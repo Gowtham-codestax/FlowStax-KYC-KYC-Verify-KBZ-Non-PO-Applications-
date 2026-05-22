@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="9" passed="0" failed="2" skipped="7">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-22T15:03:30 IST" name="Parallel Suite" finished-at="2026-05-22T15:03:54 IST" duration-ms="24178">
+    <groups>
+    </groups>
+    <test started-at="2026-05-22T15:03:30 IST" name="Flow Stax Test" finished-at="2026-05-22T15:03:54 IST" duration-ms="24178">
+      <class name="testsScriptKBZPayService.accountCloseTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testsScriptKBZPayService.accountCloseTest@4d1c00d0]" started-at="2026-05-22T15:03:30 IST" name="setup" finished-at="2026-05-22T15:03:33 IST" duration-ms="3328" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="AccountCloseTest()[pri:1, instance:testsScriptKBZPayService.accountCloseTest@4d1c00d0]" started-at="2026-05-22T15:03:33 IST" name="AccountCloseTest" finished-at="2026-05-22T15:03:54 IST" duration-ms="20577" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: (//flt-semantics/span[.='Email ']/following::flt-semantics/input[@data-semantics-role='text-field'])[1] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59346}, goog:processID: 13944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59346/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 04ad4be15a9087cd787a0e640bcc95fe]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//flt-semantics/span[.='Email ']/following::flt-semantics/input[@data-semantics-role='text-field'])[1] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59346}, goog:processID: 13944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59346/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 04ad4be15a9087cd787a0e640bcc95fe
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at org.pages.LoginPage.login(LoginPage.java:83)
+at testsScriptKBZPayService.accountCloseTest.AccountCloseTest(accountCloseTest.java:27)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AccountCloseTest -->
+        <test-method signature="TSOLoginFlow()[pri:2, instance:testsScriptKBZPayService.accountCloseTest@4d1c00d0]" started-at="2026-05-22T15:03:54 IST" name="TSOLoginFlow" finished-at="2026-05-22T15:03:54 IST" depends-on-methods="testsScriptKBZPayService.accountCloseTest.AccountCloseTest" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method testsScriptKBZPayService.accountCloseTest.TSOLoginFlow() on instance testsScriptKBZPayService.accountCloseTest@4d1c00d0 depends on not successfully finished methods 
+[testsScriptKBZPayService.accountCloseTest.AccountCloseTest() on instance testsScriptKBZPayService.accountCloseTest@4d1c00d0]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method testsScriptKBZPayService.accountCloseTest.TSOLoginFlow() on instance testsScriptKBZPayService.accountCloseTest@4d1c00d0 depends on not successfully finished methods 
+[testsScriptKBZPayService.accountCloseTest.AccountCloseTest() on instance testsScriptKBZPayService.accountCloseTest@4d1c00d0]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TSOLoginFlow -->
+        <test-method signature="branchLogin()[pri:3, instance:testsScriptKBZPayService.accountCloseTest@4d1c00d0]" started-at="2026-05-22T15:03:54 IST" name="branchLogin" finished-at="2026-05-22T15:03:54 IST" depends-on-methods="testsScriptKBZPayService.accountCloseTest.TSOLoginFlow" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method testsScriptKBZPayService.accountCloseTest.branchLogin() on instance testsScriptKBZPayService.accountCloseTest@4d1c00d0 depends on not successfully finished methods 
+[testsScriptKBZPayService.accountCloseTest.TSOLoginFlow() on instance testsScriptKBZPayService.accountCloseTest@4d1c00d0]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method testsScriptKBZPayService.accountCloseTest.branchLogin() on instance testsScriptKBZPayService.accountCloseTest@4d1c00d0 depends on not successfully finished methods 
+[testsScriptKBZPayService.accountCloseTest.TSOLoginFlow() on instance testsScriptKBZPayService.accountCloseTest@4d1c00d0]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- branchLogin -->
+        <test-method signature="tsoLogin2()[pri:4, instance:testsScriptKBZPayService.accountCloseTest@4d1c00d0]" started-at="2026-05-22T15:03:54 IST" name="tsoLogin2" finished-at="2026-05-22T15:03:54 IST" depends-on-methods="testsScriptKBZPayService.accountCloseTest.branchLogin" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method testsScriptKBZPayService.accountCloseTest.tsoLogin2() on instance testsScriptKBZPayService.accountCloseTest@4d1c00d0 depends on not successfully finished methods 
+[testsScriptKBZPayService.accountCloseTest.branchLogin() on instance testsScriptKBZPayService.accountCloseTest@4d1c00d0]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method testsScriptKBZPayService.accountCloseTest.tsoLogin2() on instance testsScriptKBZPayService.accountCloseTest@4d1c00d0 depends on not successfully finished methods 
+[testsScriptKBZPayService.accountCloseTest.branchLogin() on instance testsScriptKBZPayService.accountCloseTest@4d1c00d0]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tsoLogin2 -->
+        <test-method signature="closingLoopLogin()[pri:5, instance:testsScriptKBZPayService.accountCloseTest@4d1c00d0]" started-at="2026-05-22T15:03:54 IST" name="closingLoopLogin" finished-at="2026-05-22T15:03:54 IST" depends-on-methods="testsScriptKBZPayService.accountCloseTest.tsoLogin2" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method testsScriptKBZPayService.accountCloseTest.closingLoopLogin() on instance testsScriptKBZPayService.accountCloseTest@4d1c00d0 depends on not successfully finished methods 
+[testsScriptKBZPayService.accountCloseTest.tsoLogin2() on instance testsScriptKBZPayService.accountCloseTest@4d1c00d0]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method testsScriptKBZPayService.accountCloseTest.closingLoopLogin() on instance testsScriptKBZPayService.accountCloseTest@4d1c00d0 depends on not successfully finished methods 
+[testsScriptKBZPayService.accountCloseTest.tsoLogin2() on instance testsScriptKBZPayService.accountCloseTest@4d1c00d0]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingLoopLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testsScriptKBZPayService.accountCloseTest@4d1c00d0]" started-at="2026-05-22T15:03:54 IST" name="tearDown" finished-at="2026-05-22T15:03:54 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testsScriptKBZPayService.accountCloseTest -->
+      <class name="testsScripts.KYCFlowTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testsScripts.KYCFlowTest@3d285d7e]" started-at="2026-05-22T15:03:30 IST" name="setup" finished-at="2026-05-22T15:03:33 IST" duration-ms="3403" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="kycFlowTest()[pri:1, instance:testsScripts.KYCFlowTest@3d285d7e]" started-at="2026-05-22T15:03:33 IST" name="kycFlowTest" finished-at="2026-05-22T15:03:54 IST" duration-ms="20518" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: (//flt-semantics/span[.='Email ']/following::flt-semantics/input[@data-semantics-role='text-field'])[1] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59347}, goog:processID: 22692, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59347/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d60fe26c7bea5fb43251bf334c839ed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//flt-semantics/span[.='Email ']/following::flt-semantics/input[@data-semantics-role='text-field'])[1] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59347}, goog:processID: 22692, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59347/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8d60fe26c7bea5fb43251bf334c839ed
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at org.pages.LoginPage.login(LoginPage.java:83)
+at testsScripts.KYCFlowTest.kycFlowTest(KYCFlowTest.java:30)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- kycFlowTest -->
+        <test-method signature="Kyc1Flow()[pri:2, instance:testsScripts.KYCFlowTest@3d285d7e]" started-at="2026-05-22T15:03:54 IST" name="Kyc1Flow" finished-at="2026-05-22T15:03:54 IST" depends-on-methods="testsScripts.KYCFlowTest.kycFlowTest" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method testsScripts.KYCFlowTest.Kyc1Flow() on instance testsScripts.KYCFlowTest@3d285d7e depends on not successfully finished methods 
+[testsScripts.KYCFlowTest.kycFlowTest() on instance testsScripts.KYCFlowTest@3d285d7e]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method testsScripts.KYCFlowTest.Kyc1Flow() on instance testsScripts.KYCFlowTest@3d285d7e depends on not successfully finished methods 
+[testsScripts.KYCFlowTest.kycFlowTest() on instance testsScripts.KYCFlowTest@3d285d7e]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Kyc1Flow -->
+        <test-method signature="Kyc2Flow()[pri:3, instance:testsScripts.KYCFlowTest@3d285d7e]" started-at="2026-05-22T15:03:54 IST" name="Kyc2Flow" finished-at="2026-05-22T15:03:54 IST" depends-on-methods="testsScripts.KYCFlowTest.Kyc1Flow" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method testsScripts.KYCFlowTest.Kyc2Flow() on instance testsScripts.KYCFlowTest@3d285d7e depends on not successfully finished methods 
+[testsScripts.KYCFlowTest.Kyc1Flow() on instance testsScripts.KYCFlowTest@3d285d7e]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method testsScripts.KYCFlowTest.Kyc2Flow() on instance testsScripts.KYCFlowTest@3d285d7e depends on not successfully finished methods 
+[testsScripts.KYCFlowTest.Kyc1Flow() on instance testsScripts.KYCFlowTest@3d285d7e]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Kyc2Flow -->
+        <test-method signature="branchFlow()[pri:4, instance:testsScripts.KYCFlowTest@3d285d7e]" started-at="2026-05-22T15:03:54 IST" name="branchFlow" finished-at="2026-05-22T15:03:54 IST" depends-on-methods="testsScripts.KYCFlowTest.Kyc2Flow" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method testsScripts.KYCFlowTest.branchFlow() on instance testsScripts.KYCFlowTest@3d285d7e depends on not successfully finished methods 
+[testsScripts.KYCFlowTest.Kyc2Flow() on instance testsScripts.KYCFlowTest@3d285d7e]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method testsScripts.KYCFlowTest.branchFlow() on instance testsScripts.KYCFlowTest@3d285d7e depends on not successfully finished methods 
+[testsScripts.KYCFlowTest.Kyc2Flow() on instance testsScripts.KYCFlowTest@3d285d7e]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+at java.base/java.lang.Thread.run(Thread.java:1583)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- branchFlow -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testsScripts.KYCFlowTest@3d285d7e]" started-at="2026-05-22T15:03:54 IST" name="tearDown" finished-at="2026-05-22T15:03:54 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testsScripts.KYCFlowTest -->
+    </test> <!-- Flow Stax Test -->
+  </suite> <!-- Parallel Suite -->
+</testng-results>
