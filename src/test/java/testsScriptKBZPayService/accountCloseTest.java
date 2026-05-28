@@ -1,5 +1,4 @@
 package testsScriptKBZPayService;
-
 import java.awt.AWTException;
 
 import org.genricPackage.BaseClass;

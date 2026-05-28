@@ -1,5 +1,4 @@
 package testScriptNonPo;
-
 import java.awt.AWTException;
 
 import org.genricPackage.BaseClass;

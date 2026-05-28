@@ -1,0 +1,38 @@
+services:
+
+  postgres-db:
+    image: postgres:15-alpine
+    container_name: postgres-db
+    environment:
+      POSTGRES_DB: healenium
+      POSTGRES_USER: healenium_user
+      POSTGRES_PASSWORD: healenium_password
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U healenium_user -d healenium"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  selector-imitator:
+    image: healenium/hlm-selector-imitator:1.4
+    container_name: selector-imitator
+    ports:
+      - "8000:8000"
+
+  healenium:
+    image: healenium/hlm-backend:3.4.6
+    container_name: healenium
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+      selector-imitator:
+        condition: service_started
+    ports:
+      - "7878:7878"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-db:5432/healenium?currentSchema=public
+      SPRING_DATASOURCE_USERNAME: healenium_user
+      SPRING_DATASOURCE_PASSWORD: healenium_password
+      HLM_SELECTOR_URL: http://selector-imitator:8000

@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">FlowStax Automation Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 22, 2026 03:03:30 pm</span></a>
+<a href="#"><span class="badge badge-primary">May 28, 2026 02:20:54 pm</span></a>
 </li>
 </ul>
 </div>
@@ -71,7 +71,6 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
 <div class="dropdown-divider"></div>
@@ -81,25 +80,25 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">AccountCloseTest</p>
+            <p class="name">pettyCash_Reject_Flow</p>
             <p class="text-sm">
-              <span>3:03:33 pm</span> / <span>00:00:00:006</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>2:20:59 pm</span> / <span>00:00:22:553</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">AccountCloseTest</h5>
-<span class='badge badge-success'>05.22.2026 3:03:33 pm</span>
-<span class='badge badge-danger'>05.22.2026 3:03:33 pm</span>
-<span class='badge badge-default'>00:00:00:006</span>
+<h5 class="test-status text-fail">pettyCash_Reject_Flow</h5>
+<span class='badge badge-success'>05.28.2026 2:20:59 pm</span>
+<span class='badge badge-danger'>05.28.2026 2:21:22 pm</span>
+<span class='badge badge-default'>00:00:22:553</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -112,9 +111,79 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:03:33 pm</td>
+        <td>2:20:59 pm</td>
         <td>
           Test Execution Started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:21:22 pm</td>
+        <td>
+          Test Failed
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>2:21:22 pm</td>
+        <td>
+          <textarea readonly class="code-block">org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: unable to send message to renderer
+  (Session info: chrome=148.0.7778.179)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7f7e0a230c2e8bcbebbe9807c43fa6f3, findElement {using=xpath, value=//flt-semantics[.='Add New']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65251}, goog:processID: 21988, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65251/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7f7e0a230c2e8bcbebbe9807c43fa6f3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:364)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:358)
+	at org.pages.DashBoardPage.clickAddNew(DashBoardPage.java:20)
+	at testScriptNonPo.PettyCashRejectFlowTest.pettyCash_Reject_Flow(PettyCashRejectFlowTest.java:28)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</textarea>
+          
         </td>
       </tr>
   </tbody>
@@ -122,25 +191,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="fail" test-id="2"
+        <li class="test-item"  status="skip" test-id="2"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">kycFlowTest</p>
+            <p class="name">financeAuthorizerFlow</p>
             <p class="text-sm">
-              <span>3:03:33 pm</span> / <span>00:00:20:525</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>2:21:22 pm</span> / <span>00:00:00:008</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-fail">kycFlowTest</h5>
-<span class='badge badge-success'>05.22.2026 3:03:33 pm</span>
-<span class='badge badge-danger'>05.22.2026 3:03:54 pm</span>
-<span class='badge badge-default'>00:00:20:525</span>
+<h5 class="test-status text-skip">financeAuthorizerFlow</h5>
+<span class='badge badge-success'>05.28.2026 2:21:22 pm</span>
+<span class='badge badge-danger'>05.28.2026 2:21:22 pm</span>
+<span class='badge badge-default'>00:00:00:008</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -153,91 +222,16 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:03:33 pm</td>
+        <td>2:21:22 pm</td>
         <td>
           Test Execution Started
         </td>
       </tr>
       <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>3:03:54 pm</td>
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>2:21:22 pm</td>
         <td>
-          Test Failed
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>3:03:54 pm</td>
-        <td>
-          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//flt-semantics/span[.='Email ']/following::flt-semantics/input[@data-semantics-role='text-field'])[1] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59347}, goog:processID: 22692, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59347/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8d60fe26c7bea5fb43251bf334c839ed
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at org.pages.LoginPage.login(LoginPage.java:83)
-	at testsScripts.KYCFlowTest.kycFlowTest(KYCFlowTest.java:30)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-</textarea>
-          
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>3:03:54 pm</td>
-        <td>
-          Test Failed
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>3:03:54 pm</td>
-        <td>
-          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//flt-semantics/span[.='Email ']/following::flt-semantics/input[@data-semantics-role='text-field'])[1] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '4.35.0', revision: '1c58e5028b'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.179, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59346}, goog:processID: 13944, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59346/devtoo..., se:cdpVersion: 148.0.7778.179, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 04ad4be15a9087cd787a0e640bcc95fe
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at org.pages.LoginPage.login(LoginPage.java:83)
-	at testsScriptKBZPayService.accountCloseTest.AccountCloseTest(accountCloseTest.java:27)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-</textarea>
-          
+          Test Skipped
         </td>
       </tr>
   </tbody>
@@ -245,25 +239,25 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="3"
+        <li class="test-item"  status="skip" test-id="3"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">TSOLoginFlow</p>
+            <p class="name">dcfoFlow</p>
             <p class="text-sm">
-              <span>3:03:54 pm</span> / <span>00:00:00:000</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>2:21:22 pm</span> / <span>00:00:00:008</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">TSOLoginFlow</h5>
-<span class='badge badge-success'>05.22.2026 3:03:54 pm</span>
-<span class='badge badge-danger'>05.22.2026 3:03:54 pm</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<h5 class="test-status text-skip">dcfoFlow</h5>
+<span class='badge badge-success'>05.28.2026 2:21:22 pm</span>
+<span class='badge badge-danger'>05.28.2026 2:21:22 pm</span>
+<span class='badge badge-default'>00:00:00:008</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -276,9 +270,16 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:03:54 pm</td>
+        <td>2:21:22 pm</td>
         <td>
           Test Execution Started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>2:21:22 pm</td>
+        <td>
+          Test Skipped
         </td>
       </tr>
   </tbody>
@@ -291,9 +292,9 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Kyc1Flow</p>
+            <p class="name">CFOFlow</p>
             <p class="text-sm">
-              <span>3:03:54 pm</span> / <span>00:00:00:005</span>
+              <span>2:21:22 pm</span> / <span>00:00:00:005</span>
               <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
@@ -301,9 +302,9 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">Kyc1Flow</h5>
-<span class='badge badge-success'>05.22.2026 3:03:54 pm</span>
-<span class='badge badge-danger'>05.22.2026 3:03:54 pm</span>
+<h5 class="test-status text-skip">CFOFlow</h5>
+<span class='badge badge-success'>05.28.2026 2:21:22 pm</span>
+<span class='badge badge-danger'>05.28.2026 2:21:22 pm</span>
 <span class='badge badge-default'>00:00:00:005</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -317,21 +318,14 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:03:54 pm</td>
+        <td>2:21:22 pm</td>
         <td>
           Test Execution Started
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>3:03:54 pm</td>
-        <td>
-          Test Skipped
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>3:03:54 pm</td>
+        <td>2:21:22 pm</td>
         <td>
           Test Skipped
         </td>
@@ -341,25 +335,25 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="5"
+        <li class="test-item"  status="skip" test-id="5"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Kyc2Flow</p>
+            <p class="name">DCEOFlow</p>
             <p class="text-sm">
-              <span>3:03:54 pm</span> / <span>00:00:00:000</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>2:21:22 pm</span> / <span>00:00:00:008</span>
+              <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Kyc2Flow</h5>
-<span class='badge badge-success'>05.22.2026 3:03:54 pm</span>
-<span class='badge badge-danger'>05.22.2026 3:03:54 pm</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<h5 class="test-status text-skip">DCEOFlow</h5>
+<span class='badge badge-success'>05.28.2026 2:21:22 pm</span>
+<span class='badge badge-danger'>05.28.2026 2:21:22 pm</span>
+<span class='badge badge-default'>00:00:00:008</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -372,9 +366,16 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:03:54 pm</td>
+        <td>2:21:22 pm</td>
         <td>
           Test Execution Started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>2:21:22 pm</td>
+        <td>
+          Test Skipped
         </td>
       </tr>
   </tbody>
@@ -387,9 +388,9 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">branchLogin</p>
+            <p class="name">CEOFlow</p>
             <p class="text-sm">
-              <span>3:03:54 pm</span> / <span>00:00:00:002</span>
+              <span>2:21:22 pm</span> / <span>00:00:00:006</span>
               <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
@@ -397,10 +398,10 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">branchLogin</h5>
-<span class='badge badge-success'>05.22.2026 3:03:54 pm</span>
-<span class='badge badge-danger'>05.22.2026 3:03:54 pm</span>
-<span class='badge badge-default'>00:00:00:002</span>
+<h5 class="test-status text-skip">CEOFlow</h5>
+<span class='badge badge-success'>05.28.2026 2:21:22 pm</span>
+<span class='badge badge-danger'>05.28.2026 2:21:22 pm</span>
+<span class='badge badge-default'>00:00:00:006</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -413,14 +414,14 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:03:54 pm</td>
+        <td>2:21:22 pm</td>
         <td>
           Test Execution Started
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>3:03:54 pm</td>
+        <td>2:21:22 pm</td>
         <td>
           Test Skipped
         </td>
@@ -435,9 +436,9 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">tsoLogin2</p>
+            <p class="name">FinanceRenocileFlow</p>
             <p class="text-sm">
-              <span>3:03:54 pm</span> / <span>00:00:00:001</span>
+              <span>2:21:22 pm</span> / <span>00:00:00:012</span>
               <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
@@ -445,10 +446,10 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-skip">tsoLogin2</h5>
-<span class='badge badge-success'>05.22.2026 3:03:54 pm</span>
-<span class='badge badge-danger'>05.22.2026 3:03:54 pm</span>
-<span class='badge badge-default'>00:00:00:001</span>
+<h5 class="test-status text-skip">FinanceRenocileFlow</h5>
+<span class='badge badge-success'>05.28.2026 2:21:22 pm</span>
+<span class='badge badge-danger'>05.28.2026 2:21:22 pm</span>
+<span class='badge badge-default'>00:00:00:012</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -461,14 +462,14 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:03:54 pm</td>
+        <td>2:21:22 pm</td>
         <td>
           Test Execution Started
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>3:03:54 pm</td>
+        <td>2:21:22 pm</td>
         <td>
           Test Skipped
         </td>
@@ -485,7 +486,7 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
           <div class="test-detail">
             <p class="name">branchFlow</p>
             <p class="text-sm">
-              <span>3:03:54 pm</span> / <span>00:00:00:001</span>
+              <span>2:21:22 pm</span> / <span>00:00:00:007</span>
               <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
@@ -494,9 +495,9 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-skip">branchFlow</h5>
-<span class='badge badge-success'>05.22.2026 3:03:54 pm</span>
-<span class='badge badge-danger'>05.22.2026 3:03:54 pm</span>
-<span class='badge badge-default'>00:00:00:001</span>
+<span class='badge badge-success'>05.28.2026 2:21:22 pm</span>
+<span class='badge badge-danger'>05.28.2026 2:21:22 pm</span>
+<span class='badge badge-default'>00:00:00:007</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -509,69 +510,14 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:03:54 pm</td>
+        <td>2:21:22 pm</td>
         <td>
           Test Execution Started
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>3:03:54 pm</td>
-        <td>
-          Test Skipped
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="skip" test-id="9"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">closingLoopLogin</p>
-            <p class="text-sm">
-              <span>3:03:54 pm</span> / <span>00:00:00:002</span>
-              <span class="badge skip-bg log float-right">Skip</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-skip">closingLoopLogin</h5>
-<span class='badge badge-success'>05.22.2026 3:03:54 pm</span>
-<span class='badge badge-danger'>05.22.2026 3:03:54 pm</span>
-<span class='badge badge-default'>00:00:00:002</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log info-bg">Info</span></td>
-        <td>3:03:54 pm</td>
-        <td>
-          Test Execution Started
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>3:03:54 pm</td>
-        <td>
-          Test Skipped
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log skip-bg">Skip</span></td>
-        <td>3:03:54 pm</td>
+        <td>2:21:22 pm</td>
         <td>
           Test Skipped
         </td>
@@ -603,12 +549,12 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.TimeoutException</p>
+<p class="name">org.openqa.selenium.NoSuchSessionException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.TimeoutException</h4>
+<h4>org.openqa.selenium.NoSuchSessionException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -622,9 +568,9 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>15:03:33 pm</td>
+<td>14:20:59 pm</td>
 <td>
-<a href="#" class="linked" test-id='2' id='2'>kycFlowTest</a>
+<a href="#" class="linked" test-id='1' id='1'>pettyCash_Reject_Flow</a>
 </td>
 </tr>
 </tbody>
@@ -644,19 +590,19 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>May 22, 2026 03:03:30 pm</h3>
+<h3>May 28, 2026 02:20:54 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>May 22, 2026 03:03:54 pm</h3>
+<h3>May 28, 2026 02:21:24 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>3</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -678,13 +624,13 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='33%'>
-<b>3</b> tests passed
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='11%'><b>1</b> tests failed,
-<b>5</b> skipped, <b data-tooltip='0%'>0</b> others
+<small data-tooltip='12%'><b>1</b> tests failed,
+<b>7</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
 </div>
@@ -703,8 +649,8 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
 <div class="card-footer">
 <div><small data-tooltip='0%'><b>0</b> events passed</small></div>
 <div>
-<small data-tooltip='20%'><b>4</b> events failed,
-<b data-tooltip='%'>16</b> others
+<small data-tooltip='11%'><b>2</b> events failed,
+<b data-tooltip='%'>15</b> others
 </small>
 </div>
 </div>
@@ -720,7 +666,7 @@ Session ID: 04ad4be15a9087cd787a0e640bcc95fe
 </div></div>
 <script>
 var timeline = {
-"AccountCloseTest":0.006,"kycFlowTest":20.525,"TSOLoginFlow":0,"Kyc1Flow":0.005,"Kyc2Flow":0,"branchLogin":0.002,"tsoLogin2":0.001,"branchFlow":0.001,"closingLoopLogin":0.002
+"pettyCash_Reject_Flow":22.553,"financeAuthorizerFlow":0.008,"dcfoFlow":0.008,"CFOFlow":0.005,"DCEOFlow":0.008,"CEOFlow":0.006,"FinanceRenocileFlow":0.012,"branchFlow":0.007
 };
 </script>
 <div class="row">
@@ -751,10 +697,10 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 3,
+passParent: 0,
 failParent: 1,
 warningParent: 0,
-skipParent: 5,
+skipParent: 7,
 childCount: 5,
 passChild: 0,
 failChild: 0,
@@ -769,10 +715,10 @@ skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
 passEvents: 0,
-failEvents: 4,
+failEvents: 2,
 warningEvents: 0,
 skipEvents: 7,
-infoEvents: 9
+infoEvents: 8
 };
 </script>        </div>
       </div>

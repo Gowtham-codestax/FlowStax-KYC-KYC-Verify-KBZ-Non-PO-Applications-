@@ -10,5 +10,14 @@
 	  <class name="testsScripts.KYCFlowTest"/>
 			
     </classes>
+    
   </test> <!-- Test -->
+  
+  <listeners>
+    <listener class-name=
+    "listeners.FailureListener"/>
+</listeners>
+
 </suite> <!-- Suite -->
+
+

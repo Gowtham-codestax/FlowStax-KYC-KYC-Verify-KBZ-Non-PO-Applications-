@@ -1,21 +1,18 @@
 package org.genricPackage;
-
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+
 
 import factory.DriverFactory;
 
 public class BaseClass {
 	
 	public WebDriver driver;
-
 	@BeforeClass
     public void setup() {
 		
@@ -24,10 +21,9 @@ public class BaseClass {
 	//	option.addArguments("--headless=new");
 		
         driver = new ChromeDriver(option);
-        
+  
         DriverFactory.setDriver(driver);
         
-
         DriverFactory.getDriver().manage().window().maximize();
 
         DriverFactory.getDriver().manage().timeouts() .implicitlyWait(Duration.ofSeconds(20));
@@ -40,7 +36,7 @@ public class BaseClass {
 
         if (driver != null) {
         	
-      //  	DriverFactory.getDriver().quit();
+        	DriverFactory.getDriver().quit();
         	DriverFactory.unload();
             
         }

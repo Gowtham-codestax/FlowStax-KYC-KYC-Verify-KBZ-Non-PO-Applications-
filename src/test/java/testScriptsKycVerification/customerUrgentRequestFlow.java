@@ -1,5 +1,4 @@
 package testScriptsKycVerification;
-
 import java.awt.AWTException;
 
 import org.KycVerificationAppPages.ClustuerManger1Page;
@@ -21,13 +20,10 @@ public class customerUrgentRequestFlow extends BaseClass {
 
 	@Test(priority = 1)
 	public void CustomerUrgentRequestFlowTest()throws AWTException, InterruptedException {
-		
-		
 		LoginPage login = new LoginPage(driver);
 		DashBoardPage DashBoard= new DashBoardPage(driver);
 		KYCPage Kyc= new KYCPage(driver);
 		customerUrgentRequestPages customerUgerntreq= new customerUrgentRequestPages(driver);
-		
 		
 		login.login("branch_sr@gmail.com", "HybjyJcjHWAYtgTvXbe!");
 	
@@ -96,10 +92,8 @@ public class customerUrgentRequestFlow extends BaseClass {
 		Thread.sleep(5000);
 		
 		LoginPage login = new LoginPage(driver);
-		DashBoardPage DashBoard= new DashBoardPage(driver);
 		KYCPage Kyc= new KYCPage(driver);
 		KycOfficerPage KycOfficer1= new KycOfficerPage(driver);
-		customerUrgentRequestPages customerUgerntreq= new customerUrgentRequestPages(driver);
 		
 		
 		login.login("kycofficer_sr@gmail.com", "DD5GK7Ki6W18NgYoQPA8");
