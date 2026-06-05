@@ -455,28 +455,40 @@ public class PettyCashPage {
 		 	js.executeScript("arguments[0].scrollIntoView({behevior: 'smooth', block: 'center'})", SeocondDescriptionTxtField);
 	    	js.executeScript("arguments[0].click();",SeocondDescriptionTxtField);
 			Thread.sleep(400);
-			SeocondDescriptionTxtField.sendKeys(Keys.CONTROL+"a");
-			SeocondDescriptionTxtField.sendKeys("Testing Petty Cash Flow");
-			
+			SeocondDescriptionTxtField.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+			Thread.sleep(400);
+			SeocondDescriptionTxtField.sendKeys(Keys.BACK_SPACE);
+			Thread.sleep(400);
+			js.executeScript("arguments[0].click();",SeocondDescriptionTxtField);
+			Thread.sleep(400);
+			SeocondDescriptionTxtField.sendKeys("Edit- Testing Petty Cash Flow");
+				
 			
 			// 2nd Row Quantity editing 
 			WebElement SecondRowQuantityfield= wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//flt-semantics/span[contains(text(),'Quantity')]/following::flt-semantics/textarea[@data-semantics-role='text-field'])[14]")));
-			Thread.sleep(200);
+			Thread.sleep(2000);
 			js.executeScript("arguments[0].scrollIntoView({behevior: 'smooth', block: 'center'})", SecondRowQuantityfield);
 	    	js.executeScript("arguments[0].click();",SecondRowQuantityfield);
-			Thread.sleep(400);
-			SecondRowQuantityfield.sendKeys("1999");
+	    	Thread.sleep(400);
+	    	SecondRowQuantityfield.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+	    	Thread.sleep(500);
+
+	    	SecondRowQuantityfield.sendKeys(Keys.BACK_SPACE);
+	    	Thread.sleep(500);
+	    	
+	    	js.executeScript("arguments[0].click();",SecondRowQuantityfield);
+	    	Thread.sleep(500);
+	    	SecondRowQuantityfield.sendKeys("1999");;
 			
+	    	
 			// 2nd Row Unit Editing 
 			
-			 WebElement	SecondRowEachUnitRemoveOption=  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//flt-semantics/flt-semantics-container/flt-semantics[@aria-label='Each']/flt-semantics-container/flt-semantics[@role='button'])[2]")));
+			 WebElement	SecondRowUnitRemoveOption=  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics[@aria-label='Unit']/child::*/flt-semantics[@role='button']")));
 				//SecondEachUnitRemoveOption 
+			 	js.executeScript("arguments[0].scrollIntoView({block: 'center'});", SecondRowUnitRemoveOption);
 			 	Thread.sleep(300);
-			 	js.executeScript("arguments[0].scrollIntoView({block: 'center'});", SecondRowEachUnitRemoveOption);
-			 	Thread.sleep(300);
-			 	js.executeScript("arguments[0].click();", SecondRowEachUnitRemoveOption);
-			 	SecondRowEachUnitRemoveOption.click();
-			 	
+			 	js.executeScript("arguments[0].click();", SecondRowUnitRemoveOption);
+			 	Thread.sleep(400);			 	
 			 
 			// 2nd Row Unit option editing
 				
@@ -485,16 +497,14 @@ public class PettyCashPage {
 			 	Thread.sleep(200);
 			 	UnitDD.click();
 			 	
-			 	WebElement Unit=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//flt-semantics/span[.='Unit']")));
+			 	WebElement Each=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//flt-semantics/span[.='Each']")));
 			 	Thread.sleep(200);
-			 	js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", Unit);
+			 	js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", Each);
 			 	Thread.sleep(200);
-			 	js.executeScript("arguments[0].click();", Unit);
-			 	
+			 	js.executeScript("arguments[0].click();", Each);
 			 	
 			 	// 2nd Row Price editing
 			 	
-
 			 	WebElement	SecondRowpriceEditing=  wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//flt-semantics/span[contains(text(),'Price')]/following::flt-semantics/textarea[@data-semantics-role='text-field'])[15]")));
 			 	wait.until(ExpectedConditions.visibilityOf(SecondRowpriceEditing));
 				wait.until(ExpectedConditions.elementToBeClickable(SecondRowpriceEditing));
@@ -503,11 +513,13 @@ public class PettyCashPage {
 				Thread.sleep(600);
 				js.executeScript("arguments[0].click();", SecondRowpriceEditing);
 				Thread.sleep(300);
+				SecondRowpriceEditing.sendKeys(Keys.chord(Keys.CONTROL,"a"));
+				Thread.sleep(300);
+				SecondRowpriceEditing.sendKeys(Keys.BACK_SPACE);
+				Thread.sleep(400);
+				js.executeScript("arguments[0].click();", SecondRowpriceEditing);
+				Thread.sleep(400);
 				SecondRowpriceEditing.sendKeys("2900000");
-			 
-			
-			
-		
 		 
 	 }
 	 
@@ -643,13 +655,5 @@ public class PettyCashPage {
 	            }
 	        }
 	    }
-	 
-	 
-	 
-	 
-		
-	 
-	 
 
-
-}
+	}

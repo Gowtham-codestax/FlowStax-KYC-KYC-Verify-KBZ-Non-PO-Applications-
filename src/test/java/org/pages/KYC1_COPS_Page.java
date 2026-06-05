@@ -124,18 +124,13 @@ public void checkerRadioButton() throws InterruptedException {
 
 		    // Pull record found
 		    for (int i = 0; i < 1; i++) {
-
 		        try {
-
 		            // Find fresh element every time
 		            WebElement pullBtn = wait.until( ExpectedConditions.presenceOfElementLocated(pullButton));
-
 		            js.executeScript("arguments[0].scrollIntoView({block:'center'});",pullBtn); 
-		            js.executeScript("arguments[0].click();", pullBtn);
-		            
+		            js.executeScript("arguments[0].click();", pullBtn);  
 		            //PULLS
-		            List< WebElement > Pulls= driver.findElements(By.xpath("//flt-semantics[@style[contains(.,'position: absolute; overflow: visible; width: 36px; height: 34px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 493.504, 214.5); pointer-events: all; z-index: 8;')]]"));
-		         
+		            List< WebElement > Pulls= driver.findElements(By.xpath("//flt-semantics[@style[contains(.,'position: absolute; overflow: visible; width: 36px; height: 34px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 493.504, 214.5); pointer-events: all; z-index: 8;')]]"));    
 		            if (Pulls.size()>0) {
 		            	js.executeScript("arguments[0].click();", Pulls);
 		            	break;

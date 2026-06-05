@@ -47,7 +47,7 @@ public class closingLoopPage {
 	    		WebElement	eyeiconbtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//flt-semantics[@style='position: absolute; overflow: visible; width: 40px; height: 40px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 100, 7.5); pointer-events: all;'])[1]")));
 	    		 js.executeScript("arguments[0].scrollIntoView({block:'center'});", eyeiconbtn);
 	    		 Thread.sleep(1000);
-	    		js.executeScript("arguments[0].click();", eyeiconbtn);
+	    		 js.executeScript("arguments[0].click();", eyeiconbtn);
 	    	
 	    }
 	 
@@ -64,6 +64,20 @@ public class closingLoopPage {
 		    js.executeScript("arguments[0].click();",Close);
 		
 	}
+	 
+	 
+	 public void resolvebutton() throws InterruptedException {
+		 By Resolve_Btn =
+		            By.xpath("//flt-semantics[contains(text(),'Resolve')]");
+
+		    WebElement Resolve =
+		            wait.until(ExpectedConditions.presenceOfElementLocated(Resolve_Btn));
+
+		    Thread.sleep(500);
+		    js.executeScript("arguments[0].click();",Resolve);
+		
+	}
+
 	 
 	 
 	 public void ReOpenbutton() throws InterruptedException {
@@ -89,6 +103,33 @@ public class closingLoopPage {
 		    js.executeScript("arguments[0].click();",Mark);
 		
 	}
+	 
+	 public void updatebutton() throws InterruptedException {
+		 By UpdtaePtion_Btn =
+		            By.xpath("//flt-semantics[contains(text(),'Update')]");
+
+		    WebElement Update =
+		            wait.until(ExpectedConditions.presenceOfElementLocated(UpdtaePtion_Btn));
+
+		    Thread.sleep(500);
+		    js.executeScript("arguments[0].click();",Update);
+		
+	}
+	 
+	 public void needMoreInfobutton() throws InterruptedException {
+		 By NeedMoreInfo_Option_Btn =
+		            By.xpath("//flt-semantics[contains(text(),'Need more info')]");
+
+		    WebElement NeedInfo =
+		            wait.until(ExpectedConditions.presenceOfElementLocated(NeedMoreInfo_Option_Btn));
+
+		    Thread.sleep(500);
+		    js.executeScript("arguments[0].click();",NeedInfo);
+		
+	}
+	 
+	 
+	 
 	 
 
 	    public void denyButton() throws InterruptedException {
@@ -117,7 +158,53 @@ public class closingLoopPage {
 		
 		}
 
+	    
+	    public void  additionalDoc_Upload_Btn() throws InterruptedException {    
+ 		    // For Upload Passport front Pag
+ 		    WebElement	additiondoc=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='Additional Documents']/following::flt-semantics/input[@data-semantics-role='text-field']")));
+ 		    js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth',block: 'center'});", additiondoc);
+ 			Thread.sleep(3000);
+ 		//	js.executeScript("arguments[0].click();", additiondoc);
+ 			additiondoc.click();
+ 		    Thread.sleep(5000);
+ 		    
+ 		    		// For Upload Passport front Page Robot Loop 
+ 		 			// Navigate using TAB 
+ 		 			for (int i = 0; i < 9; i++) {
+ 		 			    robot.keyPress(KeyEvent.VK_TAB);
+ 		 			    robot.keyRelease(KeyEvent.VK_TAB);
+ 		 			    Thread.sleep(500);
+ 		 			}
+ 		 			// Press ENTER (select file + click Open)
+ 		 			robot.keyPress(KeyEvent.VK_ENTER);
+ 		 			robot.keyRelease(KeyEvent.VK_ENTER);
+ 		 			Thread.sleep(2000);
+ 		 			// 🔹 1 TAB (move to Open button)
+ 		 			robot.keyPress(KeyEvent.VK_TAB);
+ 		 			robot.keyRelease(KeyEvent.VK_TAB);
+ 		 			
+ 		 			// Down to select the File 
+ 		 			robot.keyPress(KeyEvent.VK_DOWN);
+ 		 		    robot.keyRelease(KeyEvent.VK_DOWN);
+ 		 			
+ 		 			// Enter (click open)
+ 		 			robot.keyPress(KeyEvent.VK_ENTER);
+ 		 			robot.keyRelease(KeyEvent.VK_ENTER);
+ 		     
+ 	 }
 	 
+	    
+	    public void downloadPDFButton() throws InterruptedException {
+	    	
+	    	By DownLoadBtn=By.xpath("(//flt-semantics[@role='button'])[10]");
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(DownLoadBtn));
+	    	Thread.sleep(1000);
+	    	
+	    	WebElement donloadPdfbtn=driver.findElement(DownLoadBtn);
+	    	js.executeScript("arguments[0].click();", donloadPdfbtn);
+	    	
+	    	
+	    }
 	 
 
 }

@@ -37,7 +37,7 @@ public class accountUnlockPaygilantTest  extends BaseClass{
 		accPaygilant.enterCustomerDetails();
 	
 		accPaygilant.uploadPassport_FrontPageBtn();
-				
+		
 		accPaygilant.uploadPassport_BackpageBtn();
 		
 		accPaygilant.uploadRequestForm_Btn();
@@ -52,12 +52,11 @@ public class accountUnlockPaygilantTest  extends BaseClass{
 		
 		Kyc.NextButton();
 		
+		Kyc.EyeIconbtnClick();
 		
-	//	Kyc.EyeIconbtnClick();
+		Kyc.EditIconbtnClick();
 		
-	//	Kyc.EditIconbtnClick();
-		
-	//	Kyc.NextButton();
+		Kyc.NextButton();
 		
 		Kyc.MenuButton();
 		
@@ -76,9 +75,7 @@ public class accountUnlockPaygilantTest  extends BaseClass{
 		Thread.sleep(5000);
 		
 		LoginPage login = new LoginPage(driver);
-		DashBoardPage DashBoard= new DashBoardPage(driver);
 		KYCPage Kyc= new KYCPage(driver);
-		KYC1_COPS_Page Kyc1=new KYC1_COPS_Page(driver);
 		AccountUnlock_Paygilant_Page accPaygilant = new AccountUnlock_Paygilant_Page(driver);
 		
 		login.login("fmu1_cops@gmail.com", "FPsvBbB6!!3Cfobbq$9E");
@@ -99,8 +96,9 @@ public class accountUnlockPaygilantTest  extends BaseClass{
 		
 	}
 	
+	// ,dependsOnMethods = "FMU1Login"
 	
-	@Test(priority = 3,dependsOnMethods = "FMU1Login")
+	@Test(priority = 3)
 	public void SOC1Login() throws InterruptedException, AWTException {
 		
 		
@@ -131,8 +129,8 @@ public class accountUnlockPaygilantTest  extends BaseClass{
 		
 	}
 	
-	// 
-	 @Test(priority = 4 ,dependsOnMethods = "SOC1Login")
+	// ,dependsOnMethods = "SOC1Login"
+	 @Test(priority = 4 )
 	public void FMUlogin() throws InterruptedException, AWTException {
 		
 		
@@ -163,7 +161,7 @@ public class accountUnlockPaygilantTest  extends BaseClass{
 	
 	
 	//  ,dependsOnMethods ="FMUlogin"
-	@Test(priority = 5 ,dependsOnMethods ="FMUlogin")
+	@Test(priority = 5 )
 	public void CIFGropuLogin() throws InterruptedException, AWTException {
 		
 		
@@ -198,7 +196,9 @@ public class accountUnlockPaygilantTest  extends BaseClass{
 		
 		
 	}
-	@Test(priority =6,dependsOnMethods = "CIFGropuLogin")
+	
+	// ,dependsOnMethods = "CIFGropuLogin"
+	@Test(priority =6)
 	public void branchGropLogin() throws InterruptedException, AWTException {
 		
 		

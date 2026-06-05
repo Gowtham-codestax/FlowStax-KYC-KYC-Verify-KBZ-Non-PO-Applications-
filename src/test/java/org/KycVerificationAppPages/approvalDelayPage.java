@@ -164,7 +164,10 @@ public class approvalDelayPage {
 			wait.until(ExpectedConditions.visibilityOf(TypeofservicereqField));
 			wait.until(ExpectedConditions.elementToBeClickable(TypeofservicereqField));
 			Thread.sleep(200);
-			TypeofservicereqField.click();
+			js.executeScript("arguments[0].scrollIntoView({block: 'center'});", TypeofservicereqField);
+			Thread.sleep(200);
+			js.executeScript("arguments[0].click();", TypeofservicereqField);
+		//	TypeofservicereqField.click();
 			Thread.sleep(300);
 			TypeofservicereqField.sendKeys("Testing Approval delay Flow");
 			

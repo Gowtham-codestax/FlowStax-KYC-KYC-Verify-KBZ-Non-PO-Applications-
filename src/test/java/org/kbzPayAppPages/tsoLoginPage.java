@@ -6,6 +6,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -33,7 +34,36 @@ public class tsoLoginPage {
 	}
 	
 	
-
+	public void selectKYCUpdate() throws InterruptedException {
+		
+		By Select = By.xpath("//flt-semantics/span[.='Select']");
+		WebElement KYCSelect=wait.until(ExpectedConditions.presenceOfElementLocated(Select));
+		wait.until(ExpectedConditions.elementToBeClickable(Select));
+		Thread.sleep(2000);
+		KYCSelect.click();
+		// js.executeScript("arguments[0].click();", KYCSelect);
+	
+		
+	}
+	
+	public void PullOptionButon() throws InterruptedException {
+		
+		for (int i = 0; i < 5; i++) {
+			
+		try {
+		
+		By pullOption = By.xpath("//flt-semantics[@style[contains(.,'width: 36px') and contains(.,'height: 34px')]]");
+		WebElement Pull=wait.until(ExpectedConditions.presenceOfElementLocated(pullOption));
+		Thread.sleep(1000);
+		js.executeScript("arguments[0].click();", Pull);
+		
+		}catch(Exception e) {
+			e.printStackTrace();
+			
+			}
+		}
+	}
+	
 	
 	public void accountClose_Option() throws InterruptedException {
 		
@@ -46,19 +76,48 @@ public class tsoLoginPage {
 			By pull = By.xpath("//flt-semantics[@role='button' and .='Pull']");
 			WebElement Pull=wait.until(ExpectedConditions.presenceOfElementLocated(pull));
 			Thread.sleep(500);
-			js.executeScript("arguments[0].click();", Pull);
-		
-		
-			
+			js.executeScript("arguments[0].click();", Pull);	
 	}
 	
-	public void PullOptionButon() {
-		
-		By pullOption = By.xpath("//flt-semantics[@style[contains(.,'width: 36px') and contains(.,'height: 34px')]]");
-		WebElement Pull=wait.until(ExpectedConditions.presenceOfElementLocated(pullOption));
-		js.executeScript("arguments[0].click();", Pull);
 	
+	public void agentMerchantandRedApp_Option() throws InterruptedException {
+		
+		By AgentMerchant_RedappLocator = By.xpath("//flt-semantics/span[contains(text(),'Agent Merchant and Red App SM KYC Change')]");
+		wait.until(ExpectedConditions.presenceOfElementLocated(AgentMerchant_RedappLocator));
+		Thread.sleep(1000); // Allow Flutter rendering to stabilize
+	//	wait.until(ExpectedConditions.elementToBeClickable(AgentMerchant_Redapp));
+	//	js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block :'center'});", AgentMerchant_Redapp);
+		
+		// Fetch FRESH reference right before use (not stored between waits)
+		WebElement Agent_Redapp = driver.findElement(AgentMerchant_RedappLocator);
+
+		js.executeScript("arguments[0].click();", Agent_Redapp);
+
+		
+		// PUll
+		By pull = By.xpath("//flt-semantics[@role='button' and .='Pull']");
+		WebElement Pull=wait.until(ExpectedConditions.presenceOfElementLocated(pull));
+		Thread.sleep(500);
+		js.executeScript("arguments[0].click();", Pull);	
+		
 	}
+	
+	
+	
+	 public void resolvebutton() throws InterruptedException {
+		 By ResolveOption_Btn =
+		            By.xpath("//flt-semantics[contains(text(),'Resolve')]");
+
+		    WebElement Resolve =
+		            wait.until(ExpectedConditions.presenceOfElementLocated(ResolveOption_Btn));
+
+		    Thread.sleep(500);
+		    js.executeScript("arguments[0].click();",Resolve);
+		
+	}
+	
+	
+
 	
 	
 	public void makeForcorrectionbutton() throws InterruptedException {
@@ -76,6 +135,35 @@ public class tsoLoginPage {
 		
 	}
 	
+	
+	
+	public void needMoreInfobutton() throws InterruptedException {
+		 By NeedMoreInfo_Option_Btn =
+		            By.xpath("//flt-semantics[contains(text(),'Need more info')]");
+
+		    WebElement NeedInfo =
+		            wait.until(ExpectedConditions.presenceOfElementLocated(NeedMoreInfo_Option_Btn));
+
+		    Thread.sleep(500);
+		    js.executeScript("arguments[0].click();",NeedInfo);
+		
+	}
+	 
+	
+	
+
+    public void denyButton() throws InterruptedException {
+    	
+
+		WebElement	Denytbtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics[contains(text(),'Deny')]")));
+		Thread.sleep(1000);
+		js.executeScript("arguments[0].click();", Denytbtn);
+    	
+    	
+    }
+    
+    
+	
 	 public void UpdateStage_Commentsection() throws InterruptedException {
 			
 			
@@ -92,18 +180,6 @@ public class tsoLoginPage {
 		}
 
 
-	 public void resolvebutton() throws InterruptedException {
-		 By ResolveOption_Btn =
-		            By.xpath("//flt-semantics[contains(text(),'Resolve')]");
-
-		    WebElement Resolve =
-		            wait.until(ExpectedConditions.presenceOfElementLocated(ResolveOption_Btn));
-
-		    Thread.sleep(500);
-		    js.executeScript("arguments[0].click();",Resolve);
-		
-	}
-	
 	
 
 

@@ -3,13 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScriptNonPo.FuctionPettyCashFlowTest">
+      <class name="testsScriptKBZPayService.AgentMerchant_and_RedAppSM_KYC_ChangeTest">
         <methods>
+          <include name="closingLoopLogin2"/>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="FuctionPettyCashApproveTest"/>
+          <include name="TSOLoginFlow"/>
+          <include name="branchLoginFlow"/>
+          <include name="TsoLoginFlow2"/>
+          <include name="closingLoopLogin"/>
+          <include name="TsoLoginFlow3"/>
         </methods>
-      </class> <!-- testScriptNonPo.FuctionPettyCashFlowTest -->
+      </class> <!-- testsScriptKBZPayService.AgentMerchant_and_RedAppSM_KYC_ChangeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

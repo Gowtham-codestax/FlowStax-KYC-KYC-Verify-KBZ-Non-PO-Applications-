@@ -99,7 +99,7 @@ public class AccountUnlock_Paygilant_Page {
     	Thread.sleep(1000);
     	
     	//Customer Phn Number
-    	WebElement	addrecord_Phn_Field=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//input[@data-semantics-role='text-field'])[5]"))));
+    	WebElement	addrecord_Phn_Field=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@data-semantics-role='text-field'])[5]")));
     //	mouse.moveToElement(addrecord_Phn_Field).click(addrecord_Phn_Field).sendKeys("678976777").perform();
     	addrecord_Phn_Field.click();
     	Thread.sleep(1000);
@@ -107,7 +107,7 @@ public class AccountUnlock_Paygilant_Page {
     	
     	
     	//Customer PassportType
-    	WebElement Passport_TDType=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@role='radio'])[5]"))));
+    	WebElement Passport_TDType=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//flt-semantics[@role='radio'])[5]")));
     	//js.executeScript("arguments[0].scrollIntoView(true);",Passport_TDType);
     	Thread.sleep(1000);
     	js.executeScript("arguments[0].click();",Passport_TDType);
@@ -119,11 +119,12 @@ public class AccountUnlock_Paygilant_Page {
     	
     	
     	
-    	  	
+      	
     }
 	
 	
 	
+
 	  public void  uploadPassport_FrontPageBtn() throws InterruptedException {    
 		    // For Upload Passport front Pag
 		    WebElement	PassportFrontPagebtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//input[@data-semantics-role='text-field'])[7]"))));
@@ -137,7 +138,7 @@ public class AccountUnlock_Paygilant_Page {
 		 				
 		 			    robot.keyPress(KeyEvent.VK_TAB);
 		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(1000);
+		 			    Thread.sleep(500);
 		 			}
 		 			// Press ENTER (select file + click Open)
 		 			robot.keyPress(KeyEvent.VK_ENTER);
@@ -172,7 +173,7 @@ public class AccountUnlock_Paygilant_Page {
 		    				for (int i = 0; i < 9; i++) {
 		    					robot.keyPress(KeyEvent.VK_TAB);
 		    				    robot.keyRelease(KeyEvent.VK_TAB);
-		    				    Thread.sleep(1000);
+		    				    Thread.sleep(500);
 		    				}
 		    								
 		    				// Press ENTER (select file + click Open)
@@ -206,7 +207,7 @@ public class AccountUnlock_Paygilant_Page {
 		 			for (int i = 0; i < 9; i++) {
 		 				robot.keyPress(KeyEvent.VK_TAB);
 		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(1000);
+		 			    Thread.sleep(500);
 		 			}
 		 							
 		 			// Press ENTER (select file + click Open)
@@ -232,42 +233,42 @@ public class AccountUnlock_Paygilant_Page {
 		
 		//Locked Reason Radio button
 		WebElement Lockedreason_yesRadioBtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@role='radio'])[7]"))));
-    	Lockedreason_yesRadioBtn.click();
-    	Thread.sleep(1000);
-    	
-    	
-    	
-    	//Login locKED YES radio buton
+  	Lockedreason_yesRadioBtn.click();
+  	Thread.sleep(1000);
+  	
+  	
+  	
+  	//Login locKED YES radio buton
 		WebElement LoginLocked_yesRadioBtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@role='radio'])[9]"))));
-    	LoginLocked_yesRadioBtn.click();
-    	Thread.sleep(1000);
-    	
-    	
-    	//NRC Verifed yes Button
-    	
-    	WebElement NrcYes_yesRadioBtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@role='radio'])[11]"))));
-    	NrcYes_yesRadioBtn.click();
-    	Thread.sleep(1000);
+  	LoginLocked_yesRadioBtn.click();
+  	Thread.sleep(1000);
+  	
+  	
+  	//NRC Verifed yes Button
+  	
+  	WebElement NrcYes_yesRadioBtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@role='radio'])[11]"))));
+  	NrcYes_yesRadioBtn.click();
+  	Thread.sleep(1000);
 				
-    	
-    	// Mobile vefied yes button
-    	
-    	WebElement MobileverifedYes_yesRadioBtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@role='radio'])[13]"))));
-    	MobileverifedYes_yesRadioBtn.click();
-    	Thread.sleep(1000);
-    	
-    	
-    	//Signature verifed yes button
-    	WebElement SignatureVerifed_yesRadioBtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@role='radio'])[15]"))));
-    	SignatureVerifed_yesRadioBtn.click();
-    	Thread.sleep(1000);
-    	
-    	
-    	//Maker Checker complteed Yes bUtton
-    	
-    	WebElement Makerchecker_yesRadioBtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@role='radio'])[17]"))));
-    	Makerchecker_yesRadioBtn.click();
-    	Thread.sleep(1000);
+  	
+  	// Mobile vefied yes button
+  	
+  	WebElement MobileverifedYes_yesRadioBtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@role='radio'])[13]"))));
+  	MobileverifedYes_yesRadioBtn.click();
+  	Thread.sleep(1000);
+  	
+  	
+  	//Signature verifed yes button
+  	WebElement SignatureVerifed_yesRadioBtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@role='radio'])[15]"))));
+  	SignatureVerifed_yesRadioBtn.click();
+  	Thread.sleep(1000);
+  	
+  	
+  	//Maker Checker complteed Yes bUtton
+  	
+  	WebElement Makerchecker_yesRadioBtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@role='radio'])[17]"))));
+  	Makerchecker_yesRadioBtn.click();
+  	Thread.sleep(1000);
 		
 	}
 	
@@ -278,28 +279,28 @@ public class AccountUnlock_Paygilant_Page {
 		    Thread.sleep(2000);
 		    
 		 // For upload SIM Card Robot Loop 
- 			// Navigate using TAB 
- 			for (int i = 0; i < 9; i++) {
- 				robot.keyPress(KeyEvent.VK_TAB);
- 			    robot.keyRelease(KeyEvent.VK_TAB);
- 			    Thread.sleep(1000);
- 			}
- 							
- 			// Press ENTER (select file + click Open)
- 			robot.keyPress(KeyEvent.VK_ENTER);
- 			robot.keyRelease(KeyEvent.VK_ENTER);
- 			Thread.sleep(2000);
- 			// 🔹 1 TAB (move to Open button)
- 			robot.keyPress(KeyEvent.VK_TAB);
- 			robot.keyRelease(KeyEvent.VK_TAB);
- 			
- 			// Down to select the File 
- 			robot.keyPress(KeyEvent.VK_DOWN);
- 		    robot.keyRelease(KeyEvent.VK_DOWN);
- 			
- 			// Enter (click open)
- 			robot.keyPress(KeyEvent.VK_ENTER);
- 			robot.keyRelease(KeyEvent.VK_ENTER);
+			// Navigate using TAB 
+			for (int i = 0; i < 9; i++) {
+				robot.keyPress(KeyEvent.VK_TAB);
+			    robot.keyRelease(KeyEvent.VK_TAB);
+			    Thread.sleep(500);
+			}
+							
+			// Press ENTER (select file + click Open)
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(2000);
+			// 🔹 1 TAB (move to Open button)
+			robot.keyPress(KeyEvent.VK_TAB);
+			robot.keyRelease(KeyEvent.VK_TAB);
+			
+			// Down to select the File 
+			robot.keyPress(KeyEvent.VK_DOWN);
+		    robot.keyRelease(KeyEvent.VK_DOWN);
+			
+			// Enter (click open)
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
 		    	
 	}
 	
@@ -337,32 +338,32 @@ public class AccountUnlock_Paygilant_Page {
 	}
 	
 	public void StatusActionClick() throws InterruptedException {
-    	for (int i = 0; i <26; i++) {
+  	for (int i = 0; i <26; i++) {
 			
 			robot.keyPress(KeyEvent.VK_TAB);																										
 			robot.keyRelease(KeyEvent.VK_TAB);
 			Thread.sleep(500);	
 			}
-    	
-    	By ThreedotIcon=By.xpath("(//flt-semantics[@style[contains(.,'position: absolute; overflow: visible; width: 64px; height: 39px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 318, 8); pointer-events: all; z-index: 3;')]])[1]");
-    	
-    	WebElement threedotbtn=wait.until(ExpectedConditions.presenceOfElementLocated(ThreedotIcon));
-    	wait.until(ExpectedConditions.visibilityOf(threedotbtn));
-    	js.executeScript("arguments[0].scrollIntoView(true)", threedotbtn);
-    	js.executeScript("arguments[0].click();",threedotbtn );
-    	
- 
-    	
-    }
+  	
+  	By ThreedotIcon=By.xpath("(//flt-semantics[@style[contains(.,'position: absolute; overflow: visible; width: 64px; height: 39px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 318, 8); pointer-events: all; z-index: 3;')]])[1]");
+  	
+  	WebElement threedotbtn=wait.until(ExpectedConditions.presenceOfElementLocated(ThreedotIcon));
+  	wait.until(ExpectedConditions.visibilityOf(threedotbtn));
+  	js.executeScript("arguments[0].scrollIntoView(true)", threedotbtn);
+  	js.executeScript("arguments[0].click();",threedotbtn );
+  	
+
+  	
+  }
 	
 	public void EscalteActionclick() {
 		
 		By Escalatebutton=By.xpath("(//flt-semantics[@role='button'])[3]");
-    	WebElement Esacalatebtn=wait.until(ExpectedConditions.presenceOfElementLocated(Escalatebutton));
-    	wait.until(ExpectedConditions.visibilityOf(Esacalatebtn));
-    	js.executeScript("arguments[0].scrollIntoView(true)", Esacalatebtn);
-    	js.executeScript("arguments[0].click();",Esacalatebtn );
-    	
+  	WebElement Esacalatebtn=wait.until(ExpectedConditions.presenceOfElementLocated(Escalatebutton));
+  	wait.until(ExpectedConditions.visibilityOf(Esacalatebtn));
+  	js.executeScript("arguments[0].scrollIntoView(true)", Esacalatebtn);
+  	js.executeScript("arguments[0].click();",Esacalatebtn );
+  	
 	}
 	
 	public void UpdateStage_Commentsection() throws InterruptedException {
@@ -370,12 +371,12 @@ public class AccountUnlock_Paygilant_Page {
 		
 	
 		By Commentsection=	By.xpath("//textarea[@data-semantics-role[contains(.,'text-field')]]");
-    	WebElement UpdatestageCMNTbox=wait.until(ExpectedConditions.presenceOfElementLocated(Commentsection));
-    	Thread.sleep(1000);
-    	UpdatestageCMNTbox.click();
-    	UpdatestageCMNTbox.sendKeys("Okay");
-    //	js.executeScript("arguments[0].click()", UpdatestageCMNTbox);
-    //	js.executeScript("arguments[0].value= 'Okay';", UpdatestageCMNTbox);
+  	WebElement UpdatestageCMNTbox=wait.until(ExpectedConditions.presenceOfElementLocated(Commentsection));
+  	Thread.sleep(1000);
+  	UpdatestageCMNTbox.click();
+  	UpdatestageCMNTbox.sendKeys("Okay");
+  //	js.executeScript("arguments[0].click()", UpdatestageCMNTbox);
+  //	js.executeScript("arguments[0].value= 'Okay';", UpdatestageCMNTbox);
 	
 	}
 	
@@ -390,10 +391,10 @@ public class AccountUnlock_Paygilant_Page {
 			}
 		
 		By Approvebutton=By.xpath("//flt-semantics[.='Approve']");
-    	WebElement Approvebtn=wait.until(ExpectedConditions.presenceOfElementLocated(Approvebutton));
-    	wait.until(ExpectedConditions.visibilityOf(Approvebtn));
-    	js.executeScript("arguments[0].scrollIntoView(true)", Approvebtn);
-    	js.executeScript("arguments[0].click();",Approvebtn );
+  	WebElement Approvebtn=wait.until(ExpectedConditions.presenceOfElementLocated(Approvebutton));
+  	wait.until(ExpectedConditions.visibilityOf(Approvebtn));
+  	js.executeScript("arguments[0].scrollIntoView(true)", Approvebtn);
+  	js.executeScript("arguments[0].click();",Approvebtn );
 	}
 	
 	
@@ -408,10 +409,10 @@ public class AccountUnlock_Paygilant_Page {
 			}
 		
 		By Updatebutton=By.xpath("(//flt-semantics[.='Update'])[2]");
-    	WebElement Updatebtn=wait.until(ExpectedConditions.presenceOfElementLocated(Updatebutton));
-    	wait.until(ExpectedConditions.visibilityOf(Updatebtn));
-    	js.executeScript("arguments[0].scrollIntoView(true)", Updatebtn);
-    	js.executeScript("arguments[0].click();",Updatebtn );
+  	WebElement Updatebtn=wait.until(ExpectedConditions.presenceOfElementLocated(Updatebutton));
+  	wait.until(ExpectedConditions.visibilityOf(Updatebtn));
+  	js.executeScript("arguments[0].scrollIntoView(true)", Updatebtn);
+  	js.executeScript("arguments[0].click();",Updatebtn );
 	}
 	
 	
@@ -447,17 +448,15 @@ public class AccountUnlock_Paygilant_Page {
 			robot.keyRelease(KeyEvent.VK_TAB);
 			Thread.sleep(500);	
 			}
-    	
-    		By UnlockAction=By.xpath("(//flt-semantics[.='Unlock User'])[2]");
-    		WebElement unlockbtn=wait.until(ExpectedConditions.visibilityOfElementLocated(UnlockAction));
-    		js.executeScript("arguments[0].scrollIntoView({block:'center'});", unlockbtn);
-    		Thread.sleep(1000);
-    		unlockbtn.click();
-    	//	js.executeScript("arguments[0].click();", unlockbtn);
-    	//	js.executeScript("arguments[0].dispatchEvent(new MouseEvent('click', {bubbles:true}));",unlockbtn);
+  	
+  		By UnlockAction=By.xpath("(//flt-semantics[.='Unlock User'])[2]");
+  		WebElement unlockbtn=wait.until(ExpectedConditions.visibilityOfElementLocated(UnlockAction));
+  		js.executeScript("arguments[0].scrollIntoView({block:'center'});", unlockbtn);
+  		Thread.sleep(1000);
+  		unlockbtn.click();
+  	//	js.executeScript("arguments[0].click();", unlockbtn);
+  	//	js.executeScript("arguments[0].dispatchEvent(new MouseEvent('click', {bubbles:true}));",unlockbtn);
 		}
-		
-	
 	
 	
 }

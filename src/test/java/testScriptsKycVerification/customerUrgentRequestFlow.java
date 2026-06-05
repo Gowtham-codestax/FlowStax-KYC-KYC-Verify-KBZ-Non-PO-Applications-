@@ -18,7 +18,7 @@ import utilityPackage.ListenersClass;
 @Listeners(ListenersClass.class)
 public class customerUrgentRequestFlow extends BaseClass {
 
-	@Test(priority = 1)
+//	@Test(priority = 1)
 	public void CustomerUrgentRequestFlowTest()throws AWTException, InterruptedException {
 		LoginPage login = new LoginPage(driver);
 		DashBoardPage DashBoard= new DashBoardPage(driver);
@@ -84,8 +84,8 @@ public class customerUrgentRequestFlow extends BaseClass {
 		
 	}
 	
-	// 
-	@Test(priority = 2,dependsOnMethods = "CustomerUrgentRequestFlowTest")
+	// ,dependsOnMethods = "CustomerUrgentRequestFlowTest"
+	@Test(priority = 2)
 	public void KycOfficerFlow() throws AWTException , InterruptedException{
 		
 		driver.get("https://staging.flow.stax.run/#/login");

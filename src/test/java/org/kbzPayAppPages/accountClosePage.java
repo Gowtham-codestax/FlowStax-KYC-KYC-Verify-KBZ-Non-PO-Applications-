@@ -37,10 +37,14 @@ public class accountClosePage {
 	
 	
 	
-	public void kbzPayServiceOPtion() {
+	public void kbzPayServiceOPtion() throws InterruptedException {
 		
-		 WebElement	KBZPayService=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//flt-semantics/span[.='KBZPay Service Operations']"))));
-		 KBZPayService.click();
+		By	KBZBtn= By.xpath("//flt-semantics/span[.='KBZPay Service Operations']");
+		wait.until(ExpectedConditions.presenceOfElementLocated(KBZBtn));
+		WebElement	KBZPayService	=driver.findElement(KBZBtn);
+		Thread.sleep(1500);
+		// KBZPayService.click();
+		js.executeScript("arguments[0].click();", KBZPayService);
 		
 	}
 	
@@ -97,15 +101,21 @@ public class accountClosePage {
 	
 	public void DateOfBirth() throws InterruptedException {
 		
-		//getting current Day e,g(Today)
-		int CurrentDay=LocalDate.now().getDayOfMonth();
 		
 		// calender click
-		By CalenderPopup=By.xpath("//input[@aria-label='YYYY-MM-DD']");
+
 		WebElement Calender=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@aria-label='YYYY-MM-DD']")));
 		wait.until(ExpectedConditions.visibilityOf(Calender));
 		wait.until(ExpectedConditions.elementToBeClickable(Calender));
+		// Calender.click();
+	//	js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth',block: 'center'});", Calender);
+		Thread.sleep(500);
+	//	js.executeScript("arguments[0].click();", Calender);
 		Calender.click();
+		Thread.sleep(1500);
+		
+		//getting current Day e,g(Today)
+		int CurrentDay=LocalDate.now().getDayOfMonth();
 		
 		// Dyamimc xpath For Current Day
 		By todayDate = By.xpath("//flt-semantics[contains(text(),'" + CurrentDay + "') and contains(text(),'Today')]");
@@ -113,12 +123,12 @@ public class accountClosePage {
 		
 		// Click current date
 	    js.executeScript("arguments[0].click();", today);
-		
+	    Thread.sleep(300);
 	    //OK
 	    
 	    WebElement	OkClick=driver.findElement(By.xpath("//flt-semantics[.='OK']"));
-		//customerOnboardChannel
-    	OkClick.click();
+    //	OkClick.click();
+	    js.executeScript("arguments[0].click();", OkClick);
 		Thread.sleep(500);
 		
 	}
@@ -130,6 +140,7 @@ public class accountClosePage {
 		  // For UploadCustomerFaceBtn
 	    WebElement	UploadCustomerFaceBtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='Customer Face Photo *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
 	    Thread.sleep(500);
+	    
 	    UploadCustomerFaceBtn.click();
 	    Thread.sleep(5000);
 	    
@@ -138,7 +149,7 @@ public class accountClosePage {
 	 			for (int i = 0; i < 9; i++) {
 	 			    robot.keyPress(KeyEvent.VK_TAB);
 	 			    robot.keyRelease(KeyEvent.VK_TAB);
-	 			    Thread.sleep(500);
+	 			    Thread.sleep(300);
 	 			}
 	 			// Press ENTER (select file + click Open)
 	 			robot.keyPress(KeyEvent.VK_ENTER);
@@ -170,12 +181,14 @@ public class accountClosePage {
 	}
 	
 	
-	public void passportNumField(){
+	public void passportNumField() throws InterruptedException{
 		
 		 //Passporrt number field
 		 WebElement	Passport_NumField=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='Passport number *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
-		 mouse.moveToElement(Passport_NumField).click(Passport_NumField).sendKeys("11223344577").perform();
-	 
+		 Thread.sleep(1000);
+		 String PassNum = "67" + String.format("%07d", System.currentTimeMillis() % 10000000L);
+		 mouse.moveToElement(Passport_NumField).click(Passport_NumField).sendKeys(PassNum).perform();
+	//	 Passport_NumField.sendKeys(PassNum);
 		
 	}
 	
@@ -183,7 +196,7 @@ public class accountClosePage {
 	 public void  uploadNewPassport_PageBtn() throws InterruptedException {    
 		    // For Upload Passport front Pag
 		    WebElement	uploadNewPassportBtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='Upload new passport *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
-		   Thread.sleep(500);
+		   Thread.sleep(1500);
 		   uploadNewPassportBtn.click();
 		    Thread.sleep(5000);
 		    
@@ -192,7 +205,7 @@ public class accountClosePage {
 		 			for (int i = 0; i < 9; i++) {
 		 			    robot.keyPress(KeyEvent.VK_TAB);
 		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(500);
+		 			    Thread.sleep(300);
 		 			}
 		 			// Press ENTER (select file + click Open)
 		 			robot.keyPress(KeyEvent.VK_ENTER);
@@ -217,7 +230,7 @@ public class accountClosePage {
 	 public void  uploadOldPassport_PageBtn() throws InterruptedException {    
 		    // For Upload Passport front Pag
 		    WebElement	uploadOldPassportBtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='Upload old passport']/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
-		   Thread.sleep(500);
+		   Thread.sleep(1500);
 		   uploadOldPassportBtn.click();
 		    Thread.sleep(5000);
 		    
@@ -226,7 +239,7 @@ public class accountClosePage {
 		 			for (int i = 0; i < 9; i++) {
 		 			    robot.keyPress(KeyEvent.VK_TAB);
 		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(500);
+		 			    Thread.sleep(300);
 		 			}
 		 			// Press ENTER (select file + click Open)
 		 			robot.keyPress(KeyEvent.VK_ENTER);
@@ -304,7 +317,7 @@ public class accountClosePage {
 	 public void  bankStaffApprovalformBtn() throws InterruptedException {    
 		    // For Upload Passport front Pag
 		    WebElement	BankStaffaproltBtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='Bank Staff Approval Form *']/following::flt-semantics[1]")));
-		   Thread.sleep(500);
+		   Thread.sleep(1500);
 		   BankStaffaproltBtn.click();
 		    Thread.sleep(5000);
 		    
@@ -338,7 +351,7 @@ public class accountClosePage {
 	 public void  infoOf3transaction_Btn() throws InterruptedException {    
 		    // For Upload Passport front Pag
 		    WebElement	Transaction_Btn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='Info of 3 latest transactions']/following::flt-semantics[1]")));
-		   Thread.sleep(500);
+		   Thread.sleep(1500);
 		   Transaction_Btn.click();
 		    Thread.sleep(5000);
 		    
@@ -467,20 +480,25 @@ public class accountClosePage {
 	 	
 		 public void reasonTxtFiled() throws InterruptedException {
 				
-			 By reasonField = By.xpath(
-			            "//flt-semantics/span[contains(.,'Reason')]"+
-					 		"/following::input[@data-semantics-role='text-field'][1]" );
 
-			    WebElement reason = wait.until(ExpectedConditions.visibilityOfElementLocated(reasonField));
-
-			    js.executeScript("arguments[0].scrollIntoView({block:'center'});", reason);
+			    WebElement reason = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//flt-semantics/span[contains(.,'Reason')]/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
+			    wait.until(ExpectedConditions.elementToBeClickable(reason));
+			//    js.executeScript("arguments[0].scrollIntoView({block:'center'});", reason);
 
 			    Thread.sleep(1000);
 			    wait.until(ExpectedConditions.elementToBeClickable(reason));
 
 			    reason.click();
 			    Thread.sleep(500);
-			    reason.sendKeys("Okay");
+			    reason.sendKeys("Test");
+			    
+			 //   js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", reason);
+		    //	 Thread.sleep(1200);
+		    //	 reason.click();
+		    //	js.executeScript("arguments[0].click();", reason);
+		    //	Thread.sleep(500);
+		    //	reason.sendKeys("Test");
+		    //	js.executeScript("arguments[0].value='Test';", reason);
 
 			}	
 	 
@@ -522,7 +540,7 @@ public class accountClosePage {
 		    public void assignToTSOBtn() throws InterruptedException {
 		    	
 		    	
-	    		WebElement	AssignToTSOBtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//flt-semantics[@role='button' ])[11]")));
+	    		WebElement	AssignToTSOBtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics[@role='button' and contains(text(),'Assign to TSO')]")));
 	    		Thread.sleep(1500);
 	    		AssignToTSOBtn.click();
 	    }
@@ -534,7 +552,7 @@ public class accountClosePage {
 		    	
 
 	    		WebElement	yes=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='Is Recommendation letter uploaded *']"+
-	    				"/following::flt-semantics[@role='radio'][1]")));
+	    				"/following::flt-semantics[1][@role='radio']")));
 	    		Thread.sleep(500);
 	    		js.executeScript("arguments[0].click();", yes);
 		    	
@@ -545,7 +563,7 @@ public class accountClosePage {
 		    	
 
 	    		WebElement	yes=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='Is signature verified *']"+""
-	    									+ "/following::flt-semantics[@role='radio'][1]")));
+	    									+ "/following::flt-semantics[1][@role='radio']")));
 	    		Thread.sleep(500);
 	    		js.executeScript("arguments[0].click();", yes);
 		    	

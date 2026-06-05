@@ -35,10 +35,10 @@ public class KYCFlowTest extends BaseClass {
 		Kyc.selectKYCupdate();
 		
 		Kyc.enterCustomerDetails();
-					
-		Kyc.uploadPassport_FrontPageBtn();
 		
 		Kyc.uploadPassport_BackpageBtn();
+		
+		Kyc.uploadPassport_FrontPageBtn();
 		
 		Kyc.uploadRequestForm_Btn();
 		

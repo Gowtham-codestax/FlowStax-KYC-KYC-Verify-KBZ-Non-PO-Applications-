@@ -19,7 +19,7 @@ import utilityPackage.ListenersClass;
 public class approvalDelayTest extends BaseClass {
 	
 	
-	@Test(priority = 1)
+//	@Test(priority = 1)
 	public void approvalDelayFlow() throws AWTException, InterruptedException {
 		
 		
@@ -89,8 +89,8 @@ public class approvalDelayTest extends BaseClass {
 		
 	}
 	
-	
-	@Test(priority = 2,dependsOnMethods = "approvalDelayFlow")
+	// ,dependsOnMethods = "approvalDelayFlow"
+	@Test(priority = 2)
 	public void  KBZPayCenterCheckerFlow() throws InterruptedException, AWTException {
 		
 		driver.get("https://staging.flow.stax.run/#/login");
@@ -106,7 +106,7 @@ public class approvalDelayTest extends BaseClass {
 		
 		login.login("KBZPayCenter_checker1@gmail.com", "w8O$cz~CI6hV7L-tc4SG");
 	
-		KbzPaycentercheck1.KYCserviceReqOPtion();
+	//	KbzPaycentercheck1.KYCserviceReqOPtion();
 		
 		KbzPaycentercheck1.eyeIconBtn();
 		

@@ -106,7 +106,9 @@ public class KYCPage {
 	    public void  uploadPassport_FrontPageBtn() throws InterruptedException {    
 	    // For Upload Passport front Pag
 	    WebElement	PassportFrontPagebtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//input[@data-semantics-role='text-field'])[6]"))));
-	    PassportFrontPagebtn.click();
+	    js.executeScript("arguments[0].scrollIntoView(true);", PassportFrontPagebtn);
+	 //   PassportFrontPagebtn.click();
+	    js.executeScript("arguments[0].click();", PassportFrontPagebtn);
 	    Thread.sleep(2000);
 	    
 	    		// For Upload Passport front Page Robot Loop 
@@ -141,7 +143,9 @@ public class KYCPage {
 	    	WebElement	PassportBackPagebtn	=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//input[@data-semantics-role='text-field'])[7]")));
 	    	wait.until(ExpectedConditions.visibilityOf(PassportBackPagebtn));
 	    	wait.until(ExpectedConditions.elementToBeClickable(PassportBackPagebtn));
-	    	PassportBackPagebtn.click();
+	    	js.executeScript("arguments[0].scrollIntoView(true);", PassportBackPagebtn);
+	    //	PassportBackPagebtn.click();
+	    	js.executeScript("arguments[0].click();", PassportBackPagebtn);
 	    	Thread.sleep(2000);
 	    	
 	    	// For Upload Passport Back Page Robot Loop 
@@ -149,7 +153,7 @@ public class KYCPage {
 	    				for (int i = 0; i < 9; i++) {
 	    					robot.keyPress(KeyEvent.VK_TAB);
 	    				    robot.keyRelease(KeyEvent.VK_TAB);
-	    				    Thread.sleep(1000);
+	    				    Thread.sleep(500);
 	    				}
 	    								
 	    				// Press ENTER (select file + click Open)
@@ -175,7 +179,9 @@ public class KYCPage {
 	   
 	    
 	    WebElement	Passport_ReqFormBtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//input[@data-semantics-role='text-field'])[8]"))));
-	    Passport_ReqFormBtn.click();
+	    js.executeScript("arguments[0].scrollIntoView(true);", Passport_ReqFormBtn);
+	   // Passport_ReqFormBtn.click();
+	    js.executeScript("arguments[0].click();", Passport_ReqFormBtn);
 	    Thread.sleep(2000);
 	 
 	    	// For Upload Passport Request Form  Robot Loop 
@@ -183,7 +189,7 @@ public class KYCPage {
 	 			for (int i = 0; i < 9; i++) {
 	 				robot.keyPress(KeyEvent.VK_TAB);
 	 			    robot.keyRelease(KeyEvent.VK_TAB);
-	 			    Thread.sleep(1000);
+	 			    Thread.sleep(500);
 	 			}
 	 							
 	 			// Press ENTER (select file + click Open)
