@@ -25,7 +25,6 @@ public class accountCloseTest extends BaseClass{
 		
 		login.login("BranchTeam_KBZPay@gmail.com", "98DjpLo4WVsdI5HILPVI");
 	
-		
 		accClose.kbzPayServiceOPtion();
 		
 		DashBoard.clickAddNew();
@@ -124,16 +123,12 @@ public class accountCloseTest extends BaseClass{
 		
 		accClose.LogOut();	
 		
-		// login.login("BranchTeam_KBZPay@gmail.com", "98DjpLo4WVsdI5HILPVI");
 	
 	}
 	
 	// , dependsOnMethods = "TSOLoginFlow"
 	@Test(priority = 3, dependsOnMethods = "TSOLoginFlow")
 	public void branchLogin() throws AWTException, InterruptedException {
-		
-	//	driver.get("https://staging.flow.stax.run/#/login");
-	//	Thread.sleep(5000);
 		
 		LoginPage login = new LoginPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);
@@ -157,9 +152,6 @@ public class accountCloseTest extends BaseClass{
 	
 	@Test(priority = 4,dependsOnMethods ="branchLogin")
 	public void tsoLogin2() throws AWTException, InterruptedException {
-		
-//		driver.get("https://staging.flow.stax.run/#/login");
-//		Thread.sleep(5000);
 		
 		LoginPage login = new LoginPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);
@@ -186,9 +178,6 @@ public class accountCloseTest extends BaseClass{
 	
 	@Test(priority = 5,dependsOnMethods = "tsoLogin2")
 	public void closingLoopLogin() throws InterruptedException, AWTException {
-		
-	//	driver.get("https://staging.flow.stax.run/#/login");
-	//	Thread.sleep(5000);
 		
 		LoginPage login = new LoginPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);

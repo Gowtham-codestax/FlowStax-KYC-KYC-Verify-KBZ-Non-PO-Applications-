@@ -103,6 +103,28 @@ public class tsoLoginPage {
 	}
 	
 	
+	public void cutomerKYC_Change_Option() throws InterruptedException {
+		
+		By CutomerKYCChangeLocator = By.xpath("//flt-semantics/span[contains(text(),'Customer KYC Change Request')]");
+		wait.until(ExpectedConditions.presenceOfElementLocated(CutomerKYCChangeLocator));
+		Thread.sleep(1000); // Allow Flutter rendering to stabilize
+	
+		
+		// Fetch FRESH reference right before use (not stored between waits)
+		WebElement CustKYCChange = driver.findElement(CutomerKYCChangeLocator);
+
+		js.executeScript("arguments[0].click();", CustKYCChange);
+
+		
+		// PUll
+		By pull = By.xpath("//flt-semantics[@role='button' and .='Pull']");
+		WebElement Pull=wait.until(ExpectedConditions.presenceOfElementLocated(pull));
+		Thread.sleep(500);
+		js.executeScript("arguments[0].click();", Pull);	
+		
+	}
+	
+	
 	
 	 public void resolvebutton() throws InterruptedException {
 		 By ResolveOption_Btn =

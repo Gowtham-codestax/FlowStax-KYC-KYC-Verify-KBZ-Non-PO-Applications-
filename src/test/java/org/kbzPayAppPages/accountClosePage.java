@@ -483,7 +483,7 @@ public class accountClosePage {
 
 			    WebElement reason = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//flt-semantics/span[contains(.,'Reason')]/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
 			    wait.until(ExpectedConditions.elementToBeClickable(reason));
-			//    js.executeScript("arguments[0].scrollIntoView({block:'center'});", reason);
+			    js.executeScript("arguments[0].scrollIntoView({block:'center'});", reason);
 
 			    Thread.sleep(1000);
 			    wait.until(ExpectedConditions.elementToBeClickable(reason));

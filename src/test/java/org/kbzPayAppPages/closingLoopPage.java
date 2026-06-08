@@ -44,8 +44,8 @@ public class closingLoopPage {
 				Thread.sleep(300);	
 				}
 	    	
-	    		WebElement	eyeiconbtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//flt-semantics[@style='position: absolute; overflow: visible; width: 40px; height: 40px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 100, 7.5); pointer-events: all;'])[1]")));
-	    		 js.executeScript("arguments[0].scrollIntoView({block:'center'});", eyeiconbtn);
+	    		WebElement	eyeiconbtn=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//flt-semantics[@role='button' and @style='position: absolute; overflow: visible; width: 40px; height: 40px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 100, 7.5); pointer-events: all;'])[1]")));
+	    		// js.executeScript("arguments[0].scrollIntoView({block:'center'});", eyeiconbtn);
 	    		 Thread.sleep(1000);
 	    		 js.executeScript("arguments[0].click();", eyeiconbtn);
 	    	
@@ -196,12 +196,15 @@ public class closingLoopPage {
 	    
 	    public void downloadPDFButton() throws InterruptedException {
 	    	
-	    	By DownLoadBtn=By.xpath("(//flt-semantics[@role='button'])[10]");
+	    	By DownLoadBtn=By.xpath("//flt-semantics[@role='button' and @style='position: absolute; overflow: visible; width: 40px; height: 35px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 1002.4, 92.5); pointer-events: all; z-index: 6;']");
 	    	wait.until(ExpectedConditions.presenceOfElementLocated(DownLoadBtn));
 	    	Thread.sleep(1000);
 	    	
-	    	WebElement donloadPdfbtn=driver.findElement(DownLoadBtn);
-	    	js.executeScript("arguments[0].click();", donloadPdfbtn);
+	    	WebElement downloadPdfbtn=driver.findElement(DownLoadBtn);
+	    //	js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'})", downloadPdfbtn);
+	    	Thread.sleep(2000);
+	    //	downloadPdfbtn.click();
+	    	js.executeScript("arguments[0].click();", downloadPdfbtn);
 	    	
 	    	
 	    }

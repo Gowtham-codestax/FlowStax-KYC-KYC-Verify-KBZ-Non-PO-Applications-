@@ -7,20 +7,28 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import com.epam.healenium.SelfHealingDriver;
 
 import factory.DriverFactory;
 
 public class BaseClass {
 	
-	public WebDriver driver;
+	
+	protected SelfHealingDriver driver;
+//	public WebDriver driver;
+	 
 	@BeforeClass
     public void setup() {
 		
 		ChromeOptions option= new ChromeOptions();
-		
 	//	option.addArguments("--headless=new");
 		
-        driver = new ChromeDriver(option);
+		WebDriver webDriver = new ChromeDriver(option);
+		driver = SelfHealingDriver.create(webDriver);  // Initialize self-healing
+		
+		
+		
+   //     driver = new ChromeDriver(option);
   
         DriverFactory.setDriver(driver);
         
@@ -37,8 +45,11 @@ public class BaseClass {
         if (driver != null) {
         	
         	DriverFactory.getDriver().quit();
-        	DriverFactory.unload();
-            
+       // 	DriverFactory.unload();
+        	
+            driver.getDelegate().quit();
+         
+            DriverFactory.unload();   
         }
     }
 

@@ -21,8 +21,9 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangePage {
     WebDriverWait wait;
     JavascriptExecutor js;
     Actions mouse;
-    Robot robot;
-	
+    Robot robot;									
+    				
+    	
     public AgentMerchant_and_RedAppSM_KYC_ChangePage(WebDriver driver) throws AWTException,  InterruptedException {
 		this.driver = driver;
     	PageFactory.initElements(driver,this);
@@ -176,7 +177,7 @@ public void  redAppSimtAccType() throws InterruptedException {
 		  
 		 	WebElement	oldKYCTxtField=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//flt-semantics/span[.='Old KYC Data']/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
 	    	wait.until(ExpectedConditions.elementToBeClickable(oldKYCTxtField));
-	    	js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth',block: 'center'});", oldKYCTxtField);
+	    	// js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth',block: 'center'});", oldKYCTxtField);
 	    	Thread.sleep(1500);
 	    	oldKYCTxtField.click();
 	    	Thread.sleep(300);
@@ -191,7 +192,7 @@ public void  redAppSimtAccType() throws InterruptedException {
 		  
 		 	WebElement	NewTxtField=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//flt-semantics/span[.='New KYC Data *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
 	    	wait.until(ExpectedConditions.elementToBeClickable(NewTxtField));
-	    	js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth',block: 'center'});", NewTxtField);
+	//    	js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth',block: 'center'});", NewTxtField);
 	    	Thread.sleep(1500);
 	    	NewTxtField.click();
 	    	Thread.sleep(300);
