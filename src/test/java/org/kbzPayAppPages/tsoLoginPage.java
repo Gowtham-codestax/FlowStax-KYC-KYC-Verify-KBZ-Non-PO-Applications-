@@ -124,6 +124,23 @@ public class tsoLoginPage {
 		
 	}
 	
+	public void MABR_KYC_Change_Option() throws InterruptedException {
+		
+		By MABR_KYC_ChangeLocator = By.xpath("//flt-semantics/span[contains(text(),'MABR KYC Change')]");
+		wait.until(ExpectedConditions.presenceOfElementLocated(MABR_KYC_ChangeLocator));
+		Thread.sleep(1000); // Allow Flutter rendering to stabilize
+	
+		// Fetch FRESH reference right before use (not stored between waits)
+		WebElement MABRKYCChange = driver.findElement(MABR_KYC_ChangeLocator);
+		js.executeScript("arguments[0].click();", MABRKYCChange);
+		
+		// PUll
+		By pull = By.xpath("//flt-semantics[@role='button' and .='Pull']");
+		WebElement Pull=wait.until(ExpectedConditions.presenceOfElementLocated(pull));
+		Thread.sleep(500);
+		js.executeScript("arguments[0].click();", Pull);	
+		
+	}
 	
 	
 	 public void resolvebutton() throws InterruptedException {

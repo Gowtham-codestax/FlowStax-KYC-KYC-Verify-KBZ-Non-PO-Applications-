@@ -224,6 +224,9 @@ public class Customer_Kyc_ChangeReqPage {
 				Thread.sleep(500);
 				
 			}
+			
+			
+			
 			 public void address_TxtField() throws InterruptedException {
 				  
 				 	WebElement	Addrestxtfeild=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//flt-semantics/span[.='Address *']/following::flt-semantics[1]/textarea[@data-semantics-role='text-field']")));
@@ -344,12 +347,12 @@ public class Customer_Kyc_ChangeReqPage {
 				 			for (int i = 0; i < 9; i++) {
 				 			    robot.keyPress(KeyEvent.VK_TAB);
 				 			    robot.keyRelease(KeyEvent.VK_TAB);
-				 			    Thread.sleep(300);
+				 			    Thread.sleep(200);
 				 			}
 				 			// Press ENTER (select file + click Open)
 				 			robot.keyPress(KeyEvent.VK_ENTER);
 				 			robot.keyRelease(KeyEvent.VK_ENTER);
-				 			Thread.sleep(2000);
+				 			Thread.sleep(1100);
 				 			// 🔹 1 TAB (move to Open button)
 				 			robot.keyPress(KeyEvent.VK_TAB);
 				 			robot.keyRelease(KeyEvent.VK_TAB);
@@ -377,12 +380,12 @@ public class Customer_Kyc_ChangeReqPage {
 				 			for (int i = 0; i < 9; i++) {
 				 			    robot.keyPress(KeyEvent.VK_TAB);
 				 			    robot.keyRelease(KeyEvent.VK_TAB);
-				 			    Thread.sleep(300);
+				 			    Thread.sleep(200);
 				 			}
 				 			// Press ENTER (select file + click Open)
 				 			robot.keyPress(KeyEvent.VK_ENTER);
 				 			robot.keyRelease(KeyEvent.VK_ENTER);
-				 			Thread.sleep(2000);
+				 			Thread.sleep(1100);
 				 			// 🔹 1 TAB (move to Open button)
 				 			robot.keyPress(KeyEvent.VK_TAB);
 				 			robot.keyRelease(KeyEvent.VK_TAB);
@@ -465,12 +468,12 @@ public class Customer_Kyc_ChangeReqPage {
 				 			for (int i = 0; i < 9; i++) {
 				 			    robot.keyPress(KeyEvent.VK_TAB);
 				 			    robot.keyRelease(KeyEvent.VK_TAB);
-				 			    Thread.sleep(500);
+				 			    Thread.sleep(200);
 				 			}
 				 			// Press ENTER (select file + click Open)
 				 			robot.keyPress(KeyEvent.VK_ENTER);
 				 			robot.keyRelease(KeyEvent.VK_ENTER);
-				 			Thread.sleep(2000);
+				 			Thread.sleep(1100);
 				 			// 🔹 1 TAB (move to Open button)
 				 			robot.keyPress(KeyEvent.VK_TAB);
 				 			robot.keyRelease(KeyEvent.VK_TAB);
@@ -499,12 +502,12 @@ public class Customer_Kyc_ChangeReqPage {
 				 			for (int i = 0; i < 9; i++) {
 				 			    robot.keyPress(KeyEvent.VK_TAB);
 				 			    robot.keyRelease(KeyEvent.VK_TAB);
-				 			    Thread.sleep(500);
+				 			    Thread.sleep(200);
 				 			}
 				 			// Press ENTER (select file + click Open)
 				 			robot.keyPress(KeyEvent.VK_ENTER);
 				 			robot.keyRelease(KeyEvent.VK_ENTER);
-				 			Thread.sleep(2000);
+				 			Thread.sleep(1100);
 				 			// 🔹 1 TAB (move to Open button)
 				 			robot.keyPress(KeyEvent.VK_TAB);
 				 			robot.keyRelease(KeyEvent.VK_TAB);
@@ -681,12 +684,12 @@ public class Customer_Kyc_ChangeReqPage {
 				  
 
 				    public void EyeIconbtnClick() throws InterruptedException {
-				    	Thread.sleep(5000);
+				    	Thread.sleep(6500);
 				    	for (int i = 0; i <40; i++) {
 							
 							robot.keyPress(KeyEvent.VK_TAB);																										
 							robot.keyRelease(KeyEvent.VK_TAB);
-							Thread.sleep(300);	
+							Thread.sleep(200);	
 							}
 				    	
 				    		WebElement	eyeiconbtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//flt-semantics[@style='position: absolute; overflow: visible; width: 40px; height: 40px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 100, 7.5); pointer-events: all;'])[1]")));
@@ -713,7 +716,8 @@ public class Customer_Kyc_ChangeReqPage {
 						BranhcPhnnumField.sendKeys(Keys.BACK_SPACE);
 			    		Thread.sleep(200);
 			    		BranhcPhnnumField.click();
-			    		BranhcPhnnumField.sendKeys("67"+System.currentTimeMillis() % 1000000L);
+			    		
+			    		BranhcPhnnumField.sendKeys( "67" + String.format("%07d", System.currentTimeMillis() % 10000000L));
 			    }
 			    
 				    
@@ -782,7 +786,7 @@ public class Customer_Kyc_ChangeReqPage {
 				    
 				    public void downloadPDFButton() throws InterruptedException {
 				    	
-				    	By DownLoadBtn=By.xpath("(//flt-semantics[@role='button'])[12]");
+				    	By DownLoadBtn=By.xpath("//flt-semantics[@role='button' and @style='position: absolute; overflow: visible; width: 40px; height: 35px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 901.6, 92.5); pointer-events: all; z-index: 6;']");
 				    	wait.until(ExpectedConditions.presenceOfElementLocated(DownLoadBtn));
 				    	Thread.sleep(1000);
 				    	

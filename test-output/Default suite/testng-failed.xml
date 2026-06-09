@@ -3,19 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testsScriptKBZPayService.CustomerKycChangeReqTest">
+      <class name="testsScriptKBZPayService.MABR_KYC_ChangeTest">
         <methods>
-          <include name="TsoLoginFlow2"/>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="closingLoopLogin2"/>
-          <include name="Customer_KYC_ChangeReqFlowTest"/>
-          <include name="closingLoopLogin"/>
-          <include name="tsoLoginFlow"/>
-          <include name="TsoLoginFlow3"/>
           <include name="branchLoginFlow"/>
+          <include name="closingLoopLogin2"/>
+          <include name="TsoLoginFlow3"/>
+          <include name="MABR_KYC_ChangeFlowTest"/>
+          <include name="closingLoopLogin"/>
+          <include name="TsoLoginFlow2"/>
+          <include name="tsoLoginFlow"/>
         </methods>
-      </class> <!-- testsScriptKBZPayService.CustomerKycChangeReqTest -->
+      </class> <!-- testsScriptKBZPayService.MABR_KYC_ChangeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

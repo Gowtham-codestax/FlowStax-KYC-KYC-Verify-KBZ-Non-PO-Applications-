@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="6" parallel="classes" name="Failed suite [Parallel Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="6" parallel="classes" name="Flow Stax Test(failed)">
+<suite thread-count="2" parallel="classes" name="Failed suite [Parallel Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utilityPackage.ListenersClass"/>
+  </listeners>
+  <test thread-count="2" parallel="classes" name="Flow Stax Test- KBZPAY Parallel Execution(failed)">
     <classes>
-      <class name="testsScripts.KYCFlowTest">
+      <class name="testsScriptKBZPayService.CustomerKycChangeReqTest">
         <methods>
           <include name="setup"/>
+          <include name="TsoLoginFlow2"/>
           <include name="tearDown"/>
-          <include name="branchFlow"/>
-          <include name="Kyc2Flow"/>
-          <include name="kycFlowTest"/>
-          <include name="Kyc1Flow"/>
-        </methods>
-      </class> <!-- testsScripts.KYCFlowTest -->
-      <class name="testsScriptKBZPayService.accountCloseTest">
-        <methods>
-          <include name="tsoLogin2"/>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="TSOLoginFlow"/>
+          <include name="closingLoopLogin2"/>
+          <include name="Customer_KYC_ChangeReqFlowTest"/>
           <include name="closingLoopLogin"/>
-          <include name="AccountCloseTest"/>
-          <include name="branchLogin"/>
+          <include name="tsoLoginFlow"/>
+          <include name="TsoLoginFlow3"/>
+          <include name="branchLoginFlow"/>
         </methods>
-      </class> <!-- testsScriptKBZPayService.accountCloseTest -->
+      </class> <!-- testsScriptKBZPayService.CustomerKycChangeReqTest -->
+      <class name="testsScriptKBZPayService.AgentMerchant_and_RedAppSM_KYC_ChangeTest">
+        <methods>
+          <include name="closingLoopLogin2"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="AgemtMerchantand_RedAppFlowTest"/>
+          <include name="TSOLoginFlow"/>
+          <include name="branchLoginFlow"/>
+          <include name="TsoLoginFlow2"/>
+          <include name="closingLoopLogin"/>
+          <include name="TsoLoginFlow3"/>
+        </methods>
+      </class> <!-- testsScriptKBZPayService.AgentMerchant_and_RedAppSM_KYC_ChangeTest -->
     </classes>
-  </test> <!-- Flow Stax Test(failed) -->
+  </test> <!-- Flow Stax Test- KBZPAY Parallel Execution(failed) -->
 </suite> <!-- Failed suite [Parallel Suite] -->

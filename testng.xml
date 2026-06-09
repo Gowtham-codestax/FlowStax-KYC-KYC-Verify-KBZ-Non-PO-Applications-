@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Parallel Suite" parallel="classes" thread-count="6" >
+<suite name="Parallel Suite" parallel="classes" thread-count="2" >
 
-  <test name="Flow Stax Test">
-  
+  <test name="Flow Stax Test- KBZPAY Parallel Execution">
     <classes>
     
-	  <class name="testsScriptKBZPayService.accountCloseTest"/> 
-	  <class name="testsScripts.KYCFlowTest"/>
+	  <class name="testsScriptKBZPayService.CustomerKycChangeReqTest"/> 
+	  <class name="testsScriptKBZPayService.AgentMerchant_and_RedAppSM_KYC_ChangeTest"/>
 			
     </classes>
-    
   </test> <!-- Test -->
   
   <listeners>
     <listener class-name=
-    "listeners.FailureListener"/>
+    "utilityPackage.ListenersClass"/>
 </listeners>
 
 </suite> <!-- Suite -->

@@ -1,8 +1,9 @@
 package testsScriptKBZPayService;
-
 import java.awt.AWTException;
 import org.genricPackage.BaseClass;
 import org.kbzPayAppPages.AgentMerchant_and_RedAppSM_KYC_ChangePage;
+import org.kbzPayAppPages.Customer_Kyc_ChangeReqPage;
+import org.kbzPayAppPages.MABR_KYC_ChangePage;
 import org.kbzPayAppPages.accountClosePage;
 import org.kbzPayAppPages.closingLoopPage;
 import org.kbzPayAppPages.tsoLoginPage;
@@ -10,86 +11,71 @@ import org.pages.DashBoardPage;
 import org.pages.LoginPage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
 import utilityPackage.ListenersClass;
 
+
 @Listeners(ListenersClass.class)
-public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
+public class MABR_KYC_ChangeTest extends BaseClass {
 	
 	@Test(priority = 1)
-	public void AgemtMerchantand_RedAppFlowTest() throws InterruptedException, AWTException {
-		
+	public void MABR_KYC_ChangeFlowTest() throws AWTException, InterruptedException {
+
 		LoginPage login = new LoginPage(driver);
 		DashBoardPage DashBoard= new DashBoardPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);
 		AgentMerchant_and_RedAppSM_KYC_ChangePage agent_RedApp= new AgentMerchant_and_RedAppSM_KYC_ChangePage(driver);
+		Customer_Kyc_ChangeReqPage CusKYC = new Customer_Kyc_ChangeReqPage(driver);
+		MABR_KYC_ChangePage MABRKYC= new MABR_KYC_ChangePage(driver);
 		
 		login.login("BranchTeam_KBZPay@gmail.com", "98DjpLo4WVsdI5HILPVI");
 		
 		accClose.kbzPayServiceOPtion();
-	
+
 		DashBoard.clickAddNew();
 		
 		agent_RedApp.selectType();
 		
-		agent_RedApp.AgentMerchant_RedAppSM_KYC_ChangeOption();
+		MABRKYC.mabr_KYC_ChangeOption();
 		
 		accClose.branchPhnnUmberField();
 		
 		accClose.cusName();
 		
-		accClose.passportIDproof();
+	/*	
+		MABRKYC.nrcIDproof();
 		
-		accClose.passportNumField();
+		MABRKYC.nrcNumberFields();
 		
-		accClose.uploadNewPassport_PageBtn();
+		MABRKYC.uploadNrcFront_PageBtn();
 		
-		accClose.uploadOldPassport_PageBtn();
+		MABRKYC.uploadNRC_Back_PageBtn();
 		
+		*/
+			
+		CusKYC.passportIDproof();
+		
+		CusKYC.passportNumField();
+		
+		CusKYC.uploadNewPassport_PageBtn();
+		
+		CusKYC.uploadOldPassport_PageBtn();
+
 		accClose.phoneNumField();
 		
-		accClose.reasonTxtFiled();
-		
-		accClose.DateOfBirth();
-		
-		agent_RedApp.accountType();
-		
-		agent_RedApp.agentAccType();
-		
-		agent_RedApp.agentKYC_changeType();
-		
-		agent_RedApp.SelectAllCheckBox_KYC_changeType_Agent();
+		MABRKYC.DateOfBirth();
 		
 		agent_RedApp.kycChangeFormUpload_Btn();
 		
-		agent_RedApp.oldKycDataTxtField();
+		MABRKYC.UploadNewUserFace();
 		
-		agent_RedApp.newycDataTxtField();
-		
-		agent_RedApp.shopFrontAndBack_Upload_Btn();
-		
-		agent_RedApp.businnesLicence_Upload_Btn();
-		
-		agent_RedApp.shortCodeTxtField();
-		
-		agent_RedApp.shopName_TxtField();
-		
-		agent_RedApp.address_TxtField();
-		
-		agent_RedApp.customerFace_Upload_Btn();
-		
-		agent_RedApp.currentBalanceTXTField();
-		
-		agent_RedApp.qalStatusDD();
-		
-		agent_RedApp.yesOption();
-		
-		agent_RedApp.additionalDoc_Upload_Btn();
+		accClose.reasonTxtFiled();
 		
 		agent_RedApp.NextButton();
 		
-		agent_RedApp.EyeIconbtnClick();
+		MABRKYC.EyeIconbtnClick();
 		
-		agent_RedApp.EditIconbtnClick();
+		CusKYC.EditIconbtnClick();
 		
 		accClose.NextButton();
 		
@@ -108,13 +94,12 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 		accClose.MenuButton();
 		
 		accClose.LogOut();
-			
+
 	}
 	
-	//  ,dependsOnMethods = "AgemtMerchantand_RedAppFlowTest"
-	@Test(priority = 2 )
-	public void TSOLoginFlow() throws AWTException, InterruptedException {
-		
+	// , dependsOnMethods = "MABR_KYC_ChangeFlowTest"
+	@Test(priority = 2 , dependsOnMethods = "MABR_KYC_ChangeFlowTest")
+	public void tsoLoginFlow() throws AWTException, InterruptedException {
 		
 		LoginPage login = new LoginPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);	
@@ -124,7 +109,7 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 		
 		tso.selectKYCUpdate();
 		
-		tso.agentMerchantandRedApp_Option();;
+		tso.MABR_KYC_Change_Option();;
 		
 		tso.PullOptionButon();
 		
@@ -139,11 +124,12 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 		accClose.MenuButton();
 		
 		accClose.LogOut();	
-		
+					
 	}
 	
-	// , dependsOnMethods = "TSOLoginFlow"
-	@Test(priority = 3 ) 
+	
+	// , dependsOnMethods = "tsoLoginFlow"
+	@Test(priority = 3  , dependsOnMethods = "tsoLoginFlow")
 	public void branchLoginFlow() throws InterruptedException, AWTException {
 		
 		LoginPage login = new LoginPage(driver);
@@ -166,11 +152,10 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 		
 	}
 	
-	// ,dependsOnMethods = "branchLoginFlow"
-	@Test(priority = 4 ,dependsOnMethods = "branchLoginFlow")
+	//  , dependsOnMethods = "branchLoginFlow"
+	@Test(priority = 4  , dependsOnMethods = "branchLoginFlow")
 	public void TsoLoginFlow2() throws AWTException, InterruptedException {
 		
-
 		LoginPage login = new LoginPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);	
 		tsoLoginPage tso= new tsoLoginPage(driver);
@@ -191,7 +176,7 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 		
 	}
 	
-	// , dependsOnMethods = "TsoLoginFlow2"
+//  , dependsOnMethods = "TsoLoginFlow2"
 	@Test(priority = 5 , dependsOnMethods = "TsoLoginFlow2")
 	public void closingLoopLogin() throws AWTException, InterruptedException {
 		
@@ -215,11 +200,10 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 		
 		accClose.LogOut();	
 		
-		
 	}
-	
-	// ,dependsOnMethods = "closingLoopLogin"
-	@Test(priority = 6 ,dependsOnMethods = "closingLoopLogin")
+		
+//  , dependsOnMethods = "closingLoopLogin"
+	@Test(priority = 6 , dependsOnMethods = "closingLoopLogin" )
 	public void TsoLoginFlow3() throws AWTException, InterruptedException {
 		
 		LoginPage login = new LoginPage(driver);
@@ -241,34 +225,36 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 		accClose.LogOut();	
 		
 	}
-	
+		
 	// ,dependsOnMethods = "TsoLoginFlow3"
-	@Test(priority = 7 ,dependsOnMethods = "TsoLoginFlow3")
-	public void closingLoopLogin2() throws AWTException, InterruptedException {
-		
-		LoginPage login = new LoginPage(driver);
-		accountClosePage accClose= new accountClosePage(driver);
-		closingLoopPage closingLoop= new closingLoopPage(driver);
-		
-		login.login("closeloopteam@gmail.com", "Nw5ZQMJNx9uN85AJb0n0");
-		
-		closingLoop.EyeIconbtnClick();
-		
-		closingLoop.closebutton();
-		
-		closingLoop.UpdateStage_Commentsection();
-		
-		accClose.NextButton();
-		
-		closingLoop.EyeIconbtnClick();
-		
-		closingLoop.downloadPDFButton();
-				
-		accClose.MenuButton();
-		
-		accClose.LogOut();	
+		@Test(priority = 7,dependsOnMethods = "TsoLoginFlow3" )
+		public void closingLoopLogin2() throws AWTException, InterruptedException {
 			
-	}
+			LoginPage login = new LoginPage(driver);
+			accountClosePage accClose= new accountClosePage(driver);
+			closingLoopPage closingLoop= new closingLoopPage(driver);
+			Customer_Kyc_ChangeReqPage CusKYC = new Customer_Kyc_ChangeReqPage(driver);
+			MABR_KYC_ChangePage MABRKYC= new MABR_KYC_ChangePage(driver);
+			
+			login.login("closeloopteam@gmail.com", "Nw5ZQMJNx9uN85AJb0n0");
+			
+			closingLoop.EyeIconbtnClick();
+			
+			closingLoop.closebutton();
+			
+			closingLoop.UpdateStage_Commentsection();
+			
+			accClose.NextButton();
+			
+			closingLoop.EyeIconbtnClick();
+			
+			MABRKYC.downloadPDFButton();
+					
+			accClose.MenuButton();
+			
+			accClose.LogOut();	
+				
+		}
 	
-	
+
 }

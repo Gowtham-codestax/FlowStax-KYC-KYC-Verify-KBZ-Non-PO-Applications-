@@ -6,14 +6,15 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
 import com.epam.healenium.SelfHealingDriver;
+
 
 import factory.DriverFactory;
 
 public class BaseClass {
 	
-	
+	 // ThreadLocal: Each thread gets its own driver instance
+    private static ThreadLocal<SelfHealingDriver> driverThreadLocal = new ThreadLocal<SelfHealingDriver>();
 	protected SelfHealingDriver driver;
 //	public WebDriver driver;
 	 
@@ -29,6 +30,7 @@ public class BaseClass {
 		
 		
    //     driver = new ChromeDriver(option);
+		
   
         DriverFactory.setDriver(driver);
         
@@ -37,6 +39,9 @@ public class BaseClass {
         DriverFactory.getDriver().manage().timeouts() .implicitlyWait(Duration.ofSeconds(20));
 
         DriverFactory.getDriver().get("https://staging.flow.stax.run/#/login");
+        
+		
+		
     }
 
     @AfterClass					
@@ -44,11 +49,12 @@ public class BaseClass {
 
         if (driver != null) {
         	
-        	DriverFactory.getDriver().quit();
+       // 	DriverFactory.getDriver().quit();
        // 	DriverFactory.unload();
         	
             driver.getDelegate().quit();
-         
+       //     driverThreadLocal.remove();
+          
             DriverFactory.unload();   
         }
     }

@@ -142,7 +142,7 @@ public class CustomerKycChangeReqTest extends BaseClass {
 		
 		login.login("BranchTeam_KBZPay@gmail.com", "98DjpLo4WVsdI5HILPVI");
 		
-		accClose.kbzPayServiceOPtion();
+	//	accClose.kbzPayServiceOPtion();
 		
 		agent_RedApp.EyeIconbtnClick();
 		

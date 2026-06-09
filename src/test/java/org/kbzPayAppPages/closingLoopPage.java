@@ -41,7 +41,7 @@ public class closingLoopPage {
 				
 				robot.keyPress(KeyEvent.VK_TAB);																										
 				robot.keyRelease(KeyEvent.VK_TAB);
-				Thread.sleep(300);	
+				Thread.sleep(200);	
 				}
 	    	
 	    		WebElement	eyeiconbtn=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//flt-semantics[@role='button' and @style='position: absolute; overflow: visible; width: 40px; height: 40px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 100, 7.5); pointer-events: all;'])[1]")));
