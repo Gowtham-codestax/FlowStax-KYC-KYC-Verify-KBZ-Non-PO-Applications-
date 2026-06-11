@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/6</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jun 09 15:47:21 IST 2026</td>
+<td>Started on:</td><td>Thu Jun 11 17:20:17 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>276 seconds (276293 ms)</td>
+<tr><td>Total time:</td><td>187 seconds (187024 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,13 +77,36 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='testsScriptKBZPayService.MABR_KYC_ChangeTest.MABR_KYC_ChangeFlowTest()'><b>MABR_KYC_ChangeFlowTest</b><br>Test class: testsScriptKBZPayService.MABR_KYC_ChangeTest</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //flt-semantics[@role=&apos;button&apos; and contains(text(),&apos;Assign to TSO&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;flt-semantics id=&quot;flt-semantic-node-814&quot; role=&quot;button&quot; tabindex=&quot;0&quot; flt-tappable=&quot;&quot; style=&quot;position: absolute; overflow: visible; width: 140px; height: 28px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 1339, 565.6); pointer-events: none; z-index: 10;&quot; aria-label=&quot;Assign to TSO
+Assign to TSO&quot;&gt;...&lt;/flt-semantics&gt; is not clickable at point (1409, 579). Other element would receive the click: &lt;flutter-view flt-view-id=&quot;0&quot; tabindex=&quot;0&quot; style=&quot;position: absolute; inset: 0px; width: 1536px; height: 677.6px;&quot;&gt;...&lt;/flutter-view&gt;
+  (Session info: chrome=148.0.7778.217)
 Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
-Driver info: jdk.proxy2.$Proxy18
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at org.kbzPayAppPages.accountClosePage.assignToTSOBtn(accountClosePage.java:540)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9fc4cb378dab54a117084c6d80b4c0b5, clickElement {id=f.3F54C427A3DEAF5C0973E6DC22F9E20E.d.3FB71290C6BD37060FD984FE69DD61B5.e.508}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63936}, goog:processID: 5936, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63936/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9fc4cb378dab54a117084c6d80b4c0b5)] -&gt; xpath: //flt-semantics[@role=&apos;button&apos; and contains(text(),&apos;Assign to TSO&apos;)]]
+Session ID: 9fc4cb378dab54a117084c6d80b4c0b5
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at jdk.internal.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at com.epam.healenium.handlers.proxy.WebElementProxyHandler.invoke(WebElementProxyHandler.java:68)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.click(Unknown Source)
+	at org.kbzPayAppPages.accountClosePage.assignToTSOBtn(accountClosePage.java:566)
 	at testsScriptKBZPayService.MABR_KYC_ChangeTest.MABR_KYC_ChangeFlowTest(MABR_KYC_ChangeTest.java:82)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -113,14 +136,37 @@ Driver info: jdk.proxy2.$Proxy18
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1375633173", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1375633173'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //flt-semantics[@role=&apos;button&apos; and contains(text(),&apos;Assign to TSO&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
+</pre></div><a href='#' onClick='toggleBox("stack-trace668637515", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace668637515'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;flt-semantics id=&quot;flt-semantic-node-814&quot; role=&quot;button&quot; tabindex=&quot;0&quot; flt-tappable=&quot;&quot; style=&quot;position: absolute; overflow: visible; width: 140px; height: 28px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 1339, 565.6); pointer-events: none; z-index: 10;&quot; aria-label=&quot;Assign to TSO
+Assign to TSO&quot;&gt;...&lt;/flt-semantics&gt; is not clickable at point (1409, 579). Other element would receive the click: &lt;flutter-view flt-view-id=&quot;0&quot; tabindex=&quot;0&quot; style=&quot;position: absolute; inset: 0px; width: 1536px; height: 677.6px;&quot;&gt;...&lt;/flutter-view&gt;
+  (Session info: chrome=148.0.7778.217)
 Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
-Driver info: jdk.proxy2.$Proxy18
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at org.kbzPayAppPages.accountClosePage.assignToTSOBtn(accountClosePage.java:540)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9fc4cb378dab54a117084c6d80b4c0b5, clickElement {id=f.3F54C427A3DEAF5C0973E6DC22F9E20E.d.3FB71290C6BD37060FD984FE69DD61B5.e.508}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63936}, goog:processID: 5936, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63936/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9fc4cb378dab54a117084c6d80b4c0b5)] -&gt; xpath: //flt-semantics[@role=&apos;button&apos; and contains(text(),&apos;Assign to TSO&apos;)]]
+Session ID: 9fc4cb378dab54a117084c6d80b4c0b5
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at jdk.internal.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at com.epam.healenium.handlers.proxy.WebElementProxyHandler.invoke(WebElementProxyHandler.java:68)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.click(Unknown Source)
+	at org.kbzPayAppPages.accountClosePage.assignToTSOBtn(accountClosePage.java:566)
 	at testsScriptKBZPayService.MABR_KYC_ChangeTest.MABR_KYC_ChangeFlowTest(MABR_KYC_ChangeTest.java:82)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -151,7 +197,7 @@ Driver info: jdk.proxy2.$Proxy18
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>269</td>
+<td>180</td>
 <td>testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
@@ -162,54 +208,6 @@ Driver info: jdk.proxy2.$Proxy18
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
-<tr>
-<td title='testsScriptKBZPayService.MABR_KYC_ChangeTest.tsoLoginFlow()'><b>tsoLoginFlow</b><br>Test class: testsScriptKBZPayService.MABR_KYC_ChangeTest</td>
-<td><div><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.tsoLoginFlow() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
-[testsScriptKBZPayService.MABR_KYC_ChangeTest.MABR_KYC_ChangeFlowTest() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1513945208", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1513945208'><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.tsoLoginFlow() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
-[testsScriptKBZPayService.MABR_KYC_ChangeTest.MABR_KYC_ChangeFlowTest() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de</td></tr>
 <tr>
 <td title='testsScriptKBZPayService.MABR_KYC_ChangeTest.branchLoginFlow()'><b>branchLoginFlow</b><br>Test class: testsScriptKBZPayService.MABR_KYC_ChangeTest</td>
 <td><div><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.branchLoginFlow() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
@@ -233,8 +231,8 @@ Driver info: jdk.proxy2.$Proxy18
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1636899143", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1636899143'><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.branchLoginFlow() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
+</pre></div><a href='#' onClick='toggleBox("stack-trace17203574", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace17203574'><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.branchLoginFlow() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
 [testsScriptKBZPayService.MABR_KYC_ChangeTest.tsoLoginFlow() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de]
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
@@ -281,105 +279,9 @@ Driver info: jdk.proxy2.$Proxy18
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace457218681", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace457218681'><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.closingLoopLogin() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
+</pre></div><a href='#' onClick='toggleBox("stack-trace374740213", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace374740213'><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.closingLoopLogin() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
 [testsScriptKBZPayService.MABR_KYC_ChangeTest.TsoLoginFlow2() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de</td></tr>
-<tr>
-<td title='testsScriptKBZPayService.MABR_KYC_ChangeTest.TsoLoginFlow3()'><b>TsoLoginFlow3</b><br>Test class: testsScriptKBZPayService.MABR_KYC_ChangeTest</td>
-<td><div><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.TsoLoginFlow3() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
-[testsScriptKBZPayService.MABR_KYC_ChangeTest.closingLoopLogin() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace481952545", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace481952545'><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.TsoLoginFlow3() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
-[testsScriptKBZPayService.MABR_KYC_ChangeTest.closingLoopLogin() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div></td>
-<td>0</td>
-<td>testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de</td></tr>
-<tr>
-<td title='testsScriptKBZPayService.MABR_KYC_ChangeTest.TsoLoginFlow2()'><b>TsoLoginFlow2</b><br>Test class: testsScriptKBZPayService.MABR_KYC_ChangeTest</td>
-<td><div><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.TsoLoginFlow2() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
-[testsScriptKBZPayService.MABR_KYC_ChangeTest.branchLoginFlow() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de]
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace768413249", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace768413249'><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.TsoLoginFlow2() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
-[testsScriptKBZPayService.MABR_KYC_ChangeTest.branchLoginFlow() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de]
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -425,9 +327,153 @@ Driver info: jdk.proxy2.$Proxy18
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1982468278", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1982468278'><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.closingLoopLogin2() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
+</pre></div><a href='#' onClick='toggleBox("stack-trace272406527", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace272406527'><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.closingLoopLogin2() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
 [testsScriptKBZPayService.MABR_KYC_ChangeTest.TsoLoginFlow3() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de</td></tr>
+<tr>
+<td title='testsScriptKBZPayService.MABR_KYC_ChangeTest.tsoLoginFlow()'><b>tsoLoginFlow</b><br>Test class: testsScriptKBZPayService.MABR_KYC_ChangeTest</td>
+<td><div><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.tsoLoginFlow() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
+[testsScriptKBZPayService.MABR_KYC_ChangeTest.MABR_KYC_ChangeFlowTest() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1305669460", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1305669460'><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.tsoLoginFlow() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
+[testsScriptKBZPayService.MABR_KYC_ChangeTest.MABR_KYC_ChangeFlowTest() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de</td></tr>
+<tr>
+<td title='testsScriptKBZPayService.MABR_KYC_ChangeTest.TsoLoginFlow2()'><b>TsoLoginFlow2</b><br>Test class: testsScriptKBZPayService.MABR_KYC_ChangeTest</td>
+<td><div><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.TsoLoginFlow2() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
+[testsScriptKBZPayService.MABR_KYC_ChangeTest.branchLoginFlow() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1903728000", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1903728000'><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.TsoLoginFlow2() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
+[testsScriptKBZPayService.MABR_KYC_ChangeTest.branchLoginFlow() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de</td></tr>
+<tr>
+<td title='testsScriptKBZPayService.MABR_KYC_ChangeTest.TsoLoginFlow3()'><b>TsoLoginFlow3</b><br>Test class: testsScriptKBZPayService.MABR_KYC_ChangeTest</td>
+<td><div><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.TsoLoginFlow3() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
+[testsScriptKBZPayService.MABR_KYC_ChangeTest.closingLoopLogin() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1527317172", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1527317172'><pre>java.lang.Throwable: Method testsScriptKBZPayService.MABR_KYC_ChangeTest.TsoLoginFlow3() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de depends on not successfully finished methods 
+[testsScriptKBZPayService.MABR_KYC_ChangeTest.closingLoopLogin() on instance testsScriptKBZPayService.MABR_KYC_ChangeTest@1d8bd0de]
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)

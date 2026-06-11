@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Parallel Execution of [ KBZPay Account Close Flow ] and [KYC Verify Cutomer Urgent Flow ]- Automation Results</title>
+<title>KBZ PAY - Automation Results</title>
 <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
 <link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">FlowStax Automation Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Jun 9, 2026 03:47:21 pm</span></a>
+<a href="#"><span class="badge badge-primary">Jun 11, 2026 05:20:17 pm</span></a>
 </li>
 </ul>
 </div>
@@ -87,7 +87,7 @@
           <div class="test-detail">
             <p class="name">MABR_KYC_ChangeFlowTest</p>
             <p class="text-sm">
-              <span>3:47:26 pm</span> / <span>00:04:29:462</span>
+              <span>5:20:23 pm</span> / <span>00:03:00:356</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -96,9 +96,9 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-fail">MABR_KYC_ChangeFlowTest</h5>
-<span class='badge badge-success'>06.09.2026 3:47:26 pm</span>
-<span class='badge badge-danger'>06.09.2026 3:51:56 pm</span>
-<span class='badge badge-default'>00:04:29:462</span>
+<span class='badge badge-success'>06.11.2026 5:20:23 pm</span>
+<span class='badge badge-danger'>06.11.2026 5:23:23 pm</span>
+<span class='badge badge-default'>00:03:00:356</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -111,29 +111,52 @@
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:47:26 pm</td>
+        <td>5:20:23 pm</td>
         <td>
           Test Execution Started
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>3:51:56 pm</td>
+        <td>5:23:23 pm</td>
         <td>
           Test Failed
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>3:51:56 pm</td>
+        <td>5:23:23 pm</td>
         <td>
-          <textarea readonly class="code-block">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //flt-semantics[@role='button' and contains(text(),'Assign to TSO')] (tried for 20 second(s) with 500 milliseconds interval)
+          <textarea readonly class="code-block">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <flt-semantics id="flt-semantic-node-814" role="button" tabindex="0" flt-tappable="" style="position: absolute; overflow: visible; width: 140px; height: 28px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 1339, 565.6); pointer-events: none; z-index: 10;" aria-label="Assign to TSO
+Assign to TSO">...</flt-semantics> is not clickable at point (1409, 579). Other element would receive the click: <flutter-view flt-view-id="0" tabindex="0" style="position: absolute; inset: 0px; width: 1536px; height: 677.6px;">...</flutter-view>
+  (Session info: chrome=148.0.7778.217)
 Build info: version: '4.13.0', revision: 'ba948ece5b*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
-Driver info: jdk.proxy2.$Proxy18
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at org.kbzPayAppPages.accountClosePage.assignToTSOBtn(accountClosePage.java:540)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9fc4cb378dab54a117084c6d80b4c0b5, clickElement {id=f.3F54C427A3DEAF5C0973E6DC22F9E20E.d.3FB71290C6BD37060FD984FE69DD61B5.e.508}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63936}, goog:processID: 5936, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63936/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9fc4cb378dab54a117084c6d80b4c0b5)] -> xpath: //flt-semantics[@role='button' and contains(text(),'Assign to TSO')]]
+Session ID: 9fc4cb378dab54a117084c6d80b4c0b5
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at jdk.internal.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at com.epam.healenium.handlers.proxy.WebElementProxyHandler.invoke(WebElementProxyHandler.java:68)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.click(Unknown Source)
+	at org.kbzPayAppPages.accountClosePage.assignToTSOBtn(accountClosePage.java:566)
 	at testsScriptKBZPayService.MABR_KYC_ChangeTest.MABR_KYC_ChangeFlowTest(MABR_KYC_ChangeTest.java:82)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -179,7 +202,7 @@ Driver info: jdk.proxy2.$Proxy18
           <div class="test-detail">
             <p class="name">tsoLoginFlow</p>
             <p class="text-sm">
-              <span>3:51:56 pm</span> / <span>00:00:00:016</span>
+              <span>5:23:23 pm</span> / <span>00:00:00:009</span>
               <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
@@ -188,9 +211,9 @@ Driver info: jdk.proxy2.$Proxy18
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-skip">tsoLoginFlow</h5>
-<span class='badge badge-success'>06.09.2026 3:51:56 pm</span>
-<span class='badge badge-danger'>06.09.2026 3:51:56 pm</span>
-<span class='badge badge-default'>00:00:00:016</span>
+<span class='badge badge-success'>06.11.2026 5:23:23 pm</span>
+<span class='badge badge-danger'>06.11.2026 5:23:23 pm</span>
+<span class='badge badge-default'>00:00:00:009</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -203,14 +226,14 @@ Driver info: jdk.proxy2.$Proxy18
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:56 pm</td>
+        <td>5:23:23 pm</td>
         <td>
           Test Execution Started
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>3:51:56 pm</td>
+        <td>5:23:23 pm</td>
         <td>
           Test Skipped
         </td>
@@ -227,7 +250,7 @@ Driver info: jdk.proxy2.$Proxy18
           <div class="test-detail">
             <p class="name">branchLoginFlow</p>
             <p class="text-sm">
-              <span>3:51:56 pm</span> / <span>00:00:00:013</span>
+              <span>5:23:23 pm</span> / <span>00:00:00:009</span>
               <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
@@ -236,9 +259,9 @@ Driver info: jdk.proxy2.$Proxy18
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-skip">branchLoginFlow</h5>
-<span class='badge badge-success'>06.09.2026 3:51:56 pm</span>
-<span class='badge badge-danger'>06.09.2026 3:51:56 pm</span>
-<span class='badge badge-default'>00:00:00:013</span>
+<span class='badge badge-success'>06.11.2026 5:23:23 pm</span>
+<span class='badge badge-danger'>06.11.2026 5:23:23 pm</span>
+<span class='badge badge-default'>00:00:00:009</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -251,14 +274,14 @@ Driver info: jdk.proxy2.$Proxy18
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:56 pm</td>
+        <td>5:23:23 pm</td>
         <td>
           Test Execution Started
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>3:51:56 pm</td>
+        <td>5:23:23 pm</td>
         <td>
           Test Skipped
         </td>
@@ -275,7 +298,7 @@ Driver info: jdk.proxy2.$Proxy18
           <div class="test-detail">
             <p class="name">TsoLoginFlow2</p>
             <p class="text-sm">
-              <span>3:51:56 pm</span> / <span>00:00:00:007</span>
+              <span>5:23:23 pm</span> / <span>00:00:00:007</span>
               <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
@@ -284,8 +307,8 @@ Driver info: jdk.proxy2.$Proxy18
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-skip">TsoLoginFlow2</h5>
-<span class='badge badge-success'>06.09.2026 3:51:56 pm</span>
-<span class='badge badge-danger'>06.09.2026 3:51:56 pm</span>
+<span class='badge badge-success'>06.11.2026 5:23:23 pm</span>
+<span class='badge badge-danger'>06.11.2026 5:23:23 pm</span>
 <span class='badge badge-default'>00:00:00:007</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
@@ -299,14 +322,14 @@ Driver info: jdk.proxy2.$Proxy18
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:56 pm</td>
+        <td>5:23:23 pm</td>
         <td>
           Test Execution Started
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>3:51:56 pm</td>
+        <td>5:23:23 pm</td>
         <td>
           Test Skipped
         </td>
@@ -323,7 +346,7 @@ Driver info: jdk.proxy2.$Proxy18
           <div class="test-detail">
             <p class="name">closingLoopLogin</p>
             <p class="text-sm">
-              <span>3:51:56 pm</span> / <span>00:00:00:009</span>
+              <span>5:23:23 pm</span> / <span>00:00:00:010</span>
               <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
@@ -332,9 +355,9 @@ Driver info: jdk.proxy2.$Proxy18
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-skip">closingLoopLogin</h5>
-<span class='badge badge-success'>06.09.2026 3:51:56 pm</span>
-<span class='badge badge-danger'>06.09.2026 3:51:56 pm</span>
-<span class='badge badge-default'>00:00:00:009</span>
+<span class='badge badge-success'>06.11.2026 5:23:23 pm</span>
+<span class='badge badge-danger'>06.11.2026 5:23:23 pm</span>
+<span class='badge badge-default'>00:00:00:010</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -347,14 +370,14 @@ Driver info: jdk.proxy2.$Proxy18
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:56 pm</td>
+        <td>5:23:23 pm</td>
         <td>
           Test Execution Started
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>3:51:56 pm</td>
+        <td>5:23:23 pm</td>
         <td>
           Test Skipped
         </td>
@@ -371,7 +394,7 @@ Driver info: jdk.proxy2.$Proxy18
           <div class="test-detail">
             <p class="name">TsoLoginFlow3</p>
             <p class="text-sm">
-              <span>3:51:56 pm</span> / <span>00:00:00:006</span>
+              <span>5:23:23 pm</span> / <span>00:00:00:004</span>
               <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
@@ -380,9 +403,9 @@ Driver info: jdk.proxy2.$Proxy18
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-skip">TsoLoginFlow3</h5>
-<span class='badge badge-success'>06.09.2026 3:51:56 pm</span>
-<span class='badge badge-danger'>06.09.2026 3:51:56 pm</span>
-<span class='badge badge-default'>00:00:00:006</span>
+<span class='badge badge-success'>06.11.2026 5:23:23 pm</span>
+<span class='badge badge-danger'>06.11.2026 5:23:23 pm</span>
+<span class='badge badge-default'>00:00:00:004</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -395,14 +418,14 @@ Driver info: jdk.proxy2.$Proxy18
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:56 pm</td>
+        <td>5:23:23 pm</td>
         <td>
           Test Execution Started
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>3:51:56 pm</td>
+        <td>5:23:23 pm</td>
         <td>
           Test Skipped
         </td>
@@ -419,7 +442,7 @@ Driver info: jdk.proxy2.$Proxy18
           <div class="test-detail">
             <p class="name">closingLoopLogin2</p>
             <p class="text-sm">
-              <span>3:51:56 pm</span> / <span>00:00:00:000</span>
+              <span>5:23:23 pm</span> / <span>00:00:00:012</span>
               <span class="badge skip-bg log float-right">Skip</span>
             </p>
           </div>
@@ -428,9 +451,9 @@ Driver info: jdk.proxy2.$Proxy18
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-skip">closingLoopLogin2</h5>
-<span class='badge badge-success'>06.09.2026 3:51:56 pm</span>
-<span class='badge badge-danger'>06.09.2026 3:51:56 pm</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>06.11.2026 5:23:23 pm</span>
+<span class='badge badge-danger'>06.11.2026 5:23:23 pm</span>
+<span class='badge badge-default'>00:00:00:012</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -443,14 +466,14 @@ Driver info: jdk.proxy2.$Proxy18
   <tbody>
       <tr class="event-row">
         <td><span class="badge log info-bg">Info</span></td>
-        <td>3:51:56 pm</td>
+        <td>5:23:23 pm</td>
         <td>
           Test Execution Started
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log skip-bg">Skip</span></td>
-        <td>3:51:56 pm</td>
+        <td>5:23:23 pm</td>
         <td>
           Test Skipped
         </td>
@@ -482,12 +505,12 @@ Driver info: jdk.proxy2.$Proxy18
 <span class="meta">
 <span class='badge log badge-danger'>1</span>
 </span>
-<p class="name">org.openqa.selenium.TimeoutException</p>
+<p class="name">org.openqa.selenium.ElementClickInterceptedException</p>
 <p class="duration text-sm">1 tests</p>
 </div>
 <div class="test-contents d-none">
 <div class="info">
-<h4>org.openqa.selenium.TimeoutException</h4>
+<h4>org.openqa.selenium.ElementClickInterceptedException</h4>
 <span status="fail" class='badge log badge-danger'>1 failed</span>
 </div>
 <table class='table table-sm mt-4'>
@@ -501,7 +524,7 @@ Driver info: jdk.proxy2.$Proxy18
 <tbody>
 <tr class="tag-test-status" status="fail">
 <td><span class="badge log fail-bg">Fail</span></td>
-<td>15:47:26 pm</td>
+<td>17:20:23 pm</td>
 <td>
 <a href="#" class="linked" test-id='1' id='1'>MABR_KYC_ChangeFlowTest</a>
 </td>
@@ -523,13 +546,13 @@ Driver info: jdk.proxy2.$Proxy18
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Jun 9, 2026 03:47:21 pm</h3>
+<h3>Jun 11, 2026 05:20:17 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Jun 9, 2026 03:51:57 pm</h3>
+<h3>Jun 11, 2026 05:23:24 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
@@ -599,7 +622,7 @@ Driver info: jdk.proxy2.$Proxy18
 </div></div>
 <script>
 var timeline = {
-"MABR_KYC_ChangeFlowTest":269.462,"tsoLoginFlow":0.016,"branchLoginFlow":0.013,"TsoLoginFlow2":0.007,"closingLoopLogin":0.009,"TsoLoginFlow3":0.006,"closingLoopLogin2":0
+"MABR_KYC_ChangeFlowTest":180.356,"tsoLoginFlow":0.009,"branchLoginFlow":0.009,"TsoLoginFlow2":0.007,"closingLoopLogin":0.01,"TsoLoginFlow3":0.004,"closingLoopLogin2":0.012
 };
 </script>
 <div class="row">

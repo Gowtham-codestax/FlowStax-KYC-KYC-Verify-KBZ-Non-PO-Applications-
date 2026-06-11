@@ -420,7 +420,7 @@ public class MABR_KYC_ChangePage {
 	 
     public void downloadPDFButton() throws InterruptedException {
     	
-    	By DownLoadBtn=By.xpath("(//flt-semantics[@role='button' ])[10]");
+    	By DownLoadBtn=By.xpath("(//flt-semantics[@role='button'])[last()]");
     	wait.until(ExpectedConditions.presenceOfElementLocated(DownLoadBtn));
     	Thread.sleep(1000);
     	

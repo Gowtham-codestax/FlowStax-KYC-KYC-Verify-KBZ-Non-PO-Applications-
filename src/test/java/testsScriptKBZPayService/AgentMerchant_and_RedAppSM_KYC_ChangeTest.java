@@ -112,7 +112,7 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 	}
 	
 	//  ,dependsOnMethods = "AgemtMerchantand_RedAppFlowTest"
-	@Test(priority = 2 )
+	@Test(priority = 2  ,dependsOnMethods = "AgemtMerchantand_RedAppFlowTest")
 	public void TSOLoginFlow() throws AWTException, InterruptedException {
 		
 		
@@ -128,7 +128,7 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 		
 		tso.PullOptionButon();
 		
-		accClose.EyeIconbtnClick();
+		tso.EyeIconbtnClick();
 	
 		tso.makeForcorrectionbutton();
 		
@@ -143,18 +143,18 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 	}
 	
 	// , dependsOnMethods = "TSOLoginFlow"
-	@Test(priority = 3 ) 
+	@Test(priority = 3 , dependsOnMethods = "TSOLoginFlow" ) 
 	public void branchLoginFlow() throws InterruptedException, AWTException {
 		
 		LoginPage login = new LoginPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);
-		AgentMerchant_and_RedAppSM_KYC_ChangePage agent_RedApp= new AgentMerchant_and_RedAppSM_KYC_ChangePage(driver);
+		tsoLoginPage tso= new tsoLoginPage(driver);
 		
 		login.login("BranchTeam_KBZPay@gmail.com", "98DjpLo4WVsdI5HILPVI");
 		
 		accClose.kbzPayServiceOPtion();
 		
-		agent_RedApp.EyeIconbtnClick();
+		tso.EyeIconbtnClick(); 
 		
 		accClose.applicationCorrectedButton();
 		
@@ -177,7 +177,7 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 		
 		login.login("TSO_KBZPay@gmail.com", "i00TLMvg~OWa3wW@xCE7");
 		
-		accClose.EyeIconbtnClick();
+		tso.EyeIconbtnClick();
 		
 		tso.needMoreInfobutton();
 		
@@ -228,7 +228,7 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 		
 		login.login("TSO_KBZPay@gmail.com", "i00TLMvg~OWa3wW@xCE7");
 		
-		accClose.EyeIconbtnClick();
+		tso.EyeIconbtnClick();
 		
 		tso.resolvebutton();
 		

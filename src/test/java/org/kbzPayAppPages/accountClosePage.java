@@ -8,6 +8,7 @@ import java.time.LocalDate;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -43,8 +44,8 @@ public class accountClosePage {
 		wait.until(ExpectedConditions.presenceOfElementLocated(KBZBtn));
 		WebElement	KBZPayService	=driver.findElement(KBZBtn);
 		Thread.sleep(1500);
-		// KBZPayService.click();
-		js.executeScript("arguments[0].click();", KBZPayService);
+		 KBZPayService.click();
+	//	js.executeScript("arguments[0].click();", KBZPayService);
 		
 	}
 	
@@ -274,13 +275,14 @@ public class accountClosePage {
 		}
 	 
 	 
-	 public void fathersNameFiedl() throws InterruptedException {
+	 public void fathersNameField() throws InterruptedException {
 		 
-			WebElement FathernameField=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//flt-semantics/span[.='Address *']/following::flt-semantics[3]/input[@data-semantics-role='text-field']")));
+		 
+			WebElement FathernameField=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//flt-semantics/span[contains(.,'Fathe')]/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
 			wait.until(ExpectedConditions.visibilityOf(FathernameField));
 			wait.until(ExpectedConditions.elementToBeClickable(FathernameField));
 			
-			js.executeScript("arguments[0].scrollIntoView({block:'center'});", FathernameField);
+		//	js.executeScript("arguments[0].scrollIntoView({block:'center'});", FathernameField);
 			Thread.sleep(1000);
 			FathernameField.click();
 			Thread.sleep(500);
@@ -484,7 +486,7 @@ public class accountClosePage {
 			    WebElement reason = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//flt-semantics/span[contains(.,'Reason')]/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
 			    wait.until(ExpectedConditions.elementToBeClickable(reason));
 			  //  js.executeScript("arguments[0].scrollIntoView({block:'center'});", reason);
-			    Thread.sleep(1000);
+			 //   Thread.sleep(1000);
 			    reason.click();
 			    Thread.sleep(500);
 			    reason.sendKeys("Test");
@@ -509,8 +511,8 @@ public class accountClosePage {
 		  
 
 		    public void EyeIconbtnClick() throws InterruptedException {
-		    	Thread.sleep(5000);
-		    	for (int i = 0; i <40; i++) {
+		    	Thread.sleep(15000);
+		    	for (int i = 0; i <41; i++) {
 					
 					robot.keyPress(KeyEvent.VK_TAB);																										
 					robot.keyRelease(KeyEvent.VK_TAB);
@@ -524,13 +526,35 @@ public class accountClosePage {
 		    	
 		    }
 	 
+	/*	    public void EditIconbtnClick() throws InterruptedException {
+		    	
+		    	
+	    		WebElement	editbtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//flt-semantics[.='Edit']"))));
+	    		Thread.sleep(1000);
+	    		editbtn.click();
+	    } */
+		    
 		    public void EditIconbtnClick() throws InterruptedException {
 		    	
 		    	
 	    		WebElement	editbtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//flt-semantics[.='Edit']"))));
 	    		Thread.sleep(1000);
 	    		editbtn.click();
+	    		
+	    		// Editing in  Editing Page 		
+	    		WebElement BranhcPhnnumField=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//flt-semantics/span[.='Branch Phone Number *']/following::flt-semantics[2]/input[@data-semantics-role='text-field']")));
+	    		wait.until(ExpectedConditions.visibilityOf(BranhcPhnnumField));
+	    		wait.until(ExpectedConditions.elementToBeClickable(BranhcPhnnumField));
+	    		
+	    		BranhcPhnnumField.sendKeys(Keys.CONTROL+"a");
+				Thread.sleep(300);
+				BranhcPhnnumField.sendKeys(Keys.BACK_SPACE);
+	    		Thread.sleep(200);
+	    		BranhcPhnnumField.click();
+	    		
+	    		BranhcPhnnumField.sendKeys( "67" + String.format("%07d", System.currentTimeMillis() % 10000000L));
 	    }
+	    
 	    
 		    
 
@@ -588,7 +612,7 @@ public class accountClosePage {
 		    	Thread.sleep(2000);
 		    	js.executeScript("arguments[0].click();", UpdatestageCMNTbox);
 		    	Thread.sleep(500);
-		    	UpdatestageCMNTbox.sendKeys("Okay");
+		    	UpdatestageCMNTbox.sendKeys("Test");
 		    //	js.executeScript("arguments[0].click()", UpdatestageCMNTbox);
 		    //	js.executeScript("arguments[0].value= 'Okay';", UpdatestageCMNTbox);
 			
@@ -607,17 +631,15 @@ public class accountClosePage {
 
 		            try {
 
-		                WebElement menu =
-		                        wait.until(ExpectedConditions.elementToBeClickable(menuBtn));
+		              //  WebElement menu = wait.until(ExpectedConditions.elementToBeClickable(menuBtn));
 
-		                js.executeScript("arguments[0].scrollIntoView({block:'center'});", menu);
-		                
-		                Thread.sleep(4000);
+		            	 wait.until(ExpectedConditions.presenceOfElementLocated(menuBtn));
+		            	 WebElement menu= driver.findElement(menuBtn);
+		         //      js.executeScript("arguments[0].scrollIntoView({block:'center'});", menu);
+		                Thread.sleep(5000);
 
-		                js.executeScript(
-		                        "arguments[0].dispatchEvent(new MouseEvent('click',{bubbles:true}));",
-		                        menu);
-
+		       //         js.executeScript("arguments[0].dispatchEvent(new MouseEvent('click',{bubbles:true}));", menu);
+		                js.executeScript("arguments[0].click();",menu);
 		                System.out.println("Menu clicked");
 		                break;
 
@@ -645,9 +667,7 @@ public class accountClosePage {
 		                WebElement dropdown =
 		                        wait.until(ExpectedConditions.elementToBeClickable(logoutDD));
 		                Thread.sleep(2000);
-		                js.executeScript(
-		                        "arguments[0].dispatchEvent(new MouseEvent('click',{bubbles:true}));",
-		                        dropdown);
+		                js.executeScript("arguments[0].dispatchEvent(new MouseEvent('click',{bubbles:true}));",dropdown);
 
 		                break;
 
@@ -666,9 +686,8 @@ public class accountClosePage {
 		                WebElement logout =
 		                        wait.until(ExpectedConditions.elementToBeClickable(logoutBtn));
 
-		                		Thread.sleep(3000);	                js.executeScript(
-		                        "arguments[0].dispatchEvent(new MouseEvent('click',{bubbles:true}));",
-		                        logout);
+		                		Thread.sleep(3000);	             
+		                		js.executeScript("arguments[0].dispatchEvent(new MouseEvent('click',{bubbles:true}));", logout);
 
 		                System.out.println("Logout success");
 		                break;
@@ -701,7 +720,20 @@ public class accountClosePage {
 			    
 	 
 	 
-	 
+		    public void downloadPDFButton() throws InterruptedException {
+		    	
+		    	By DownLoadBtn=By.xpath("(//flt-semantics[@role='button'])[last()]");
+		    	wait.until(ExpectedConditions.presenceOfElementLocated(DownLoadBtn));
+		    	Thread.sleep(1000);
+		    	
+		    	WebElement downloadPdfbtn=driver.findElement(DownLoadBtn);
+		    //	js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'})", downloadPdfbtn);
+		    	Thread.sleep(2000);
+		    //	downloadPdfbtn.click();
+		    	js.executeScript("arguments[0].click();", downloadPdfbtn);
+		    	
+		    	
+		    }
 	 
 	 
 	

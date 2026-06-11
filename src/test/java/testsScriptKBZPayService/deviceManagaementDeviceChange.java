@@ -62,7 +62,7 @@ public class deviceManagaementDeviceChange extends BaseClass {
 		
 		accClose.NextButton();
 		
-		deviceChange.EyeIconbtnClick();
+		accClose.EyeIconbtnClick();
 		
 		deviceChange.escalateBtn();
 		
@@ -72,17 +72,13 @@ public class deviceManagaementDeviceChange extends BaseClass {
 			
 	}
 	
-	@Test(priority = 2, dependsOnMethods = "deviceChange")
+	// , dependsOnMethods = "deviceChange"
+	@Test(priority = 2 , dependsOnMethods = "deviceChange" )
 	public void closingLoopLogin() throws InterruptedException, AWTException {
-		
-		
-		driver.get("https://staging.flow.stax.run/#/login");
-		Thread.sleep(5000);
-		
+			
 		LoginPage login = new LoginPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);
 		closingLoopPage closingLoop= new closingLoopPage(driver);
-		deviceManagement_DeviceChange deviceChange= new deviceManagement_DeviceChange(driver);
 		
 		login.login("closeloopteam@gmail.com", "Nw5ZQMJNx9uN85AJb0n0");
 		
@@ -109,9 +105,6 @@ public class deviceManagaementDeviceChange extends BaseClass {
 		
 		LoginPage login = new LoginPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);
-		closingLoopPage closingLoop= new closingLoopPage(driver);
-		deviceManagement_DeviceChange deviceChange= new deviceManagement_DeviceChange(driver);
-		
 		
 		login.login("BranchTeam_KBZPay@gmail.com", "98DjpLo4WVsdI5HILPVI");
 		
@@ -135,14 +128,10 @@ public class deviceManagaementDeviceChange extends BaseClass {
 	@Test(priority = 4,dependsOnMethods = "branchLogin")
 	public void closingloop2() throws InterruptedException, AWTException {
 		
-		driver.get("https://staging.flow.stax.run/#/login");
-		Thread.sleep(5000);
-		
 		LoginPage login = new LoginPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);
 		closingLoopPage closingLoop= new closingLoopPage(driver);
-		deviceManagement_DeviceChange deviceChange= new deviceManagement_DeviceChange(driver);
-		
+				
 		login.login("closeloopteam@gmail.com", "Nw5ZQMJNx9uN85AJb0n0");
 		
 		closingLoop.EyeIconbtnClick();
@@ -152,6 +141,10 @@ public class deviceManagaementDeviceChange extends BaseClass {
 		closingLoop.UpdateStage_Commentsection();
 		
 		accClose.NextButton();
+		
+		accClose.EyeIconbtnClick();
+		
+		accClose.downloadPDFButton();
 		
 		accClose.MenuButton();
 		

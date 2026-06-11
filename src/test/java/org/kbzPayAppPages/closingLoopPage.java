@@ -196,7 +196,7 @@ public class closingLoopPage {
 	    
 	    public void downloadPDFButton() throws InterruptedException {
 	    	
-	    	By DownLoadBtn=By.xpath("//flt-semantics[@role='button' and @style='position: absolute; overflow: visible; width: 40px; height: 35px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 1002.4, 92.5); pointer-events: all; z-index: 6;']");
+	    	By DownLoadBtn=By.xpath("(//flt-semantics[@role='button'])[last()]");
 	    	wait.until(ExpectedConditions.presenceOfElementLocated(DownLoadBtn));
 	    	Thread.sleep(1000);
 	    	

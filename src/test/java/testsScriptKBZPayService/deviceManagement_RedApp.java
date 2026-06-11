@@ -129,6 +129,8 @@ public class deviceManagement_RedApp  extends BaseClass{
 		
 		accClose.EyeIconbtnClick();
 		
+		accClose.downloadPDFButton();
+		
 		accClose.MenuButton();
 		
 		accClose.LogOut();	

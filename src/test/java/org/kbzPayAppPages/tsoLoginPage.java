@@ -2,6 +2,7 @@ package org.kbzPayAppPages;
 
 import java.awt.AWTException;
 import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -53,8 +54,10 @@ public class tsoLoginPage {
 		try {
 		
 		By pullOption = By.xpath("//flt-semantics[@style[contains(.,'width: 36px') and contains(.,'height: 34px')]]");
-		WebElement Pull=wait.until(ExpectedConditions.presenceOfElementLocated(pullOption));
+		wait.until(ExpectedConditions.presenceOfElementLocated(pullOption));
 		Thread.sleep(1000);
+		
+		WebElement Pull=driver.findElement(pullOption);
 		js.executeScript("arguments[0].click();", Pull);
 		
 		}catch(Exception e) {
@@ -67,10 +70,12 @@ public class tsoLoginPage {
 	
 	public void accountClose_Option() throws InterruptedException {
 		
-		By	accountClose=By.xpath("//flt-semantics/span[@style[contains(.,'display: inline-block; white-space: nowrap; transform-origin: 0px 0px 0px; transform: scale(1.22549, 3.11111);')]]");
-		WebElement accountClse	=wait.until(ExpectedConditions.presenceOfElementLocated(accountClose));
-			js.executeScript("arguments[0].click();", accountClse);
-			Thread.sleep(500);
+		By	accountClose=By.xpath("//flt-semantics/span[contains(text(),'Account Close')]");
+		wait.until(ExpectedConditions.presenceOfElementLocated(accountClose));
+		WebElement	AccClose=driver.findElement(accountClose);
+		Thread.sleep(1100);
+		js.executeScript("arguments[0].click();", AccClose);
+		Thread.sleep(600);
 			
 			// PUll
 			By pull = By.xpath("//flt-semantics[@role='button' and .='Pull']");
@@ -112,7 +117,6 @@ public class tsoLoginPage {
 		
 		// Fetch FRESH reference right before use (not stored between waits)
 		WebElement CustKYCChange = driver.findElement(CutomerKYCChangeLocator);
-
 		js.executeScript("arguments[0].click();", CustKYCChange);
 
 		
@@ -141,6 +145,40 @@ public class tsoLoginPage {
 		js.executeScript("arguments[0].click();", Pull);	
 		
 	}
+	
+	public void MABT_BR_BA_PinResetAndLockReq_Option() throws InterruptedException {
+		
+		By MABT_BR_BA_PinResetAndLockReq_Locator = By.xpath("//flt-semantics/span[contains(text(),'MABT / BR / BA Pin Reset and Pin Lock Request')]");
+		wait.until(ExpectedConditions.presenceOfElementLocated(MABT_BR_BA_PinResetAndLockReq_Locator));
+		Thread.sleep(1000); // Allow Flutter rendering to stabilize
+	
+		// Fetch FRESH reference right before use (not stored between waits)
+		WebElement MABT_BR_BA_PinResetAndLockReqBtn = driver.findElement(MABT_BR_BA_PinResetAndLockReq_Locator);
+		js.executeScript("arguments[0].click();", MABT_BR_BA_PinResetAndLockReqBtn);
+		
+		// PUll
+		By pull = By.xpath("//flt-semantics[@role='button' and .='Pull']");
+		WebElement Pull=wait.until(ExpectedConditions.presenceOfElementLocated(pull));
+		Thread.sleep(500);
+		js.executeScript("arguments[0].click();", Pull);	
+		
+	}
+	
+	  public void EyeIconbtnClick() throws InterruptedException {
+	    	Thread.sleep(6100);
+	    	for (int i = 0; i <40; i++) {
+				
+				robot.keyPress(KeyEvent.VK_TAB);																										
+				robot.keyRelease(KeyEvent.VK_TAB);
+				Thread.sleep(200);	
+				}
+	    	
+	    		WebElement	eyeiconbtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//flt-semantics[@style='position: absolute; overflow: visible; width: 40px; height: 40px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 100, 7.5); pointer-events: all;'])[1]")));
+	    		 js.executeScript("arguments[0].scrollIntoView({block:'center'});", eyeiconbtn);
+	    		 Thread.sleep(1000);
+	    		js.executeScript("arguments[0].click();", eyeiconbtn);
+	    	
+	    }
 	
 	
 	 public void resolvebutton() throws InterruptedException {
@@ -179,11 +217,10 @@ public class tsoLoginPage {
 	public void needMoreInfobutton() throws InterruptedException {
 		 By NeedMoreInfo_Option_Btn =
 		            By.xpath("//flt-semantics[contains(text(),'Need more info')]");
-
-		    WebElement NeedInfo =
 		            wait.until(ExpectedConditions.presenceOfElementLocated(NeedMoreInfo_Option_Btn));
+		 WebElement NeedInfo=driver.findElement(NeedMoreInfo_Option_Btn);
 
-		    Thread.sleep(500);
+		    Thread.sleep(700);
 		    js.executeScript("arguments[0].click();",NeedInfo);
 		
 	}

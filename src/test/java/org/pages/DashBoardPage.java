@@ -16,7 +16,7 @@ public class DashBoardPage {
     By addNew = By.xpath("//flt-semantics[.='Add New']");
 
     public void clickAddNew() throws InterruptedException {
-    	Thread.sleep(5000);
+    	Thread.sleep(4000);
         driver.findElement(addNew).click();
     }
 }

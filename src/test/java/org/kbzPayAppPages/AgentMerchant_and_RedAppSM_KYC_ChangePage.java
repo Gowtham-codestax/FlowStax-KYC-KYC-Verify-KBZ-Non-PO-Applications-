@@ -498,7 +498,7 @@ public void  redAppSimtAccType() throws InterruptedException {
 	 	
 
 	    public void EyeIconbtnClick() throws InterruptedException {
-	    	Thread.sleep(15000);
+	    	Thread.sleep(10000);
 	    	for (int i = 0; i <40; i++) {
 				
 				robot.keyPress(KeyEvent.VK_TAB);																										
@@ -537,7 +537,7 @@ public void  redAppSimtAccType() throws InterruptedException {
 			currentBalNumField.sendKeys(Keys.BACK_SPACE);
     		Thread.sleep(200);
 			currentBalNumField.click();
-			currentBalNumField.sendKeys("67"+System.currentTimeMillis() % 10000000L);
+			currentBalNumField.sendKeys("67" + String.format("%07d", System.currentTimeMillis() % 10000000L));
     		
     		
     }

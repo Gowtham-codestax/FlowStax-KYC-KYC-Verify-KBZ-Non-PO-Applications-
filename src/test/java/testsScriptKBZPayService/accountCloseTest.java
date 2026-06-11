@@ -37,10 +37,6 @@ public class accountCloseTest extends BaseClass{
 		
 		accClose.cusName();
 		
-		accClose.DateOfBirth();
-		
-		accClose.UploadCustomerFace();
-		
 		accClose.passportIDproof();
 		
 		accClose.passportNumField();
@@ -49,13 +45,19 @@ public class accountCloseTest extends BaseClass{
 		
 		accClose.uploadOldPassport_PageBtn();
 		
+		accClose.phoneNumField();
+		
+		accClose.reasonTxtFiled();
+		
+		accClose.DateOfBirth();
+		
 		accClose.addressFiled();
 		
-		accClose.fathersNameFiedl();
+		accClose.UploadCustomerFace();
 		
 		accClose.currentBalanceNumFiedl();
 		
-		accClose.phoneNumField();
+		accClose.fathersNameField();
 		
 		accClose.bankStaffApprovalformBtn();
 		
@@ -68,8 +70,6 @@ public class accountCloseTest extends BaseClass{
 		accClose.sparrowTicker_DateandTime();
 		
 		accClose.alternate_phoneNumField();
-		
-		accClose.reasonTxtFiled();
 		
 		accClose.NextButton();
 		
@@ -91,7 +91,6 @@ public class accountCloseTest extends BaseClass{
 		
 		accClose.LogOut();
 		
-	//	login.login("TSO_KBZPay@gmail.com", "i00TLMvg~OWa3wW@xCE7");
 		
 	}
 	  
@@ -107,11 +106,13 @@ public class accountCloseTest extends BaseClass{
 		
 		login.login("TSO_KBZPay@gmail.com", "i00TLMvg~OWa3wW@xCE7");
 		
+		tso.selectKYCUpdate();
+		
+		tso.accountClose_Option();;
+		
 		tso.PullOptionButon();
 		
-		tso.accountClose_Option();
-		
-		accClose.EyeIconbtnClick();
+		tso.EyeIconbtnClick();
 	
 		tso.makeForcorrectionbutton();
 		
@@ -132,12 +133,13 @@ public class accountCloseTest extends BaseClass{
 		
 		LoginPage login = new LoginPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);
+		tsoLoginPage tso= new tsoLoginPage(driver);
 		
 		login.login("BranchTeam_KBZPay@gmail.com", "98DjpLo4WVsdI5HILPVI");
 		
 		accClose.kbzPayServiceOPtion();
 		
-		accClose.EyeIconbtnClick();
+		tso.EyeIconbtnClick();
 		
 		accClose.applicationCorrectedButton();
 		
@@ -159,7 +161,7 @@ public class accountCloseTest extends BaseClass{
 		
 		login.login("TSO_KBZPay@gmail.com", "i00TLMvg~OWa3wW@xCE7");
 		
-		accClose.EyeIconbtnClick();
+		tso.EyeIconbtnClick();
 		
 		tso.resolvebutton();
 		
@@ -175,8 +177,8 @@ public class accountCloseTest extends BaseClass{
 			
 	}
 	
-	
-	@Test(priority = 5,dependsOnMethods = "tsoLogin2")
+	// ,dependsOnMethods = "tsoLogin2"
+	@Test(priority = 5 ,dependsOnMethods = "tsoLogin2" )
 	public void closingLoopLogin() throws InterruptedException, AWTException {
 		
 		LoginPage login = new LoginPage(driver);
@@ -191,8 +193,14 @@ public class accountCloseTest extends BaseClass{
 		
 		accClose.NextButton();
 		
+		closingLoop.EyeIconbtnClick();
+		
+		accClose.downloadPDFButton();
+		
 		accClose.MenuButton();
 		
-		accClose.LogOut();			
+		accClose.LogOut();	
+		
+		
 	}
 }

@@ -11,15 +11,13 @@ public class ExtentManager {
 
 	        if (extent == null) {
 
-	            String reportPath = System.getProperty("user.dir")
-	                    + "/reports/ExtentReport.html";
+	            String reportPath = System.getProperty("user.dir") + "/reports/ExtentReport.html";
 
-	            ExtentSparkReporter spark =
-	                    new ExtentSparkReporter(reportPath);
+	            ExtentSparkReporter spark = new ExtentSparkReporter(reportPath);
 
 	            spark.config().setReportName("FlowStax Automation Report");
 
-	            spark.config().setDocumentTitle("Parallel Execution of [ KBZPay Account Close Flow ] and [KYC Verify Cutomer Urgent Flow ]- Automation Results");
+	            spark.config().setDocumentTitle("KBZ PAY - Automation Results");
 
 	            extent = new ExtentReports();
 

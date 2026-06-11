@@ -118,7 +118,7 @@ public class CustomerKycChangeReqTest extends BaseClass {
 		
 		tso.PullOptionButon();
 		
-		accClose.EyeIconbtnClick();
+		tso.EyeIconbtnClick();
 	
 		tso.makeForcorrectionbutton();
 		
@@ -138,13 +138,14 @@ public class CustomerKycChangeReqTest extends BaseClass {
 		
 		LoginPage login = new LoginPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);
+		tsoLoginPage tso= new tsoLoginPage(driver);
 		AgentMerchant_and_RedAppSM_KYC_ChangePage agent_RedApp= new AgentMerchant_and_RedAppSM_KYC_ChangePage(driver);
 		
 		login.login("BranchTeam_KBZPay@gmail.com", "98DjpLo4WVsdI5HILPVI");
 		
 	//	accClose.kbzPayServiceOPtion();
 		
-		agent_RedApp.EyeIconbtnClick();
+		tso.EyeIconbtnClick();
 		
 		accClose.applicationCorrectedButton();
 		
@@ -166,7 +167,7 @@ public class CustomerKycChangeReqTest extends BaseClass {
 		
 		login.login("TSO_KBZPay@gmail.com", "i00TLMvg~OWa3wW@xCE7");
 		
-		accClose.EyeIconbtnClick();
+		tso.EyeIconbtnClick();
 		
 		tso.needMoreInfobutton();
 		
@@ -217,7 +218,7 @@ public class CustomerKycChangeReqTest extends BaseClass {
 		
 		login.login("TSO_KBZPay@gmail.com", "i00TLMvg~OWa3wW@xCE7");
 		
-		accClose.EyeIconbtnClick();
+		tso.EyeIconbtnClick();
 		
 		tso.resolvebutton();
 		

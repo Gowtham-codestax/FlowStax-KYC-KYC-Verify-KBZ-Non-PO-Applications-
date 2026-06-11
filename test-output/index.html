@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\User\AppData\Local\Temp\testng-eclipse-453550873\testng-customsuite.xml</span>
+                    <span>C:\Users\User\AppData\Local\Temp\testng-eclipse--813384914\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -168,13 +168,36 @@
                   <a name="MABR_KYC_ChangeFlowTest">
                   </a> <!-- MABR_KYC_ChangeFlowTest -->
                   <span class="method-name">MABR_KYC_ChangeFlowTest</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //flt-semantics[@role=&apos;button&apos; and contains(text(),&apos;Assign to TSO&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;flt-semantics id=&quot;flt-semantic-node-814&quot; role=&quot;button&quot; tabindex=&quot;0&quot; flt-tappable=&quot;&quot; style=&quot;position: absolute; overflow: visible; width: 140px; height: 28px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 1339, 565.6); pointer-events: none; z-index: 10;&quot; aria-label=&quot;Assign to TSO
+Assign to TSO&quot;&gt;...&lt;/flt-semantics&gt; is not clickable at point (1409, 579). Other element would receive the click: &lt;flutter-view flt-view-id=&quot;0&quot; tabindex=&quot;0&quot; style=&quot;position: absolute; inset: 0px; width: 1536px; height: 677.6px;&quot;&gt;...&lt;/flutter-view&gt;
+  (Session info: chrome=148.0.7778.217)
 Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
-Driver info: jdk.proxy2.$Proxy18
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
-	at org.kbzPayAppPages.accountClosePage.assignToTSOBtn(accountClosePage.java:540)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9fc4cb378dab54a117084c6d80b4c0b5, clickElement {id=f.3F54C427A3DEAF5C0973E6DC22F9E20E.d.3FB71290C6BD37060FD984FE69DD61B5.e.508}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.217, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\User\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63936}, goog:processID: 5936, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63936/devtoo..., se:cdpVersion: 148.0.7778.217, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9fc4cb378dab54a117084c6d80b4c0b5)] -&gt; xpath: //flt-semantics[@role=&apos;button&apos; and contains(text(),&apos;Assign to TSO&apos;)]]
+Session ID: 9fc4cb378dab54a117084c6d80b4c0b5
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at jdk.internal.reflect.GeneratedMethodAccessor18.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at com.epam.healenium.handlers.proxy.WebElementProxyHandler.invoke(WebElementProxyHandler.java:68)
+	at jdk.proxy2/jdk.proxy2.$Proxy20.click(Unknown Source)
+	at org.kbzPayAppPages.accountClosePage.assignToTSOBtn(accountClosePage.java:566)
 	at testsScriptKBZPayService.MABR_KYC_ChangeTest.MABR_KYC_ChangeFlowTest(MABR_KYC_ChangeTest.java:82)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
@@ -401,7 +424,7 @@ Driver info: jdk.proxy2.$Proxy18
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\User\AppData\Local\Temp\testng-eclipse-453550873\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\User\AppData\Local\Temp\testng-eclipse--813384914\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -454,36 +477,36 @@ data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'MABR_KYC_ChangeFlowTest')
 data.setCell(0, 2, 'testsScriptKBZPayService.MABR_KYC_ChangeTest')
-data.setCell(0, 3, 269459);
+data.setCell(0, 3, 180348);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'tsoLoginFlow')
+data.setCell(1, 1, 'TsoLoginFlow3')
 data.setCell(1, 2, 'testsScriptKBZPayService.MABR_KYC_ChangeTest')
-data.setCell(1, 3, 9);
+data.setCell(1, 3, 6);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'branchLoginFlow')
+data.setCell(2, 1, 'TsoLoginFlow2')
 data.setCell(2, 2, 'testsScriptKBZPayService.MABR_KYC_ChangeTest')
-data.setCell(2, 3, 0);
+data.setCell(2, 3, 1);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'closingLoopLogin')
+data.setCell(3, 1, 'branchLoginFlow')
 data.setCell(3, 2, 'testsScriptKBZPayService.MABR_KYC_ChangeTest')
 data.setCell(3, 3, 0);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'TsoLoginFlow3')
+data.setCell(4, 1, 'closingLoopLogin')
 data.setCell(4, 2, 'testsScriptKBZPayService.MABR_KYC_ChangeTest')
 data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'TsoLoginFlow2')
+data.setCell(5, 1, 'closingLoopLogin2')
 data.setCell(5, 2, 'testsScriptKBZPayService.MABR_KYC_ChangeTest')
 data.setCell(5, 3, 0);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'closingLoopLogin2')
+data.setCell(6, 1, 'tsoLoginFlow')
 data.setCell(6, 2, 'testsScriptKBZPayService.MABR_KYC_ChangeTest')
 data.setCell(6, 3, 0);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -518,11 +541,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">MABR_KYC_ChangeFlowTest</span>
-                <span class="method-start">5365 ms</span>
+                <span class="method-start">5286 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">274921 ms</span>
+                <span class="method-start">185738 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

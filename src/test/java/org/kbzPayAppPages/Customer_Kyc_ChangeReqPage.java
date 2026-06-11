@@ -684,7 +684,7 @@ public class Customer_Kyc_ChangeReqPage {
 				  
 
 				    public void EyeIconbtnClick() throws InterruptedException {
-				    	Thread.sleep(6500);
+				    	Thread.sleep(15000);
 				    	for (int i = 0; i <40; i++) {
 							
 							robot.keyPress(KeyEvent.VK_TAB);																										
@@ -786,7 +786,7 @@ public class Customer_Kyc_ChangeReqPage {
 				    
 				    public void downloadPDFButton() throws InterruptedException {
 				    	
-				    	By DownLoadBtn=By.xpath("//flt-semantics[@role='button' and @style='position: absolute; overflow: visible; width: 40px; height: 35px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 901.6, 92.5); pointer-events: all; z-index: 6;']");
+				    	By DownLoadBtn=By.xpath("(//flt-semantics[@role='button'])[last()]");
 				    	wait.until(ExpectedConditions.presenceOfElementLocated(DownLoadBtn));
 				    	Thread.sleep(1000);
 				    	

@@ -93,8 +93,11 @@ public class LoginPage {
 	        
 	        // Login button
 	        By loginBtn = By.xpath("//flt-semantics[text()='Login']");
-	        wait.until(ExpectedConditions.elementToBeClickable(loginBtn)).click();
-	       
+	        wait.until(ExpectedConditions.presenceOfElementLocated(loginBtn));
+	        Thread.sleep(500);
+	        
+	        WebElement LoginBtn=driver.findElement(loginBtn);
+	        LoginBtn.click();
 	      //  mouse.moveToElement(driver.findElement(email)).click().sendKeys(user).perform(); //  mouse.moveToElement(driver.findElement(password)).click().sendKeys(pass).perform(); //   driver.findElement(loginBtn).click();
 	        Thread.sleep(5000);
 	        
