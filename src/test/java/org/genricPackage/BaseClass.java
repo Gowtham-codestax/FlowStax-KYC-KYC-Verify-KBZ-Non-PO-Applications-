@@ -52,7 +52,7 @@ public class BaseClass {
        // 	DriverFactory.getDriver().quit();
        // 	DriverFactory.unload();
         	
-            driver.getDelegate().quit();
+       //     driver.getDelegate().quit();
        //     driverThreadLocal.remove();
           
             DriverFactory.unload();   

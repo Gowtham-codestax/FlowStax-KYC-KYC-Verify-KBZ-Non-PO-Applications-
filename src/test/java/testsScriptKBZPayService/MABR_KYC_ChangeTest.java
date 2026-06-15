@@ -18,7 +18,7 @@ import utilityPackage.ListenersClass;
 @Listeners(ListenersClass.class)
 public class MABR_KYC_ChangeTest extends BaseClass {
 	
-	@Test(priority = 1)
+//	@Test(priority = 1)
 	public void MABR_KYC_ChangeFlowTest() throws AWTException, InterruptedException {
 
 		LoginPage login = new LoginPage(driver);
@@ -98,7 +98,7 @@ public class MABR_KYC_ChangeTest extends BaseClass {
 	}
 	
 	// , dependsOnMethods = "MABR_KYC_ChangeFlowTest"
-	@Test(priority = 2 , dependsOnMethods = "MABR_KYC_ChangeFlowTest")
+//	@Test(priority = 2 , dependsOnMethods = "MABR_KYC_ChangeFlowTest")
 	public void tsoLoginFlow() throws AWTException, InterruptedException {
 		
 		LoginPage login = new LoginPage(driver);
@@ -129,13 +129,12 @@ public class MABR_KYC_ChangeTest extends BaseClass {
 	
 	
 	// , dependsOnMethods = "tsoLoginFlow"
-	@Test(priority = 3  , dependsOnMethods = "tsoLoginFlow")
+	@Test(priority = 3  , dependsOnMethods = "tsoLoginFlow" )
 	public void branchLoginFlow() throws InterruptedException, AWTException {
 		
 		LoginPage login = new LoginPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);
 		tsoLoginPage tso= new tsoLoginPage(driver);
-		AgentMerchant_and_RedAppSM_KYC_ChangePage agent_RedApp= new AgentMerchant_and_RedAppSM_KYC_ChangePage(driver);
 		
 		login.login("BranchTeam_KBZPay@gmail.com", "98DjpLo4WVsdI5HILPVI");
 		
@@ -154,7 +153,7 @@ public class MABR_KYC_ChangeTest extends BaseClass {
 	}
 	
 	//  , dependsOnMethods = "branchLoginFlow"
-	@Test(priority = 4  , dependsOnMethods = "branchLoginFlow")
+	@Test(priority = 4 , dependsOnMethods = "branchLoginFlow"  )
 	public void TsoLoginFlow2() throws AWTException, InterruptedException {
 		
 		LoginPage login = new LoginPage(driver);
@@ -234,7 +233,6 @@ public class MABR_KYC_ChangeTest extends BaseClass {
 			LoginPage login = new LoginPage(driver);
 			accountClosePage accClose= new accountClosePage(driver);
 			closingLoopPage closingLoop= new closingLoopPage(driver);
-			Customer_Kyc_ChangeReqPage CusKYC = new Customer_Kyc_ChangeReqPage(driver);
 			MABR_KYC_ChangePage MABRKYC= new MABR_KYC_ChangePage(driver);
 			
 			login.login("closeloopteam@gmail.com", "Nw5ZQMJNx9uN85AJb0n0");

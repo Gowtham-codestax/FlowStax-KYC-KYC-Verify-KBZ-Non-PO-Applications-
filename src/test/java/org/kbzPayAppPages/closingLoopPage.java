@@ -173,12 +173,12 @@ public class closingLoopPage {
  		 			for (int i = 0; i < 9; i++) {
  		 			    robot.keyPress(KeyEvent.VK_TAB);
  		 			    robot.keyRelease(KeyEvent.VK_TAB);
- 		 			    Thread.sleep(500);
+ 		 			    Thread.sleep(200);
  		 			}
  		 			// Press ENTER (select file + click Open)
  		 			robot.keyPress(KeyEvent.VK_ENTER);
  		 			robot.keyRelease(KeyEvent.VK_ENTER);
- 		 			Thread.sleep(2000);
+ 		 			Thread.sleep(500);
  		 			// 🔹 1 TAB (move to Open button)
  		 			robot.keyPress(KeyEvent.VK_TAB);
  		 			robot.keyRelease(KeyEvent.VK_TAB);

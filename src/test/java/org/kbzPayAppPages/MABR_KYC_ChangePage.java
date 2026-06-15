@@ -313,8 +313,7 @@ public class MABR_KYC_ChangePage {
 	 
 	
 	public void UploadNewUserFace() throws InterruptedException {
-		
-		
+	
 		  // For UploadCustomerFaceBtn
 	    WebElement	UploadNewUserFaceBtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='New User Face Photo *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
 	    Thread.sleep(500);
@@ -346,6 +345,7 @@ public class MABR_KYC_ChangePage {
 	 			robot.keyRelease(KeyEvent.VK_ENTER);
 	    
 	}
+	
 	public void  additionalDoc_Upload_Btn() throws InterruptedException {    
 	    // For Upload Passport front Pag
 	    WebElement	additiondoc=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='Additional Document']/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
@@ -399,7 +399,7 @@ public class MABR_KYC_ChangePage {
 	
 	public void EditIconClick() throws InterruptedException {
 		
-		By	NumberTXTField=By.xpath("//flt-semantics/input[@aria-label='Number']");
+		By	NumberTXTField=By.xpath("//flt-semantics[.='Edit']");
 		wait.until(ExpectedConditions.presenceOfElementLocated(NumberTXTField));
 		Thread.sleep(500);			
 		WebElement	NumberTxtFieldBtn=driver.findElement(NumberTXTField);

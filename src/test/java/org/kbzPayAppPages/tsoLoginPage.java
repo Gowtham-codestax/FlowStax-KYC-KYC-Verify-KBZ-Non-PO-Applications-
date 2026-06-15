@@ -164,6 +164,28 @@ public class tsoLoginPage {
 		
 	}
 	
+	
+	public void phoneAndDevice_Change_Option() throws InterruptedException {
+		
+		By PhoneandDeviceChangeLocator = By.xpath("//flt-semantics/span[contains(text(),'Phone Change Request + Device Change Request')]");
+		wait.until(ExpectedConditions.presenceOfElementLocated(PhoneandDeviceChangeLocator));
+		Thread.sleep(1000); // Allow Flutter rendering to stabilize
+	
+		
+		// Fetch FRESH reference right before use (not stored between waits)
+		WebElement PhoneAndDeviceChangeReqBtn = driver.findElement(PhoneandDeviceChangeLocator);
+		js.executeScript("arguments[0].click();", PhoneAndDeviceChangeReqBtn);
+
+		
+		// PUll
+		By pull = By.xpath("//flt-semantics[@role='button' and .='Pull']");
+		WebElement Pull=wait.until(ExpectedConditions.presenceOfElementLocated(pull));
+		Thread.sleep(500);
+		js.executeScript("arguments[0].click();", Pull);	
+		
+	}
+	
+	
 	  public void EyeIconbtnClick() throws InterruptedException {
 	    	Thread.sleep(6100);
 	    	for (int i = 0; i <40; i++) {
