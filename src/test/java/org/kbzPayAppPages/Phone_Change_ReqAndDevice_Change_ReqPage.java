@@ -74,12 +74,12 @@ public class Phone_Change_ReqAndDevice_Change_ReqPage {
 
 	public void nrcIDproof() throws InterruptedException {
 		
+		By 	NRCIDproofRdioLoc=By.xpath("//flt-semantics/span[.='NRC / မှတ်ပုံတင်']/preceding::flt-semantics[@role='radio']");
+		wait.until(ExpectedConditions.presenceOfElementLocated(NRCIDproofRdioLoc));
+		Thread.sleep(500);
 		
-		WebElement NRCIDproofRdioBtn=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//flt-semantics/span[.='NRC / မှတ်ပုံတင်']/preceding::flt-semantics[@role='radio']")));
-		wait.until(ExpectedConditions.visibilityOf(NRCIDproofRdioBtn));
-		wait.until(ExpectedConditions.elementToBeClickable(NRCIDproofRdioBtn));
+		WebElement NRCIDproofRdioBtn=driver.findElement(NRCIDproofRdioLoc);
 		NRCIDproofRdioBtn.click();
-		Thread.sleep(1000);
 	}
 	
 	
@@ -92,7 +92,7 @@ public class Phone_Change_ReqAndDevice_Change_ReqPage {
 		Thread.sleep(1000);
 		
 		WebElement	districtBtn=driver.findElement(DistrictOPtion);
-		Thread.sleep(400);
+	//	Thread.sleep(400);
 		js.executeScript("arguments[0].click();", districtBtn);
 		WebElement fifthoption=driver.findElement(By.xpath("//flt-semantics/span[.='5']"));
 		Thread.sleep(10);
@@ -391,7 +391,7 @@ public class Phone_Change_ReqAndDevice_Change_ReqPage {
 		 
 		 public void kbzRegPhnNumField () throws InterruptedException {
 			 
-			By  kbzRegPhnNumFieldLoc	= By.xpath("//flt-semantics/span[.='KBZPay Registered Phone Number *']/following::flt-semantics[2]/input[@data-semantics-role='text-field']");
+			By  kbzRegPhnNumFieldLoc = By.xpath("//flt-semantics/span[.='KBZPay Registered Phone Number *']/following::flt-semantics[2]/input[@data-semantics-role='text-field']");
 			wait.until(ExpectedConditions.presenceOfElementLocated(kbzRegPhnNumFieldLoc));
 			Thread.sleep(600);
 			

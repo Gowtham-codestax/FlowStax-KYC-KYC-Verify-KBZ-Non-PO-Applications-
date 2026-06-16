@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testsScriptKBZPayService.Phone_Change_ReqAndDevice_Change_ReqTest">
+      <class name="testsScriptKBZPayService.Pin_Reset_Req_Device_Change_ReqTest">
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="Phone_Change_ReqAndDevice_Change_ReqPageFlowTest"/>
+          <include name="Pin_Reset_Req_Device_Change_ReqPageFlowTest"/>
         </methods>
-      </class> <!-- testsScriptKBZPayService.Phone_Change_ReqAndDevice_Change_ReqTest -->
+      </class> <!-- testsScriptKBZPayService.Pin_Reset_Req_Device_Change_ReqTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

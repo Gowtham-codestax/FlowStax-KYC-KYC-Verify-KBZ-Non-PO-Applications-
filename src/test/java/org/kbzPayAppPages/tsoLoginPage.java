@@ -186,6 +186,27 @@ public class tsoLoginPage {
 	}
 	
 	
+	public void pinResetAndDevice_Change_Option() throws InterruptedException {
+		
+		By PINResetandDeviceChangeLocator = By.xpath("//flt-semantics/span[contains(text(),'Pin Reset Request + Device Change Request')]");
+		wait.until(ExpectedConditions.presenceOfElementLocated(PINResetandDeviceChangeLocator));
+		Thread.sleep(1000); // Allow Flutter rendering to stabilize
+	
+		
+		// Fetch FRESH reference right before use (not stored between waits)
+		WebElement PINResetandDeviceChangeReqBtn = driver.findElement(PINResetandDeviceChangeLocator);
+		js.executeScript("arguments[0].click();", PINResetandDeviceChangeReqBtn);
+
+		
+		// PUll
+		By pull = By.xpath("//flt-semantics[@role='button' and .='Pull']");
+		WebElement Pull=wait.until(ExpectedConditions.presenceOfElementLocated(pull));
+		Thread.sleep(500);
+		js.executeScript("arguments[0].click();", Pull);	
+		
+	}
+	
+	
 	  public void EyeIconbtnClick() throws InterruptedException {
 	    	Thread.sleep(6100);
 	    	for (int i = 0; i <40; i++) {

@@ -113,9 +113,9 @@ public class MABR_KYC_ChangePage {
 		js.executeScript("arguments[0].click();", NumberTxtFieldBtn);
 		Thread.sleep(600);
 		NumberTxtFieldBtn.sendKeys("33457");
-		
 				
 	}
+	
 	 public void  uploadNrcFront_PageBtn() throws InterruptedException {    
 		    // For Upload Passport front Pag
 		    WebElement	uploadNRCFrontPagetBtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='Upload NRC front page *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
@@ -213,8 +213,7 @@ public class MABR_KYC_ChangePage {
 		    WebElement	OkClick=driver.findElement(By.xpath("//flt-semantics[.='OK']"));
 	    //	OkClick.click();
 		    js.executeScript("arguments[0].click();", OkClick);
-			Thread.sleep(500);
-			
+			Thread.sleep(500);		
 		}
 	
 	public void new_UserDateOfBirth() throws InterruptedException {

@@ -81,20 +81,20 @@ public class accountClosePage {
 		wait.until(ExpectedConditions.visibilityOf(BranhcPhnnumField));
 		wait.until(ExpectedConditions.elementToBeClickable(BranhcPhnnumField));
 		BranhcPhnnumField.click();
-		Thread.sleep(500);
+		Thread.sleep(200);
 		BranhcPhnnumField.sendKeys("678976777");
 	}
 	
 	
 	public void cusName() throws InterruptedException {
 		
+		By CusNameFieldLoc=By.xpath("//flt-semantics/span[.='Customer name *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']");
+		wait.until(ExpectedConditions.presenceOfElementLocated(CusNameFieldLoc));
+		Thread.sleep(200);
 		
-		
-		WebElement CusNameField=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//flt-semantics/span[.='Customer name *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
-		wait.until(ExpectedConditions.visibilityOf(CusNameField));
-		wait.until(ExpectedConditions.elementToBeClickable(CusNameField));
+		WebElement CusNameField=driver.findElement(CusNameFieldLoc);
 		CusNameField.click();
-		Thread.sleep(500);
+		Thread.sleep(100);
 		CusNameField.sendKeys("Test Name");
 		
 	}
@@ -130,7 +130,7 @@ public class accountClosePage {
 	    WebElement	OkClick=driver.findElement(By.xpath("//flt-semantics[.='OK']"));
     //	OkClick.click();
 	    js.executeScript("arguments[0].click();", OkClick);
-		Thread.sleep(500);
+		Thread.sleep(200);
 		
 	}
 	
@@ -140,7 +140,7 @@ public class accountClosePage {
 		
 		  // For UploadCustomerFaceBtn
 	    WebElement	UploadCustomerFaceBtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='Customer Face Photo *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
-	    Thread.sleep(500);
+	    Thread.sleep(200);
 	    
 	    UploadCustomerFaceBtn.click();
 	    Thread.sleep(5000);
@@ -150,12 +150,12 @@ public class accountClosePage {
 	 			for (int i = 0; i < 9; i++) {
 	 			    robot.keyPress(KeyEvent.VK_TAB);
 	 			    robot.keyRelease(KeyEvent.VK_TAB);
-	 			    Thread.sleep(300);
+	 			    Thread.sleep(200);
 	 			}
 	 			// Press ENTER (select file + click Open)
 	 			robot.keyPress(KeyEvent.VK_ENTER);
 	 			robot.keyRelease(KeyEvent.VK_ENTER);
-	 			Thread.sleep(2000);
+	 			Thread.sleep(200);
 	 			// 🔹 1 TAB (move to Open button)
 	 			robot.keyPress(KeyEvent.VK_TAB);
 	 			robot.keyRelease(KeyEvent.VK_TAB);
@@ -171,6 +171,16 @@ public class accountClosePage {
 	}
 	
 	
+	public void nrcIDproof() throws InterruptedException {
+		
+		By 	NRCIDproofRdioLoc=By.xpath("//flt-semantics/span[.='NRC / မှတ်ပုံတင်']/preceding::flt-semantics[@role='radio']");
+		wait.until(ExpectedConditions.presenceOfElementLocated(NRCIDproofRdioLoc));
+		Thread.sleep(200);
+		
+		WebElement NRCIDproofRdioBtn=driver.findElement(NRCIDproofRdioLoc);
+		NRCIDproofRdioBtn.click();
+	}
+	
 	public void passportIDproof() throws InterruptedException {
 		
 		
@@ -178,7 +188,7 @@ public class accountClosePage {
 		wait.until(ExpectedConditions.visibilityOf(passportIDproofRdioBtn));
 		wait.until(ExpectedConditions.elementToBeClickable(passportIDproofRdioBtn));
 		passportIDproofRdioBtn.click();
-		Thread.sleep(1000);
+		Thread.sleep(200);
 	}
 	
 	
@@ -186,7 +196,7 @@ public class accountClosePage {
 		
 		 //Passporrt number field
 		 WebElement	Passport_NumField=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='Passport number *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
-		 Thread.sleep(1000);
+		 Thread.sleep(500);
 		 String PassNum = "67" + String.format("%07d", System.currentTimeMillis() % 10000000L);
 		 mouse.moveToElement(Passport_NumField).click(Passport_NumField).sendKeys(PassNum).perform();
 	//	 Passport_NumField.sendKeys(PassNum);
@@ -206,12 +216,12 @@ public class accountClosePage {
 		 			for (int i = 0; i < 9; i++) {
 		 			    robot.keyPress(KeyEvent.VK_TAB);
 		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(300);
+		 			    Thread.sleep(200);
 		 			}
 		 			// Press ENTER (select file + click Open)
 		 			robot.keyPress(KeyEvent.VK_ENTER);
 		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		 			Thread.sleep(2000);
+		 			Thread.sleep(200);
 		 			// 🔹 1 TAB (move to Open button)
 		 			robot.keyPress(KeyEvent.VK_TAB);
 		 			robot.keyRelease(KeyEvent.VK_TAB);
@@ -240,12 +250,12 @@ public class accountClosePage {
 		 			for (int i = 0; i < 9; i++) {
 		 			    robot.keyPress(KeyEvent.VK_TAB);
 		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(300);
+		 			    Thread.sleep(200);
 		 			}
 		 			// Press ENTER (select file + click Open)
 		 			robot.keyPress(KeyEvent.VK_ENTER);
 		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		 			Thread.sleep(2000);
+		 			Thread.sleep(200);
 		 			// 🔹 1 TAB (move to Open button)
 		 			robot.keyPress(KeyEvent.VK_TAB);
 		 			robot.keyRelease(KeyEvent.VK_TAB);
@@ -263,30 +273,28 @@ public class accountClosePage {
 	 
 	 public void addressFiled() throws InterruptedException {
 			
-			
-			
-			WebElement AddressField=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//flt-semantics/span[.='Address *']/following::flt-semantics[1]/textarea[@data-semantics-role='text-field']")));
-			wait.until(ExpectedConditions.visibilityOf(AddressField));
-			wait.until(ExpectedConditions.elementToBeClickable(AddressField));
-			AddressField.click();
-			Thread.sleep(500);
-			AddressField.sendKeys("12 Dummy Address");
+		By AddresFieldloc= By.xpath("//flt-semantics/span[.='Address *']/following::flt-semantics[1]/textarea[@data-semantics-role='text-field']");
+		wait.until(ExpectedConditions.presenceOfElementLocated(AddresFieldloc));
+		Thread.sleep(100);
+		
+		WebElement AddressField=driver.findElement(AddresFieldloc);
+		AddressField.click();
+		Thread.sleep(100);
+		AddressField.sendKeys("Test Address");
 			
 		}
 	 
 	 
 	 public void fathersNameField() throws InterruptedException {
 		 
-		 
-			WebElement FathernameField=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//flt-semantics/span[contains(.,'Fathe')]/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
-			wait.until(ExpectedConditions.visibilityOf(FathernameField));
-			wait.until(ExpectedConditions.elementToBeClickable(FathernameField));
-			
-		//	js.executeScript("arguments[0].scrollIntoView({block:'center'});", FathernameField);
-			Thread.sleep(1000);
-			FathernameField.click();
-			Thread.sleep(500);
-			FathernameField.sendKeys("Test");
+		By FathernameFieldLoc= By.xpath("//flt-semantics/span[contains(.,'Fathe')]/following::flt-semantics[1]/input[@data-semantics-role='text-field']");
+		wait.until(ExpectedConditions.presenceOfElementLocated(FathernameFieldLoc));
+		Thread.sleep(100);
+		
+		WebElement FathernameField=driver.findElement(FathernameFieldLoc);
+		FathernameField.click();
+		Thread.sleep(100);
+		FathernameField.sendKeys("Test");
 		 
 		 
 	 }
@@ -299,7 +307,7 @@ public class accountClosePage {
 			wait.until(ExpectedConditions.visibilityOf(currentBalNumField));
 			wait.until(ExpectedConditions.elementToBeClickable(currentBalNumField));
 			currentBalNumField.click();
-			Thread.sleep(500);
+			Thread.sleep(200);
 			currentBalNumField.sendKeys("2000000");
 		 
 	 }
@@ -328,12 +336,12 @@ public class accountClosePage {
 		 			for (int i = 0; i < 9; i++) {
 		 			    robot.keyPress(KeyEvent.VK_TAB);
 		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(500);
+		 			    Thread.sleep(200);
 		 			}
 		 			// Press ENTER (select file + click Open)
 		 			robot.keyPress(KeyEvent.VK_ENTER);
 		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		 			Thread.sleep(2000);
+		 			Thread.sleep(200);
 		 			// 🔹 1 TAB (move to Open button)
 		 			robot.keyPress(KeyEvent.VK_TAB);
 		 			robot.keyRelease(KeyEvent.VK_TAB);
@@ -362,12 +370,12 @@ public class accountClosePage {
 		 			for (int i = 0; i < 9; i++) {
 		 			    robot.keyPress(KeyEvent.VK_TAB);
 		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(500);
+		 			    Thread.sleep(200);
 		 			}
 		 			// Press ENTER (select file + click Open)
 		 			robot.keyPress(KeyEvent.VK_ENTER);
 		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		 			Thread.sleep(2000);
+		 			Thread.sleep(200);
 		 			// 🔹 1 TAB (move to Open button)
 		 			robot.keyPress(KeyEvent.VK_TAB);
 		 			robot.keyRelease(KeyEvent.VK_TAB);
@@ -424,42 +432,50 @@ public class accountClosePage {
 		 }
 	 	
 	 	
+	 	 public void oldHandsetModelField() throws InterruptedException {
+				
+				WebElement OldHandsetModelField=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//flt-semantics/span[.='Old Handset Model *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
+				wait.until(ExpectedConditions.visibilityOf(OldHandsetModelField));
+				wait.until(ExpectedConditions.elementToBeClickable(OldHandsetModelField));
+				OldHandsetModelField.click();
+				Thread.sleep(500);
+				OldHandsetModelField.sendKeys("67897676GH");
+				
+			}
+	 	
+	 	
 	 	public void sparrowTicker_DateandTime() throws InterruptedException {
 			
 			//getting current Day e,g(Today)
 			int CurrentDay=LocalDate.now().getDayOfMonth();
 			
 			// calender click
-			By sparrrowDateandTime_Popup=By.xpath("//flt-semantics/span[.='Date and Time (For Sparrow Ticket)']"+"/following::flt-semantics[1]");
-			WebElement SparrrowDateandTime_Popup=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//flt-semantics/span[.='Date and Time (For Sparrow Ticket)']/following::flt-semantics[1]")));
-			wait.until(ExpectedConditions.visibilityOf(SparrrowDateandTime_Popup));
-			wait.until(ExpectedConditions.elementToBeClickable(SparrrowDateandTime_Popup));
-			SparrrowDateandTime_Popup.click();
+			By sparrrowDateandTime_PopupLoc=By.xpath("//flt-semantics/span[.='Date and Time (For Sparrow Ticket)']"+"/following::flt-semantics[1]");
+			wait.until(ExpectedConditions.presenceOfElementLocated(sparrrowDateandTime_PopupLoc));
+			Thread.sleep(500);
+			
+			WebElement sparrrowDateandTime_Popup=driver.findElement(sparrrowDateandTime_PopupLoc);
+			wait.until(ExpectedConditions.elementToBeClickable(sparrrowDateandTime_Popup));
+			sparrrowDateandTime_Popup.click();
 			
 			// Dyamimc xpath For Current Day
 			By todayDate = By.xpath("//flt-semantics[contains(text(),'" + CurrentDay + "') and contains(text(),'Today')]");
-			WebElement today = wait.until(ExpectedConditions.elementToBeClickable(todayDate));
+			wait.until(ExpectedConditions.elementToBeClickable(todayDate));
 			
+			WebElement today=driver.findElement(todayDate);
 			// Click current date
 		    js.executeScript("arguments[0].click();", today);
 			
 		    //First OK
-		    
 		    WebElement	OkClick=driver.findElement(By.xpath("//flt-semantics[.='OK']"));
 			//customerOnboardChannel
 	    	OkClick.click();
-			Thread.sleep(1000);
+			Thread.sleep(500);
 			
 			// ANother OK 
-			
 			// Second OK (Time popup) - RELOCATE AGAIN
-		    WebElement secondOk = wait.until(
-		            ExpectedConditions.elementToBeClickable(
-		                    By.xpath("(//flt-semantics[.='OK'])[last()]")
-		            ));
-
+		    WebElement secondOk = wait.until(ExpectedConditions.elementToBeClickable( By.xpath("(//flt-semantics[.='OK'])[last()]") ));
 		    js.executeScript("arguments[0].click();", secondOk);
-
 		    Thread.sleep(1000);
 			
 		}
@@ -488,7 +504,7 @@ public class accountClosePage {
 			  //  js.executeScript("arguments[0].scrollIntoView({block:'center'});", reason);
 			 //   Thread.sleep(1000);
 			    reason.click();
-			    Thread.sleep(500);
+			    Thread.sleep(100);
 			    reason.sendKeys("Test");
 			    
 			 //   js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", reason);
@@ -501,10 +517,13 @@ public class accountClosePage {
 
 			}	
 	 
-		  public void NextButton() {  	
-			   
-			  WebElement	NxtBtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//flt-semantics[.='Next']"))));
-			  NxtBtn.click();
+		  public void NextButton() throws InterruptedException {  	 
+			  By NextLoc=By.xpath("//flt-semantics[.='Next']");
+			  wait.until(ExpectedConditions.presenceOfElementLocated(NextLoc));
+			  Thread.sleep(50);
+			  
+			  WebElement NextBtn=driver.findElement(NextLoc);
+			  NextBtn.click();
 			  
 		  }
 		  
@@ -516,12 +535,12 @@ public class accountClosePage {
 					
 					robot.keyPress(KeyEvent.VK_TAB);																										
 					robot.keyRelease(KeyEvent.VK_TAB);
-					Thread.sleep(300);	
+					Thread.sleep(200);	
 					}
 		    	
 		    		WebElement	eyeiconbtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//flt-semantics[@style='position: absolute; overflow: visible; width: 40px; height: 40px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 100, 7.5); pointer-events: all;'])[1]")));
 		    		 js.executeScript("arguments[0].scrollIntoView({block:'center'});", eyeiconbtn);
-		    		 Thread.sleep(1000);
+		    		 Thread.sleep(500);
 		    		js.executeScript("arguments[0].click();", eyeiconbtn);
 		    	
 		    }
@@ -562,7 +581,7 @@ public class accountClosePage {
 		    	
 		    	
 	    		WebElement	AssignToTSOBtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics[@role='button' and contains(text(),'Assign to TSO')]")));
-	    		Thread.sleep(1500);
+	    		Thread.sleep(3000);
 	    		AssignToTSOBtn.click();
 	    }
 	 
@@ -572,8 +591,7 @@ public class accountClosePage {
 		    public void recommedUploadLeter_YesRadioBtn() throws InterruptedException {
 		    	
 
-	    		WebElement	yes=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='Is Recommendation letter uploaded *']"+
-	    				"/following::flt-semantics[1][@role='radio']")));
+	    		WebElement	yes=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='Is Recommendation letter uploaded *']"+"/following::flt-semantics[1][@role='radio']")));
 	    		Thread.sleep(500);
 	    		js.executeScript("arguments[0].click();", yes);
 		    	
@@ -609,9 +627,9 @@ public class accountClosePage {
 		    	
 				By Commentsection=	By.xpath("//textarea[@data-semantics-role[contains(.,'text-field')]]");
 		    	WebElement UpdatestageCMNTbox=wait.until(ExpectedConditions.presenceOfElementLocated(Commentsection));
-		    	Thread.sleep(2000);
+		    	Thread.sleep(1200);
 		    	js.executeScript("arguments[0].click();", UpdatestageCMNTbox);
-		    	Thread.sleep(500);
+		    	Thread.sleep(100);
 		    	UpdatestageCMNTbox.sendKeys("Test");
 		    //	js.executeScript("arguments[0].click()", UpdatestageCMNTbox);
 		    //	js.executeScript("arguments[0].value= 'Okay';", UpdatestageCMNTbox);
@@ -636,7 +654,7 @@ public class accountClosePage {
 		            	 wait.until(ExpectedConditions.presenceOfElementLocated(menuBtn));
 		            	 WebElement menu= driver.findElement(menuBtn);
 		         //      js.executeScript("arguments[0].scrollIntoView({block:'center'});", menu);
-		                Thread.sleep(5000);
+		                Thread.sleep(3000);
 
 		       //         js.executeScript("arguments[0].dispatchEvent(new MouseEvent('click',{bubbles:true}));", menu);
 		                js.executeScript("arguments[0].click();",menu);

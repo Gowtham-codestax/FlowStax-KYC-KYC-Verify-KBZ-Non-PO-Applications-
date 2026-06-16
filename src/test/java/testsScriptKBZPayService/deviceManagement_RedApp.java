@@ -85,9 +85,6 @@ public class deviceManagement_RedApp  extends BaseClass{
 	public void closingLoopLogin() throws InterruptedException, AWTException {
 		
 		
-		driver.get("https://staging.flow.stax.run/#/login");
-		Thread.sleep(5000);
-		
 		LoginPage login = new LoginPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);
 		closingLoopPage closingLoop= new closingLoopPage(driver);
@@ -114,14 +111,9 @@ public class deviceManagement_RedApp  extends BaseClass{
 	@Test(priority = 3,dependsOnMethods = "closingLoopLogin")
 	public void branchLogin() throws InterruptedException, AWTException {
 		
-		driver.get("https://staging.flow.stax.run/#/login");
-		Thread.sleep(5000);
 		
 		LoginPage login = new LoginPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);
-		closingLoopPage closingLoop= new closingLoopPage(driver);
-		deviceManagement_DeviceChange deviceChange= new deviceManagement_DeviceChange(driver);
-		
 		
 		login.login("BranchTeam_KBZPay@gmail.com", "98DjpLo4WVsdI5HILPVI");
 		

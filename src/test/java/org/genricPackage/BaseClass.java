@@ -36,7 +36,7 @@ public class BaseClass {
         
         DriverFactory.getDriver().manage().window().maximize();
 
-        DriverFactory.getDriver().manage().timeouts() .implicitlyWait(Duration.ofSeconds(20));
+        DriverFactory.getDriver().manage().timeouts() .implicitlyWait(Duration.ofSeconds(15));
 
         DriverFactory.getDriver().get("https://staging.flow.stax.run/#/login");
         
