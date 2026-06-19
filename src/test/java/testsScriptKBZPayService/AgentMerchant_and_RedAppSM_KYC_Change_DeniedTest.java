@@ -1,6 +1,7 @@
 package testsScriptKBZPayService;
 
 import java.awt.AWTException;
+
 import org.genricPackage.BaseClass;
 import org.kbzPayAppPages.AgentMerchant_and_RedAppSM_KYC_ChangePage;
 import org.kbzPayAppPages.accountClosePage;
@@ -10,10 +11,12 @@ import org.pages.DashBoardPage;
 import org.pages.LoginPage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
 import utilityPackage.ListenersClass;
 
 @Listeners(ListenersClass.class)
-public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
+public class AgentMerchant_and_RedAppSM_KYC_Change_DeniedTest extends BaseClass{
+	
 	
 	@Test(priority = 1 )
 	public void AgemtMerchantand_RedAppFlowTest() throws InterruptedException, AWTException {
@@ -115,7 +118,6 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 	@Test(priority = 2  ,dependsOnMethods = "AgemtMerchantand_RedAppFlowTest" )
 	public void TSOLoginFlow() throws AWTException, InterruptedException {
 		
-		
 		LoginPage login = new LoginPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);	
 		tsoLoginPage tso= new tsoLoginPage(driver);
@@ -143,7 +145,7 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 	}
 	
 	// , dependsOnMethods = "TSOLoginFlow"
-	@Test(priority = 3  ) 
+	@Test(priority = 3 , dependsOnMethods = "TSOLoginFlow" ) 
 	public void branchLoginFlow() throws InterruptedException, AWTException {
 		
 		LoginPage login = new LoginPage(driver);
@@ -230,7 +232,7 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 		
 		tso.EyeIconbtnClick();
 		
-		tso.resolvebutton();
+		tso.denyButton();
 		
 		tso.UpdateStage_Commentsection();
 		
@@ -254,15 +256,7 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 		
 		closingLoop.EyeIconbtnClick();
 		
-		closingLoop.closebutton();
-		
-		closingLoop.UpdateStage_Commentsection();
-		
-		accClose.NextButton();
-		
-		closingLoop.EyeIconbtnClick();
-		
-		closingLoop.downloadPDFButton();
+    	closingLoop.downloadPDFButton();
 				
 		accClose.MenuButton();
 		
@@ -270,5 +264,5 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 			
 	}
 	
-	
+
 }

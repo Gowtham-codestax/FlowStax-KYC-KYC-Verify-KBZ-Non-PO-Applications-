@@ -199,29 +199,35 @@ public class approvalDelayPage {
 		    PassportFrontPagebtn.click();
 		    Thread.sleep(5000);
 		    
-		    		// For Upload Passport front Page Robot Loop 
-		 			// Navigate using TAB 
-		 			for (int i = 0; i < 9; i++) {
-		 			    robot.keyPress(KeyEvent.VK_TAB);
-		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(500);
-		 			}
-		 			// Press ENTER (select file + click Open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		 			Thread.sleep(2000);
-		 			// 🔹 1 TAB (move to Open button)
-		 			robot.keyPress(KeyEvent.VK_TAB);
-		 			robot.keyRelease(KeyEvent.VK_TAB);
-		 			
-		 			// Down to select the File 
-		 			robot.keyPress(KeyEvent.VK_DOWN);
-		 		    robot.keyRelease(KeyEvent.VK_DOWN);
-		 			
-		 			// Enter (click open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		    
+		    // For Upload Passport front Page Robot Loop 
+			// Navigate using TAB 
+			for (int i = 0; i < 9; i++) {
+			    robot.keyPress(KeyEvent.VK_TAB);
+			    robot.keyRelease(KeyEvent.VK_TAB);
+			    Thread.sleep(350);
+			}
+		// Press DOWN arrow 3 times to select picture option
+			for (int i = 0; i < 3; i++) {
+			    robot.keyPress(KeyEvent.VK_DOWN);
+			    robot.keyRelease(KeyEvent.VK_DOWN);
+			    Thread.sleep(350);
+			}
+			// Press ENTER (select file + click Open)
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(200);
+			// 🔹 1 TAB (move to Open button)
+			robot.keyPress(KeyEvent.VK_TAB);
+			robot.keyRelease(KeyEvent.VK_TAB);
+			
+			// Down to select the File 
+			robot.keyPress(KeyEvent.VK_DOWN);
+		    robot.keyRelease(KeyEvent.VK_DOWN);
+			
+			// Enter (click open)
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+	    
 		   
 		    }
 	 
@@ -233,31 +239,36 @@ public class approvalDelayPage {
 	    	wait.until(ExpectedConditions.elementToBeClickable(PassportBackPagebtn));
 	    	 Thread.sleep(500);
 	    	PassportBackPagebtn.click();
-	    	 Thread.sleep(5000);
-	    	
-	    	// For Upload Passport Back Page Robot Loop 
-	    				// Navigate using TAB 
-	    				for (int i = 0; i < 9; i++) {
-	    					robot.keyPress(KeyEvent.VK_TAB);
-	    				    robot.keyRelease(KeyEvent.VK_TAB);
-	    				    Thread.sleep(500);
-	    				}
-	    								
-	    				// Press ENTER (select file + click Open)
-	    				robot.keyPress(KeyEvent.VK_ENTER);
-	    				robot.keyRelease(KeyEvent.VK_ENTER);
-	    				Thread.sleep(1000);
-	    				// 🔹 1 TAB (move to Open button)
-	    				robot.keyPress(KeyEvent.VK_TAB);
-	    				robot.keyRelease(KeyEvent.VK_TAB);
-	    				
-	    				// Down to select the File 
-	    				robot.keyPress(KeyEvent.VK_DOWN);
-	    			    robot.keyRelease(KeyEvent.VK_DOWN);
-	    				
-	    				// Enter (click open)
-	    				robot.keyPress(KeyEvent.VK_ENTER);
-	    				robot.keyRelease(KeyEvent.VK_ENTER);
+	    	Thread.sleep(5100);
+		    
+		    // For Upload Passport front Page Robot Loop 
+			// Navigate using TAB 
+			for (int i = 0; i < 9; i++) {
+			    robot.keyPress(KeyEvent.VK_TAB);
+			    robot.keyRelease(KeyEvent.VK_TAB);
+			    Thread.sleep(350);
+			}
+		// Press DOWN arrow 3 times to select picture option
+			for (int i = 0; i < 3; i++) {
+			    robot.keyPress(KeyEvent.VK_DOWN);
+			    robot.keyRelease(KeyEvent.VK_DOWN);
+			    Thread.sleep(350);
+			}
+			// Press ENTER (select file + click Open)
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(200);
+			// 🔹 1 TAB (move to Open button)
+			robot.keyPress(KeyEvent.VK_TAB);
+			robot.keyRelease(KeyEvent.VK_TAB);
+			
+			// Down to select the File 
+			robot.keyPress(KeyEvent.VK_DOWN);
+		    robot.keyRelease(KeyEvent.VK_DOWN);
+			
+			// Enter (click open)
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
 	    	}
 	    
 	 // For Upload Passport Request Form 
@@ -267,31 +278,37 @@ public class approvalDelayPage {
 	    WebElement	Passport_ReqFormBtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//input[@data-semantics-role='text-field'])[7]"))));
 	    Thread.sleep(500);
 	    Passport_ReqFormBtn.click();
-	    Thread.sleep(5000);
-	 
-	    	// For Upload Passport Request Form  Robot Loop 
-	 			// Navigate using TAB 
-	 			for (int i = 0; i < 9; i++) {
-	 				robot.keyPress(KeyEvent.VK_TAB);
-	 			    robot.keyRelease(KeyEvent.VK_TAB);
-	 			    Thread.sleep(500);
-	 			}
-	 							
-	 			// Press ENTER (select file + click Open)
-	 			robot.keyPress(KeyEvent.VK_ENTER);
-	 			robot.keyRelease(KeyEvent.VK_ENTER);
-	 			Thread.sleep(1000);
-	 			// 🔹 1 TAB (move to Open button)
-	 			robot.keyPress(KeyEvent.VK_TAB);
-	 			robot.keyRelease(KeyEvent.VK_TAB);
-	 			
-	 			// Down to select the File 
-	 			robot.keyPress(KeyEvent.VK_DOWN);
-	 		    robot.keyRelease(KeyEvent.VK_DOWN);
-	 			
-	 			// Enter (click open)
-	 			robot.keyPress(KeyEvent.VK_ENTER);
-	 			robot.keyRelease(KeyEvent.VK_ENTER);
+Thread.sleep(5100);
+	    
+	    // For Upload Passport front Page Robot Loop 
+		// Navigate using TAB 
+		for (int i = 0; i < 9; i++) {
+		    robot.keyPress(KeyEvent.VK_TAB);
+		    robot.keyRelease(KeyEvent.VK_TAB);
+		    Thread.sleep(350);
+		}
+	// Press DOWN arrow 3 times to select picture option
+		for (int i = 0; i < 3; i++) {
+		    robot.keyPress(KeyEvent.VK_DOWN);
+		    robot.keyRelease(KeyEvent.VK_DOWN);
+		    Thread.sleep(350);
+		}
+		// Press ENTER (select file + click Open)
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		Thread.sleep(200);
+		// 🔹 1 TAB (move to Open button)
+		robot.keyPress(KeyEvent.VK_TAB);
+		robot.keyRelease(KeyEvent.VK_TAB);
+		
+		// Down to select the File 
+		robot.keyPress(KeyEvent.VK_DOWN);
+	    robot.keyRelease(KeyEvent.VK_DOWN);
+		
+		// Enter (click open)
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+    
 	    
 	    }
 	    
@@ -321,31 +338,37 @@ public class approvalDelayPage {
 	    WebElement	uploadsecondaryIDfrontPage_Btn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//input[@data-semantics-role='text-field'])[8]"))));
 	    Thread.sleep(500);
 	    uploadsecondaryIDfrontPage_Btn.click();
-	    Thread.sleep(5000);
-	 
-	    	// For Upload Passport Request Form  Robot Loop 
-	 			// Navigate using TAB 
-	 			for (int i = 0; i < 9; i++) {
-	 				robot.keyPress(KeyEvent.VK_TAB);
-	 			    robot.keyRelease(KeyEvent.VK_TAB);
-	 			    Thread.sleep(500);
-	 			}
-	 							
-	 			// Press ENTER (select file + click Open)
-	 			robot.keyPress(KeyEvent.VK_ENTER);
-	 			robot.keyRelease(KeyEvent.VK_ENTER);
-	 			Thread.sleep(1000);
-	 			// 🔹 1 TAB (move to Open button)
-	 			robot.keyPress(KeyEvent.VK_TAB);
-	 			robot.keyRelease(KeyEvent.VK_TAB);
-	 			
-	 			// Down to select the File 
-	 			robot.keyPress(KeyEvent.VK_DOWN);
-	 		    robot.keyRelease(KeyEvent.VK_DOWN);
-	 			
-	 			// Enter (click open)
-	 			robot.keyPress(KeyEvent.VK_ENTER);
-	 			robot.keyRelease(KeyEvent.VK_ENTER);
+	    Thread.sleep(5100);
+	    
+	    // For Upload Passport front Page Robot Loop 
+		// Navigate using TAB 
+		for (int i = 0; i < 9; i++) {
+		    robot.keyPress(KeyEvent.VK_TAB);
+		    robot.keyRelease(KeyEvent.VK_TAB);
+		    Thread.sleep(350);
+		}
+	// Press DOWN arrow 3 times to select picture option
+		for (int i = 0; i < 3; i++) {
+		    robot.keyPress(KeyEvent.VK_DOWN);
+		    robot.keyRelease(KeyEvent.VK_DOWN);
+		    Thread.sleep(350);
+		}
+		// Press ENTER (select file + click Open)
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		Thread.sleep(200);
+		// 🔹 1 TAB (move to Open button)
+		robot.keyPress(KeyEvent.VK_TAB);
+		robot.keyRelease(KeyEvent.VK_TAB);
+		
+		// Down to select the File 
+		robot.keyPress(KeyEvent.VK_DOWN);
+	    robot.keyRelease(KeyEvent.VK_DOWN);
+		
+		// Enter (click open)
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+    
 	    
 	    }
 	    
@@ -360,31 +383,37 @@ public class approvalDelayPage {
 
 	    	    Thread.sleep(500);
 	    	    uploadSecondaryIDBackPageBtn.click();
-	    	    Thread.sleep(5000);
-
-	    	    // TAB navigation
-	    	    for (int i = 0; i < 9; i++) {
-	    	        robot.keyPress(KeyEvent.VK_TAB);
-	    	        robot.keyRelease(KeyEvent.VK_TAB);
-	    	        Thread.sleep(500);
-	    	    }
-
-	    	    // ENTER
-	    	    robot.keyPress(KeyEvent.VK_ENTER);
-	    	    robot.keyRelease(KeyEvent.VK_ENTER);
-	    	    Thread.sleep(2000);
-
-	    	    // TAB
-	    	    robot.keyPress(KeyEvent.VK_TAB);
-	    	    robot.keyRelease(KeyEvent.VK_TAB);
-
-	    	    // DOWN
-	    	    robot.keyPress(KeyEvent.VK_DOWN);
+	    	    Thread.sleep(5100);
+	    	    
+	    	    // For Upload Passport front Page Robot Loop 
+	    		// Navigate using TAB 
+	    		for (int i = 0; i < 9; i++) {
+	    		    robot.keyPress(KeyEvent.VK_TAB);
+	    		    robot.keyRelease(KeyEvent.VK_TAB);
+	    		    Thread.sleep(350);
+	    		}
+	    	// Press DOWN arrow 3 times to select picture option
+	    		for (int i = 0; i < 3; i++) {
+	    		    robot.keyPress(KeyEvent.VK_DOWN);
+	    		    robot.keyRelease(KeyEvent.VK_DOWN);
+	    		    Thread.sleep(350);
+	    		}
+	    		// Press ENTER (select file + click Open)
+	    		robot.keyPress(KeyEvent.VK_ENTER);
+	    		robot.keyRelease(KeyEvent.VK_ENTER);
+	    		Thread.sleep(200);
+	    		// 🔹 1 TAB (move to Open button)
+	    		robot.keyPress(KeyEvent.VK_TAB);
+	    		robot.keyRelease(KeyEvent.VK_TAB);
+	    		
+	    		// Down to select the File 
+	    		robot.keyPress(KeyEvent.VK_DOWN);
 	    	    robot.keyRelease(KeyEvent.VK_DOWN);
-
-	    	    // ENTER
-	    	    robot.keyPress(KeyEvent.VK_ENTER);
-	    	    robot.keyRelease(KeyEvent.VK_ENTER);
+	    		
+	    		// Enter (click open)
+	    		robot.keyPress(KeyEvent.VK_ENTER);
+	    		robot.keyRelease(KeyEvent.VK_ENTER);
+	        
 	    }
 	   
 		 // For uploadAdditionalDocument_Btn
@@ -393,32 +422,37 @@ public class approvalDelayPage {
 	    WebElement	uploadadditionalDocument_Btn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//input[@data-semantics-role='text-field'])[10]"))));
 	    Thread.sleep(500);
 	    uploadadditionalDocument_Btn.click();
-	    Thread.sleep(5000);
-	 
-	    	// For Upload Passport Request Form  Robot Loop 
-	 			// Navigate using TAB 
-	 			for (int i = 0; i < 9; i++) {
-	 				robot.keyPress(KeyEvent.VK_TAB);
-	 			    robot.keyRelease(KeyEvent.VK_TAB);
-	 			    Thread.sleep(500);
-	 			}
-	 							
-	 			// Press ENTER (select file + click Open)
-	 			robot.keyPress(KeyEvent.VK_ENTER);
-	 			robot.keyRelease(KeyEvent.VK_ENTER);
-	 			Thread.sleep(1000);
-	 			// 🔹 1 TAB (move to Open button)
-	 			robot.keyPress(KeyEvent.VK_TAB);
-	 			robot.keyRelease(KeyEvent.VK_TAB);
-	 			
-	 			// Down to select the File 
-	 			robot.keyPress(KeyEvent.VK_DOWN);
-	 		    robot.keyRelease(KeyEvent.VK_DOWN);
-	 			
-	 			// Enter (click open)
-	 			robot.keyPress(KeyEvent.VK_ENTER);
-	 			robot.keyRelease(KeyEvent.VK_ENTER);
+	    Thread.sleep(5100);
 	    
+	    // For Upload Passport front Page Robot Loop 
+		// Navigate using TAB 
+		for (int i = 0; i < 9; i++) {
+		    robot.keyPress(KeyEvent.VK_TAB);
+		    robot.keyRelease(KeyEvent.VK_TAB);
+		    Thread.sleep(350);
+		}
+	// Press DOWN arrow 3 times to select picture option
+		for (int i = 0; i < 3; i++) {
+		    robot.keyPress(KeyEvent.VK_DOWN);
+		    robot.keyRelease(KeyEvent.VK_DOWN);
+		    Thread.sleep(350);
+		}
+		// Press ENTER (select file + click Open)
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		Thread.sleep(200);
+		// 🔹 1 TAB (move to Open button)
+		robot.keyPress(KeyEvent.VK_TAB);
+		robot.keyRelease(KeyEvent.VK_TAB);
+		
+		// Down to select the File 
+		robot.keyPress(KeyEvent.VK_DOWN);
+	    robot.keyRelease(KeyEvent.VK_DOWN);
+		
+		// Enter (click open)
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+    
 	    }
 	    
 	    
@@ -428,31 +462,37 @@ public class approvalDelayPage {
 	    	WebElement	UploadNRCrecmendationLetter=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//input[@data-semantics-role='text-field'])[11]"))));
 	    	 Thread.sleep(500);
 	    	UploadNRCrecmendationLetter.click();
-	    	 Thread.sleep(5000);
-		 
-		    	// For Upload PUploadNRCrecmendationLetter  Robot Loop 
-		 			// Navigate using TAB 
-		 			for (int i = 0; i < 9; i++) {
-		 				robot.keyPress(KeyEvent.VK_TAB);
-		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(500);
-		 			}
-		 							
-		 			// Press ENTER (select file + click Open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		 			Thread.sleep(1000);
-		 			// 🔹 1 TAB (move to Open button)
-		 			robot.keyPress(KeyEvent.VK_TAB);
-		 			robot.keyRelease(KeyEvent.VK_TAB);
-		 			
-		 			// Down to select the File 
-		 			robot.keyPress(KeyEvent.VK_DOWN);
-		 		    robot.keyRelease(KeyEvent.VK_DOWN);
-		 			
-		 			// Enter (click open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
+	    	Thread.sleep(5100);
+		    
+		    // For Upload Passport front Page Robot Loop 
+			// Navigate using TAB 
+			for (int i = 0; i < 9; i++) {
+			    robot.keyPress(KeyEvent.VK_TAB);
+			    robot.keyRelease(KeyEvent.VK_TAB);
+			    Thread.sleep(350);
+			}
+		// Press DOWN arrow 3 times to select picture option
+			for (int i = 0; i < 3; i++) {
+			    robot.keyPress(KeyEvent.VK_DOWN);
+			    robot.keyRelease(KeyEvent.VK_DOWN);
+			    Thread.sleep(350);
+			}
+			// Press ENTER (select file + click Open)
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(200);
+			// 🔹 1 TAB (move to Open button)
+			robot.keyPress(KeyEvent.VK_TAB);
+			robot.keyRelease(KeyEvent.VK_TAB);
+			
+			// Down to select the File 
+			robot.keyPress(KeyEvent.VK_DOWN);
+		    robot.keyRelease(KeyEvent.VK_DOWN);
+			
+			// Enter (click open)
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+	    
 		    
 	    	
 	    }
@@ -464,32 +504,37 @@ public class approvalDelayPage {
 	    	WebElement	UploadSelf=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//input[@data-semantics-role='text-field'])[12]"))));
 	    	 Thread.sleep(500);
 	    	UploadSelf.click();
-	    	 Thread.sleep(5000);
-		 
-		    	// For UploadSelf  Robot Loop 
-		 			// Navigate using TAB 
-		 			for (int i = 0; i < 9; i++) {
-		 				robot.keyPress(KeyEvent.VK_TAB);
-		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(500);
-		 			}
-		 							
-		 			// Press ENTER (select file + click Open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		 			Thread.sleep(1000);
-		 			// 🔹 1 TAB (move to Open button)
-		 			robot.keyPress(KeyEvent.VK_TAB);
-		 			robot.keyRelease(KeyEvent.VK_TAB);
-		 			
-		 			// Down to select the File 
-		 			robot.keyPress(KeyEvent.VK_DOWN);
-		 		    robot.keyRelease(KeyEvent.VK_DOWN);
-		 			
-		 			// Enter (click open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
+	    	Thread.sleep(5100);
 		    
+		    // For Upload Passport front Page Robot Loop 
+			// Navigate using TAB 
+			for (int i = 0; i < 9; i++) {
+			    robot.keyPress(KeyEvent.VK_TAB);
+			    robot.keyRelease(KeyEvent.VK_TAB);
+			    Thread.sleep(350);
+			}
+		// Press DOWN arrow 3 times to select picture option
+			for (int i = 0; i < 3; i++) {
+			    robot.keyPress(KeyEvent.VK_DOWN);
+			    robot.keyRelease(KeyEvent.VK_DOWN);
+			    Thread.sleep(350);
+			}
+			// Press ENTER (select file + click Open)
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(200);
+			// 🔹 1 TAB (move to Open button)
+			robot.keyPress(KeyEvent.VK_TAB);
+			robot.keyRelease(KeyEvent.VK_TAB);
+			
+			// Down to select the File 
+			robot.keyPress(KeyEvent.VK_DOWN);
+		    robot.keyRelease(KeyEvent.VK_DOWN);
+			
+			// Enter (click open)
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+	    
 	    	
 	    }
 	    

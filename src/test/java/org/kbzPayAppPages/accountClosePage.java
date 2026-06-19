@@ -42,9 +42,10 @@ public class accountClosePage {
 		
 		By	KBZBtn= By.xpath("//flt-semantics/span[.='KBZPay Service Operations']");
 		wait.until(ExpectedConditions.presenceOfElementLocated(KBZBtn));
+		Thread.sleep(1000);
 		WebElement	KBZPayService	=driver.findElement(KBZBtn);
-		Thread.sleep(1500);
-		 KBZPayService.click();
+		Thread.sleep(200);
+		KBZPayService.click();
 	//	js.executeScript("arguments[0].click();", KBZPayService);
 		
 	}
@@ -136,37 +137,40 @@ public class accountClosePage {
 	
 	
 	public void UploadCustomerFace() throws InterruptedException {
-		
-		
 		  // For UploadCustomerFaceBtn
 	    WebElement	UploadCustomerFaceBtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//flt-semantics/span[.='Customer Face Photo *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']")));
-	    Thread.sleep(200);
-	    
+	//   Thread.sleep(200);    
 	    UploadCustomerFaceBtn.click();
 	    Thread.sleep(5000);
 	    
-	    		// For Upload Passport front Page Robot Loop 
-	 			// Navigate using TAB 
-	 			for (int i = 0; i < 9; i++) {
-	 			    robot.keyPress(KeyEvent.VK_TAB);
-	 			    robot.keyRelease(KeyEvent.VK_TAB);
-	 			    Thread.sleep(200);
-	 			}
-	 			// Press ENTER (select file + click Open)
-	 			robot.keyPress(KeyEvent.VK_ENTER);
-	 			robot.keyRelease(KeyEvent.VK_ENTER);
-	 			Thread.sleep(200);
-	 			// 🔹 1 TAB (move to Open button)
-	 			robot.keyPress(KeyEvent.VK_TAB);
-	 			robot.keyRelease(KeyEvent.VK_TAB);
-	 			
-	 			// Down to select the File 
-	 			robot.keyPress(KeyEvent.VK_DOWN);
-	 		    robot.keyRelease(KeyEvent.VK_DOWN);
-	 			
-	 			// Enter (click open)
-	 			robot.keyPress(KeyEvent.VK_ENTER);
-	 			robot.keyRelease(KeyEvent.VK_ENTER);
+	 // For Upload Passport front Page Robot Loop 
+			// Navigate using TAB 
+			for (int i = 0; i < 9; i++) {
+			    robot.keyPress(KeyEvent.VK_TAB);
+			    robot.keyRelease(KeyEvent.VK_TAB);
+			    Thread.sleep(300);
+			}
+		// Press DOWN arrow 3 times to select picture option
+			for (int i = 0; i < 3; i++) {
+			    robot.keyPress(KeyEvent.VK_DOWN);
+			    robot.keyRelease(KeyEvent.VK_DOWN);
+			    Thread.sleep(300);
+			}
+			// Press ENTER (select file + click Open)
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(200);
+			// 🔹 1 TAB (move to Open button)
+			robot.keyPress(KeyEvent.VK_TAB);
+			robot.keyRelease(KeyEvent.VK_TAB);
+			
+			// Down to select the File 
+			robot.keyPress(KeyEvent.VK_DOWN);
+		    robot.keyRelease(KeyEvent.VK_DOWN);
+			
+			// Enter (click open)
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
 	    
 	}
 	
@@ -211,29 +215,34 @@ public class accountClosePage {
 		   uploadNewPassportBtn.click();
 		    Thread.sleep(5000);
 		    
-		    		// For Upload Passport front Page Robot Loop 
-		 			// Navigate using TAB 
-		 			for (int i = 0; i < 9; i++) {
-		 			    robot.keyPress(KeyEvent.VK_TAB);
-		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(200);
-		 			}
-		 			// Press ENTER (select file + click Open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		 			Thread.sleep(200);
-		 			// 🔹 1 TAB (move to Open button)
-		 			robot.keyPress(KeyEvent.VK_TAB);
-		 			robot.keyRelease(KeyEvent.VK_TAB);
-		 			
-		 			// Down to select the File 
-		 			robot.keyPress(KeyEvent.VK_DOWN);
-		 		    robot.keyRelease(KeyEvent.VK_DOWN);
-		 			
-		 			// Enter (click open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		    
+		 // For Upload Passport front Page Robot Loop 
+ 			// Navigate using TAB 
+ 			for (int i = 0; i < 9; i++) {
+ 			    robot.keyPress(KeyEvent.VK_TAB);
+ 			    robot.keyRelease(KeyEvent.VK_TAB);
+ 			    Thread.sleep(350);
+ 			}
+ 		// Press DOWN arrow 3 times to select picture option
+ 			for (int i = 0; i < 3; i++) {
+ 			    robot.keyPress(KeyEvent.VK_DOWN);
+ 			    robot.keyRelease(KeyEvent.VK_DOWN);
+ 			    Thread.sleep(300);
+ 			}
+ 			// Press ENTER (select file + click Open)
+ 			robot.keyPress(KeyEvent.VK_ENTER);
+ 			robot.keyRelease(KeyEvent.VK_ENTER);
+ 			Thread.sleep(300);
+ 			// 🔹 1 TAB (move to Open button)
+ 			robot.keyPress(KeyEvent.VK_TAB);
+ 			robot.keyRelease(KeyEvent.VK_TAB);
+ 			
+ 			// Down to select the File 
+ 			robot.keyPress(KeyEvent.VK_DOWN);
+ 		    robot.keyRelease(KeyEvent.VK_DOWN);
+ 			
+ 			// Enter (click open)
+ 			robot.keyPress(KeyEvent.VK_ENTER);
+ 			robot.keyRelease(KeyEvent.VK_ENTER);
 		   
 		    }
 	 
@@ -244,31 +253,35 @@ public class accountClosePage {
 		   Thread.sleep(1500);
 		   uploadOldPassportBtn.click();
 		    Thread.sleep(5000);
-		    
-		    		// For Upload Passport front Page Robot Loop 
-		 			// Navigate using TAB 
-		 			for (int i = 0; i < 9; i++) {
-		 			    robot.keyPress(KeyEvent.VK_TAB);
-		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(200);
-		 			}
-		 			// Press ENTER (select file + click Open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		 			Thread.sleep(200);
-		 			// 🔹 1 TAB (move to Open button)
-		 			robot.keyPress(KeyEvent.VK_TAB);
-		 			robot.keyRelease(KeyEvent.VK_TAB);
-		 			
-		 			// Down to select the File 
-		 			robot.keyPress(KeyEvent.VK_DOWN);
-		 		    robot.keyRelease(KeyEvent.VK_DOWN);
-		 			
-		 			// Enter (click open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		    
-		   
+		    // For Upload Passport front Page Robot Loop 
+ 			// Navigate using TAB 
+ 			for (int i = 0; i < 9; i++) {
+ 			    robot.keyPress(KeyEvent.VK_TAB);
+ 			    robot.keyRelease(KeyEvent.VK_TAB);
+ 			    Thread.sleep(350);
+ 			}
+ 		// Press DOWN arrow 3 times to select picture option
+ 			for (int i = 0; i < 3; i++) {
+ 			    robot.keyPress(KeyEvent.VK_DOWN);
+ 			    robot.keyRelease(KeyEvent.VK_DOWN);
+ 			    Thread.sleep(300);
+ 			}
+ 			// Press ENTER (select file + click Open)
+ 			robot.keyPress(KeyEvent.VK_ENTER);
+ 			robot.keyRelease(KeyEvent.VK_ENTER);
+ 			Thread.sleep(300);
+ 			// 🔹 1 TAB (move to Open button)
+ 			robot.keyPress(KeyEvent.VK_TAB);
+ 			robot.keyRelease(KeyEvent.VK_TAB);
+ 			
+ 			// Down to select the File 
+ 			robot.keyPress(KeyEvent.VK_DOWN);
+ 		    robot.keyRelease(KeyEvent.VK_DOWN);
+ 			
+ 			// Enter (click open)
+ 			robot.keyPress(KeyEvent.VK_ENTER);
+ 			robot.keyRelease(KeyEvent.VK_ENTER);
+ 			
 		    }
 	 
 	 public void addressFiled() throws InterruptedException {
@@ -331,29 +344,34 @@ public class accountClosePage {
 		   BankStaffaproltBtn.click();
 		    Thread.sleep(5000);
 		    
-		    		// For Upload Passport front Page Robot Loop 
-		 			// Navigate using TAB 
-		 			for (int i = 0; i < 9; i++) {
-		 			    robot.keyPress(KeyEvent.VK_TAB);
-		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(200);
-		 			}
-		 			// Press ENTER (select file + click Open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		 			Thread.sleep(200);
-		 			// 🔹 1 TAB (move to Open button)
-		 			robot.keyPress(KeyEvent.VK_TAB);
-		 			robot.keyRelease(KeyEvent.VK_TAB);
-		 			
-		 			// Down to select the File 
-		 			robot.keyPress(KeyEvent.VK_DOWN);
-		 		    robot.keyRelease(KeyEvent.VK_DOWN);
-		 			
-		 			// Enter (click open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		    
+		    // For Upload Passport front Page Robot Loop 
+ 			// Navigate using TAB 
+ 			for (int i = 0; i < 9; i++) {
+ 			    robot.keyPress(KeyEvent.VK_TAB);
+ 			    robot.keyRelease(KeyEvent.VK_TAB);
+ 			    Thread.sleep(350);
+ 			}
+ 		// Press DOWN arrow 3 times to select picture option
+ 			for (int i = 0; i < 3; i++) {
+ 			    robot.keyPress(KeyEvent.VK_DOWN);
+ 			    robot.keyRelease(KeyEvent.VK_DOWN);
+ 			    Thread.sleep(300);
+ 			}
+ 			// Press ENTER (select file + click Open)
+ 			robot.keyPress(KeyEvent.VK_ENTER);
+ 			robot.keyRelease(KeyEvent.VK_ENTER);
+ 			Thread.sleep(300);
+ 			// 🔹 1 TAB (move to Open button)
+ 			robot.keyPress(KeyEvent.VK_TAB);
+ 			robot.keyRelease(KeyEvent.VK_TAB);
+ 			
+ 			// Down to select the File 
+ 			robot.keyPress(KeyEvent.VK_DOWN);
+ 		    robot.keyRelease(KeyEvent.VK_DOWN);
+ 			
+ 			// Enter (click open)
+ 			robot.keyPress(KeyEvent.VK_ENTER);
+ 			robot.keyRelease(KeyEvent.VK_ENTER);
 		   
 		    }
 	 
@@ -365,30 +383,34 @@ public class accountClosePage {
 		   Transaction_Btn.click();
 		    Thread.sleep(5000);
 		    
-		    		// For Upload Passport front Page Robot Loop 
-		 			// Navigate using TAB 
-		 			for (int i = 0; i < 9; i++) {
-		 			    robot.keyPress(KeyEvent.VK_TAB);
-		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(200);
-		 			}
-		 			// Press ENTER (select file + click Open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		 			Thread.sleep(200);
-		 			// 🔹 1 TAB (move to Open button)
-		 			robot.keyPress(KeyEvent.VK_TAB);
-		 			robot.keyRelease(KeyEvent.VK_TAB);
-		 			
-		 			// Down to select the File 
-		 			robot.keyPress(KeyEvent.VK_DOWN);
-		 		    robot.keyRelease(KeyEvent.VK_DOWN);
-		 			
-		 			// Enter (click open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		    
-		   
+		    // For Upload Passport front Page Robot Loop 
+ 			// Navigate using TAB 
+ 			for (int i = 0; i < 9; i++) {
+ 			    robot.keyPress(KeyEvent.VK_TAB);
+ 			    robot.keyRelease(KeyEvent.VK_TAB);
+ 			    Thread.sleep(350);
+ 			}
+ 		// Press DOWN arrow 3 times to select picture option
+ 			for (int i = 0; i < 3; i++) {
+ 			    robot.keyPress(KeyEvent.VK_DOWN);
+ 			    robot.keyRelease(KeyEvent.VK_DOWN);
+ 			    Thread.sleep(300);
+ 			}
+ 			// Press ENTER (select file + click Open)
+ 			robot.keyPress(KeyEvent.VK_ENTER);
+ 			robot.keyRelease(KeyEvent.VK_ENTER);
+ 			Thread.sleep(300);
+ 			// 🔹 1 TAB (move to Open button)
+ 			robot.keyPress(KeyEvent.VK_TAB);
+ 			robot.keyRelease(KeyEvent.VK_TAB);
+ 			
+ 			// Down to select the File 
+ 			robot.keyPress(KeyEvent.VK_DOWN);
+ 		    robot.keyRelease(KeyEvent.VK_DOWN);
+ 			
+ 			// Enter (click open)
+ 			robot.keyPress(KeyEvent.VK_ENTER);
+ 			robot.keyRelease(KeyEvent.VK_ENTER);
 		    }
 	 
 	 
@@ -745,7 +767,6 @@ public class accountClosePage {
 		    	Thread.sleep(1000);
 		    	
 		    	WebElement downloadPdfbtn=driver.findElement(DownLoadBtn);
-		    //	js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'})", downloadPdfbtn);
 		    	Thread.sleep(2000);
 		    //	downloadPdfbtn.click();
 		    	js.executeScript("arguments[0].click();", downloadPdfbtn);

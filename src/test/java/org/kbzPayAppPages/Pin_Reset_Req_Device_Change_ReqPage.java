@@ -121,6 +121,12 @@ public class Pin_Reset_Req_Device_Change_ReqPage {
 		 			for (int i = 0; i < 9; i++) {
 		 			    robot.keyPress(KeyEvent.VK_TAB);
 		 			    robot.keyRelease(KeyEvent.VK_TAB);
+		 			    Thread.sleep(350);
+		 			}
+		 		// Press DOWN arrow 3 times to select picture option
+		 			for (int i = 0; i < 3; i++) {
+		 			    robot.keyPress(KeyEvent.VK_DOWN);
+		 			    robot.keyRelease(KeyEvent.VK_DOWN);
 		 			    Thread.sleep(200);
 		 			}
 		 			// Press ENTER (select file + click Open)
@@ -149,30 +155,34 @@ public class Pin_Reset_Req_Device_Change_ReqPage {
 		    uploadNRCBackPagetBtn.click();
 		    Thread.sleep(5000);
 		    
-		    		// For Upload Passport front Page Robot Loop 
-		 			// Navigate using TAB 
-		 			for (int i = 0; i < 9; i++) {
-		 			    robot.keyPress(KeyEvent.VK_TAB);
-		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(200);
-		 			}
-		 			// Press ENTER (select file + click Open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		 			Thread.sleep(200);
-		 			// 🔹 1 TAB (move to Open button)
-		 			robot.keyPress(KeyEvent.VK_TAB);
-		 			robot.keyRelease(KeyEvent.VK_TAB);
-		 			
-		 			// Down to select the File 
-		 			robot.keyPress(KeyEvent.VK_DOWN);
-		 		    robot.keyRelease(KeyEvent.VK_DOWN);
-		 			
-		 			// Enter (click open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		    
-		   
+		 // For Upload Passport front Page Robot Loop 
+ 			// Navigate using TAB 
+ 			for (int i = 0; i < 9; i++) {
+ 			    robot.keyPress(KeyEvent.VK_TAB);
+ 			    robot.keyRelease(KeyEvent.VK_TAB);
+ 			    Thread.sleep(350);
+ 			}
+ 		// Press DOWN arrow 3 times to select picture option
+ 			for (int i = 0; i < 3; i++) {
+ 			    robot.keyPress(KeyEvent.VK_DOWN);
+ 			    robot.keyRelease(KeyEvent.VK_DOWN);
+ 			    Thread.sleep(200);
+ 			}
+ 			// Press ENTER (select file + click Open)
+ 			robot.keyPress(KeyEvent.VK_ENTER);
+ 			robot.keyRelease(KeyEvent.VK_ENTER);
+ 			Thread.sleep(200);
+ 			// 🔹 1 TAB (move to Open button)
+ 			robot.keyPress(KeyEvent.VK_TAB);
+ 			robot.keyRelease(KeyEvent.VK_TAB);
+ 			
+ 			// Down to select the File 
+ 			robot.keyPress(KeyEvent.VK_DOWN);
+ 		    robot.keyRelease(KeyEvent.VK_DOWN);
+ 			
+ 			// Enter (click open)
+ 			robot.keyPress(KeyEvent.VK_ENTER);
+ 			robot.keyRelease(KeyEvent.VK_ENTER);
 		    }
 	 
 	
@@ -329,7 +339,7 @@ public class Pin_Reset_Req_Device_Change_ReqPage {
 	    	
 	    		WebElement	eyeiconbtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//flt-semantics[@style='position: absolute; overflow: visible; width: 40px; height: 40px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 100, 7.5); pointer-events: all;'])[1]")));
 	    		 js.executeScript("arguments[0].scrollIntoView({block:'center'});", eyeiconbtn);
-	    		 Thread.sleep(1000);
+	    		 Thread.sleep(500);
 	    		js.executeScript("arguments[0].click();", eyeiconbtn);
 	    	
 	    }

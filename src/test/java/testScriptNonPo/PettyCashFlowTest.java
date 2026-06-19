@@ -1,6 +1,5 @@
 package testScriptNonPo;
 import java.awt.AWTException;
-
 import org.genricPackage.BaseClass;
 import org.nonPoAppPages.FinanceAuthorizerPage;
 import org.nonPoAppPages.PettyCashPage;
@@ -8,8 +7,9 @@ import org.pages.DashBoardPage;
 import org.pages.LoginPage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import utilityPackage.ListenersClass;
+
+
 @Listeners(ListenersClass.class)
 public class PettyCashFlowTest extends BaseClass{
 	
@@ -23,7 +23,6 @@ public class PettyCashFlowTest extends BaseClass{
 		
 		login.login("branch_npo@gmail.com", "P$2EorwK5cyc@Ar-8NOT");
 	
-		
 		DashBoard.clickAddNew();
 		
 		petty.selectCategory();
@@ -81,14 +80,13 @@ public class PettyCashFlowTest extends BaseClass{
 	@Test(priority = 2,dependsOnMethods = "pettyCashFlow")
 	public void financeAuthorizerFlow() throws AWTException, InterruptedException {
 		
-
 		LoginPage login = new LoginPage(driver);
 		PettyCashPage petty= new PettyCashPage(driver);
 		FinanceAuthorizerPage financeAuthorizer= new FinanceAuthorizerPage(driver);
 		
 		login.login("finance_authorizer_npo@gmail.com", "bbJyL6et2OCjao4hy30B");
 		
-		financeAuthorizer.nonPoProcess_Option();
+	//	financeAuthorizer.nonPoProcess_Option();
 		
 		financeAuthorizer.EyeIconbtnClick();
 		
@@ -107,15 +105,14 @@ public class PettyCashFlowTest extends BaseClass{
 	
 	@Test(priority = 3,dependsOnMethods = "financeAuthorizerFlow")
 	public void dcfoFlow() throws InterruptedException, AWTException {
-		
-
+	
 		LoginPage login = new LoginPage(driver);
 		PettyCashPage petty= new PettyCashPage(driver);
 		FinanceAuthorizerPage financeAuthorizer= new FinanceAuthorizerPage(driver);
 		
 		login.login("dcfo_npo@gmail.com", "Pn!NskTNlvfJa8k~TRb$");
 		
-		financeAuthorizer.nonPoProcess_Option();
+	//	financeAuthorizer.nonPoProcess_Option();
 		
 		financeAuthorizer.EyeIconbtnClick();
 		
@@ -141,7 +138,7 @@ public class PettyCashFlowTest extends BaseClass{
 		
 		login.login("cfo_npo@gmail.com", "9JnmmenusfeIqPebx~m~");
 		
-		financeAuthorizer.nonPoProcess_Option();
+	//	financeAuthorizer.nonPoProcess_Option();
 		
 		financeAuthorizer.EyeIconbtnClick();
 		
@@ -167,7 +164,7 @@ public class PettyCashFlowTest extends BaseClass{
 		
 		login.login("dceo_npo@gmail.com", "I4xKC2BBKV@5syekUwx7");
 		
-		financeAuthorizer.nonPoProcess_Option();
+	//	financeAuthorizer.nonPoProcess_Option();
 		
 		financeAuthorizer.EyeIconbtnClick();
 		
@@ -183,7 +180,6 @@ public class PettyCashFlowTest extends BaseClass{
 		
 	}
 	
-	
 	@Test(priority = 6,dependsOnMethods = "DCEOFlow")
 	public void CFO2Flow() throws AWTException, InterruptedException {
 		
@@ -193,7 +189,7 @@ public class PettyCashFlowTest extends BaseClass{
 		
 		login.login("cfo_npo@gmail.com", "9JnmmenusfeIqPebx~m~");
 		
-		financeAuthorizer.nonPoProcess_Option();
+//		financeAuthorizer.nonPoProcess_Option();
 		
 		financeAuthorizer.EyeIconbtnClick();
 		
@@ -221,7 +217,7 @@ public class PettyCashFlowTest extends BaseClass{
 		
 		login.login("dceo_npo@gmail.com", "I4xKC2BBKV@5syekUwx7");
 		
-		financeAuthorizer.nonPoProcess_Option();
+//		financeAuthorizer.nonPoProcess_Option();
 		
 		financeAuthorizer.EyeIconbtnClick();
 		
@@ -246,7 +242,7 @@ public class PettyCashFlowTest extends BaseClass{
 		
 		login.login("ceo_npo@gmail.com", "lBwHwJLyQX7qW#!OO~1A");
 		
-		financeAuthorizer.nonPoProcess_Option();
+//		financeAuthorizer.nonPoProcess_Option();
 		
 		financeAuthorizer.EyeIconbtnClick();
 		
@@ -272,7 +268,7 @@ public class PettyCashFlowTest extends BaseClass{
 		
 		login.login("finance_reconcile_npo@gmail.com", "I9y0qsXlTx2u37ygJwis");
 		
-		financeAuthorizer.nonPoProcess_Option();
+//		financeAuthorizer.nonPoProcess_Option();
 		
 		financeAuthorizer.EyeIconbtnClick();
 		
@@ -288,7 +284,6 @@ public class PettyCashFlowTest extends BaseClass{
 		
 	}
 	
-
 	@Test(priority = 9,dependsOnMethods = "FinanceRenocileFlow" )
 	public void branchFlow() throws InterruptedException, AWTException {
 		
@@ -299,11 +294,12 @@ public class PettyCashFlowTest extends BaseClass{
 		
 		petty.EyeIconbtnClick();
 		
+		petty.downloadPDFButton();
+		
 		petty.MenuButton();
 		
 		petty.LogOut();
 		
-	
 	}
 	
 

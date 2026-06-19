@@ -57,178 +57,269 @@ public class KYCPage {
 	    
 	    public void enterCustomerDetails() throws InterruptedException {	
 	    	//CUS ID
-	    	WebElement CusId=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//input[@data-semantics-role='text-field'])[1]"))));
+	    	
+	    	By CusIdLoc =By.xpath("//flt-semantics/span[.='Customer ID *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']");
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(CusIdLoc));
+	    	Thread.sleep(800);
+
+	    	WebElement CusId=driver.findElement(CusIdLoc);
 	    	CusId.click();
-	    	Thread.sleep(1000);
+	    	Thread.sleep(300);
 	    	CusId.sendKeys("123456711");
 	    	
 	    	//CUS Name
-	    	WebElement	CusName=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//input[@data-semantics-role='text-field'])[2]"))));
-	    	Thread.sleep(1500);
-	    	mouse.moveToElement(CusName).click().sendKeys(" Flow stax").perform();
+	    	
+	    	By CusNameLoc	=By.xpath("//flt-semantics/span[.='Customer Name *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']");
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(CusNameLoc));
+	    	Thread.sleep(800);
+	    	
+	    	WebElement CusName=driver.findElement(CusNameLoc);
+	    	mouse.moveToElement(CusName).click().sendKeys("Test").perform();
 	    	
 	    	//Premium Radio button
-	    	WebElement PremiumRadioBtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@aria-checked='false'])[1]"))));
+	    	By PremiumRadioLoc=By.xpath("//flt-semantics/span[.='Premium']/preceding::flt-semantics[1][@role='radio']");
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(PremiumRadioLoc));
+	    	Thread.sleep(800);
+	    	WebElement   PremiumRadioBtn=driver.findElement(PremiumRadioLoc);
 	    	PremiumRadioBtn.click();
-	    	Thread.sleep(1000);
+	    	
 	    	
 	    	// Customer Email Entering
-	    	WebElement addrecord_Email_Field=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@data-semantics-role='text-field'])[3]")));
-	    	wait.until(ExpectedConditions.visibilityOf(addrecord_Email_Field));
-	    	wait.until(ExpectedConditions.elementToBeClickable(addrecord_Email_Field));
+	    	By Email_FieldLoc=By.xpath("//flt-semantics/span[.='Email ID']/following::flt-semantics[1]/input[@data-semantics-role='text-field']");
+	    	wait.until(ExpectedConditions.elementToBeClickable(Email_FieldLoc));
+	    	Thread.sleep(800);
 	    	//mouse.moveToElement(addrecord_Email_Field).click().sendKeys("Gowthamcodestax@gmail.com").perform();
-	    	
-	    	addrecord_Email_Field.click();
-	    	Thread.sleep(500);
-	    	addrecord_Email_Field.sendKeys("Gowthamcodestax@gmail.com");
-	    	Thread.sleep(1000);
+	    	WebElement Email_Field=driver.findElement(Email_FieldLoc);
+	    	Email_Field.click();
+	    	Thread.sleep(200);
+	    	Email_Field.sendKeys("Test@gmail.com");
+
 	    	
 	    	//Customer Phn Number
-	    	WebElement	addrecord_Phn_Field=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//input[@data-semantics-role='text-field'])[4]"))));
+	    	By Contact_FieldLoc=By.xpath("//flt-semantics/span[.='Contact Number']/following::flt-semantics[2]/input[@data-semantics-role='text-field']");
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(Contact_FieldLoc));
 	    //	mouse.moveToElement(addrecord_Phn_Field).click(addrecord_Phn_Field).sendKeys("678976777").perform();
-	    	addrecord_Phn_Field.click();
-	    	addrecord_Phn_Field.sendKeys("678976777");
+	    	Thread.sleep(800);
+	    	WebElement Contact_Field=driver.findElement(Contact_FieldLoc);
+	    	Contact_Field.click();
+	    	Contact_Field.sendKeys("678976777");
 	    	
 	    	//Customer PassportType
-	    	WebElement Passport_TDType=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@aria-checked='false'])[4]"))));
+	    	WebElement Passport_TDType=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//flt-semantics/span[.='Passport / နိုင်ငံကူးလက်မှတ်']/preceding::flt-semantics[1][@role='radio']"))));
 	    	Passport_TDType.click();
-	    	
-	    	//Passporrt number field
-	    	WebElement	Passport_NumField=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//input[@data-semantics-role='text-field'])[5]"))));
-	    	mouse.moveToElement(Passport_NumField).click(Passport_NumField).sendKeys(" 11223344577").perform();
-	    	
-	    	
-	    	
 	    	
 	    }
 	    
+	  
 	    
 	    public void  uploadPassport_FrontPageBtn() throws InterruptedException {    
-	    // For Upload Passport front Pag
-	    WebElement	PassportFrontPagebtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//input[@data-semantics-role='text-field'])[6]"))));
-	    js.executeScript("arguments[0].scrollIntoView(true);", PassportFrontPagebtn);
-	 //   PassportFrontPagebtn.click();
-	    js.executeScript("arguments[0].click();", PassportFrontPagebtn);
-	    Thread.sleep(2000);
-	    
-	    		// For Upload Passport front Page Robot Loop 
-	 			// Navigate using TAB 
-	 			for (int i = 0; i < 9; i++) {
-	 			    robot.keyPress(KeyEvent.VK_TAB);
-	 			    robot.keyRelease(KeyEvent.VK_TAB);
-	 			    Thread.sleep(1000);
-	 			}
-	 			// Press ENTER (select file + click Open)
-	 			robot.keyPress(KeyEvent.VK_ENTER);
-	 			robot.keyRelease(KeyEvent.VK_ENTER);
-	 			Thread.sleep(2000);
-	 			// 🔹 1 TAB (move to Open button)
-	 			robot.keyPress(KeyEvent.VK_TAB);
-	 			robot.keyRelease(KeyEvent.VK_TAB);
-	 			
-	 			// Down to select the File 
-	 			robot.keyPress(KeyEvent.VK_DOWN);
-	 		    robot.keyRelease(KeyEvent.VK_DOWN);
-	 			
-	 			// Enter (click open)
-	 			robot.keyPress(KeyEvent.VK_ENTER);
-	 			robot.keyRelease(KeyEvent.VK_ENTER);
-	    
+	    // For Upload Passport front Page
+	   By 	PassportFrontPagebtnLoc=	By.xpath("//flt-semantics/span[.='Upload Passport Front Page *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']");
+	   wait.until(ExpectedConditions.presenceOfElementLocated(PassportFrontPagebtnLoc));
+	   Thread.sleep(800);
 	   
+	   WebElement   PassportFrontPagebtn= driver.findElement(PassportFrontPagebtnLoc);
+	   PassportFrontPagebtn.click();
+	//  js.executeScript("arguments[0].click();", PassportFrontPagebtn);
+	    Thread.sleep(5100);
+	    
+	    // For Upload Passport front Page Robot Loop 
+		// Navigate using TAB 
+		for (int i = 0; i < 9; i++) {
+		    robot.keyPress(KeyEvent.VK_TAB);
+		    robot.keyRelease(KeyEvent.VK_TAB);
+		    Thread.sleep(350);
+		}
+	// Press DOWN arrow 3 times to select picture option
+		for (int i = 0; i < 3; i++) {
+		    robot.keyPress(KeyEvent.VK_DOWN);
+		    robot.keyRelease(KeyEvent.VK_DOWN);
+		    Thread.sleep(350);
+		}
+		// Press ENTER (select file + click Open)
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		Thread.sleep(200);
+		// 🔹 1 TAB (move to Open button)
+		robot.keyPress(KeyEvent.VK_TAB);
+		robot.keyRelease(KeyEvent.VK_TAB);
+		
+		// Down to select the File 
+		robot.keyPress(KeyEvent.VK_DOWN);
+	    robot.keyRelease(KeyEvent.VK_DOWN);
+		
+		// Enter (click open)
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+    
 	    }
 	    
 	    // For Upload Passport Back Page
 	    public void uploadPassport_BackpageBtn() throws InterruptedException {  	
 	    	
-	    	WebElement	PassportBackPagebtn	=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//input[@data-semantics-role='text-field'])[7]")));
-	    	wait.until(ExpectedConditions.visibilityOf(PassportBackPagebtn));
-	    	wait.until(ExpectedConditions.elementToBeClickable(PassportBackPagebtn));
-	    	js.executeScript("arguments[0].scrollIntoView(true);", PassportBackPagebtn);
-	    //	PassportBackPagebtn.click();
-	    	js.executeScript("arguments[0].click();", PassportBackPagebtn);
-	    	Thread.sleep(2000);
+	    	By PassportBackPagebtnLoc=By.xpath("//flt-semantics/span[.='Upload Passport Back Page *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']");
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(PassportBackPagebtnLoc));
+	    	Thread.sleep(800);
 	    	
-	    	// For Upload Passport Back Page Robot Loop 
-	    				// Navigate using TAB 
-	    				for (int i = 0; i < 9; i++) {
-	    					robot.keyPress(KeyEvent.VK_TAB);
-	    				    robot.keyRelease(KeyEvent.VK_TAB);
-	    				    Thread.sleep(500);
-	    				}
-	    								
-	    				// Press ENTER (select file + click Open)
-	    				robot.keyPress(KeyEvent.VK_ENTER);
-	    				robot.keyRelease(KeyEvent.VK_ENTER);
-	    				Thread.sleep(2000);
-	    				// 🔹 1 TAB (move to Open button)
-	    				robot.keyPress(KeyEvent.VK_TAB);
-	    				robot.keyRelease(KeyEvent.VK_TAB);
-	    				
-	    				// Down to select the File 
-	    				robot.keyPress(KeyEvent.VK_DOWN);
-	    			    robot.keyRelease(KeyEvent.VK_DOWN);
-	    				
-	    				// Enter (click open)
-	    				robot.keyPress(KeyEvent.VK_ENTER);
-	    				robot.keyRelease(KeyEvent.VK_ENTER);
+	    	WebElement 	PassportBackPagebtn=driver.findElement(PassportBackPagebtnLoc);
+	   // 	js.executeScript("arguments[0].scrollIntoView(true);", PassportBackPagebtn);
+	  //  	Thread.sleep(200);
+	    	PassportBackPagebtn.click();
+	    //	js.executeScript("arguments[0].click();", PassportBackPagebtn);
+	    	Thread.sleep(5100);
+	    	
+	    	 // For Upload Passport front Page Robot Loop 
+			// Navigate using TAB 
+			for (int i = 0; i < 9; i++) {
+			    robot.keyPress(KeyEvent.VK_TAB);
+			    robot.keyRelease(KeyEvent.VK_TAB);
+			    Thread.sleep(350);
+			}
+		// Press DOWN arrow 3 times to select picture option
+			for (int i = 0; i < 3; i++) {
+			    robot.keyPress(KeyEvent.VK_DOWN);
+			    robot.keyRelease(KeyEvent.VK_DOWN);
+			    Thread.sleep(350);
+			}
+			// Press ENTER (select file + click Open)
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(200);
+			// 🔹 1 TAB (move to Open button)
+			robot.keyPress(KeyEvent.VK_TAB);
+			robot.keyRelease(KeyEvent.VK_TAB);
+			
+			// Down to select the File 
+			robot.keyPress(KeyEvent.VK_DOWN);
+		    robot.keyRelease(KeyEvent.VK_DOWN);
+			
+			// Enter (click open)
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+	    
 	    	}
+	    
+	    public void passPortNumField() throws InterruptedException {
+	    	
+	    	By PassNumLoc= By.xpath("//flt-semantics/span[.='Passport Number *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']");
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(PassNumLoc));
+	    	Thread.sleep(500);
+	    	
+	    	WebElement	PassportNumField=driver.findElement(PassNumLoc);
+	    	PassportNumField.click();
+	    	Thread.sleep(300);
+	    	PassportNumField.sendKeys("3478279921");
+	    	
+	    }
 	    
 	    
 	    // For Upload Passport Request Form 
 	    public void uploadRequestForm_Btn() throws InterruptedException {  
 	   
+	    By	Passport_ReqFormBtnLoc=By.xpath("//flt-semantics/span[.='Upload Request Form *']/following::flt-semantics[1]/input[@data-semantics-role='text-field']");
+	    wait.until(ExpectedConditions.presenceOfElementLocated(Passport_ReqFormBtnLoc));
+	    Thread.sleep(800);
 	    
-	    WebElement	Passport_ReqFormBtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//input[@data-semantics-role='text-field'])[8]"))));
-	    js.executeScript("arguments[0].scrollIntoView(true);", Passport_ReqFormBtn);
-	   // Passport_ReqFormBtn.click();
-	    js.executeScript("arguments[0].click();", Passport_ReqFormBtn);
-	    Thread.sleep(2000);
+	    WebElement   Passport_ReqFormBtn= driver.findElement(Passport_ReqFormBtnLoc);
+	//    js.executeScript("arguments[0].scrollIntoView(true);", Passport_ReqFormBtn);
+	//    Thread.sleep(200);
+	    Passport_ReqFormBtn.click();
+	//    js.executeScript("arguments[0].click();", Passport_ReqFormBtn);
+	    Thread.sleep(5100);
 	 
-	    	// For Upload Passport Request Form  Robot Loop 
-	 			// Navigate using TAB 
-	 			for (int i = 0; i < 9; i++) {
-	 				robot.keyPress(KeyEvent.VK_TAB);
-	 			    robot.keyRelease(KeyEvent.VK_TAB);
-	 			    Thread.sleep(500);
-	 			}
-	 							
-	 			// Press ENTER (select file + click Open)
-	 			robot.keyPress(KeyEvent.VK_ENTER);
-	 			robot.keyRelease(KeyEvent.VK_ENTER);
-	 			Thread.sleep(2000);
-	 			// 🔹 1 TAB (move to Open button)
-	 			robot.keyPress(KeyEvent.VK_TAB);
-	 			robot.keyRelease(KeyEvent.VK_TAB);
-	 			
-	 			// Down to select the File 
-	 			robot.keyPress(KeyEvent.VK_DOWN);
-	 		    robot.keyRelease(KeyEvent.VK_DOWN);
-	 			
-	 			// Enter (click open)
-	 			robot.keyPress(KeyEvent.VK_ENTER);
-	 			robot.keyRelease(KeyEvent.VK_ENTER);
+	    // For Upload Passport front Page Robot Loop 
+		// Navigate using TAB 
+		for (int i = 0; i < 9; i++) {
+		    robot.keyPress(KeyEvent.VK_TAB);
+		    robot.keyRelease(KeyEvent.VK_TAB);
+		    Thread.sleep(350);
+		}
+	// Press DOWN arrow 3 times to select picture option
+		for (int i = 0; i < 3; i++) {
+		    robot.keyPress(KeyEvent.VK_DOWN);
+		    robot.keyRelease(KeyEvent.VK_DOWN);
+		    Thread.sleep(350);
+		}
+		// Press ENTER (select file + click Open)
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		Thread.sleep(200);
+		// 🔹 1 TAB (move to Open button)
+		robot.keyPress(KeyEvent.VK_TAB);
+		robot.keyRelease(KeyEvent.VK_TAB);
+		
+		// Down to select the File 
+		robot.keyPress(KeyEvent.VK_DOWN);
+	    robot.keyRelease(KeyEvent.VK_DOWN);
+		
+		// Enter (click open)
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+    
 	    
 	    }
 	    
-	    public void Regular_KYC_RequestBtn() {   	
-	    WebElement	RegularKYCRadioBtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@role='radio'])[7]"))));
-	    RegularKYCRadioBtn.click();
+	    public void Regular_KYC_RequestBtn() throws InterruptedException {   
+	    	By RegularKYCRadioBtnLoc	=By.xpath("//flt-semantics/span[.='Regular Request']/preceding::flt-semantics[1][@role='radio']");
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(RegularKYCRadioBtnLoc));
+	    	Thread.sleep(400);
+	    	WebElement  	RegularKYCRadioBtn=driver.findElement(RegularKYCRadioBtnLoc);
+	    	RegularKYCRadioBtn.click();
 	    }
 	    
-	    public void PhnNumber_Change_KYC_Checkbox() {  	
-	    WebElement	PhnNumberchage_CheckBox=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//flt-semantics[@role='checkbox'])[1]")));
-	    wait.until(ExpectedConditions.visibilityOf(PhnNumberchage_CheckBox));
-	    wait.until(ExpectedConditions.elementToBeClickable(PhnNumberchage_CheckBox));
-	    js.executeScript("arguments[0].scrollIntoView(true);", PhnNumberchage_CheckBox);
-	    js.executeScript("arguments[0].click()", PhnNumberchage_CheckBox);
-	   // PhnNumberchage_CheckBox.click();
 	    
+	    public void idClose_IdOpenRadioBtn() throws InterruptedException {   
+	    	By IDClose_IdOpenRadioBtnLoc	=By.xpath("//flt-semantics/span[.='999 ID Closed / 999 ID Reopen']/preceding::flt-semantics[1][@role='radio']");
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(IDClose_IdOpenRadioBtnLoc));
+	    	Thread.sleep(400);
+	    	WebElement  	RegularKYCRadioBtn=driver.findElement(IDClose_IdOpenRadioBtnLoc);
+	    	RegularKYCRadioBtn.click();
+	    }
+	    
+	    public void dormant_ACReleasenRadioBtn() throws InterruptedException {   
+	    	By dormant_ACReleasenRadioBtnLoc	=By.xpath("//flt-semantics/span[.='999 dormant A/C release']/preceding::flt-semantics[1][@role='radio']");
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(dormant_ACReleasenRadioBtnLoc));
+	    	Thread.sleep(400);
+	    	WebElement  	Dormant_ACReleasen_RadioBtn=driver.findElement(dormant_ACReleasenRadioBtnLoc);
+	    	Dormant_ACReleasen_RadioBtn.click();
+	    }
+	    
+	    
+	    
+	    
+	    public void typesOf_KYC_ChangeReq_Checkboxes() throws InterruptedException {  
+	    	
+	    	// Phn number checkox
+	    	By PhnNumber_Change_KYC_CheckboxLoc	=By.xpath("//flt-semantics/span[.='Type of KYC Change Request *']/following::flt-semantics[@aria-label='Phone Number Change'][@role='checkbox']");
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(PhnNumber_Change_KYC_CheckboxLoc));
+	    	Thread.sleep(200);
+	    	WebElement  	PhnNumberChange_KYC_Checkbox=driver.findElement(PhnNumber_Change_KYC_CheckboxLoc);
+	    	PhnNumberChange_KYC_Checkbox.click();
+	    	
+	    	// Email Change chekc Box
+	    	
+	    	By emailChange_CheckboxLoc	=By.xpath("//flt-semantics/span[.='Type of KYC Change Request *']/following::flt-semantics[@aria-label='Email Change'][@role='checkbox']");
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(emailChange_CheckboxLoc));
+	    	Thread.sleep(200);
+	    	WebElement  	emailChange_Checkbox=driver.findElement(emailChange_CheckboxLoc);
+	    	emailChange_Checkbox.click();
+	    	
+	    	
+	    	//
+	    	
 	   
 	    }
 	    
-	    public void RemarkTextField() { 	
-	    WebElement	remarkField=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//input[@data-semantics-role='text-field'])[9]"))));
-	    remarkField.sendKeys("Done");
+	    
+	    
+	    
+	    public void RemarkTextField() throws InterruptedException { 	
+	    By	RemarkTxtFiledlOc=By.xpath("//flt-semantics/span[.='Remark']/following::flt-semantics/input[@data-semantics-role='text-field']");
+	    wait.until(ExpectedConditions.presenceOfElementLocated(RemarkTxtFiledlOc));
+	    Thread.sleep(400);
+	    
+	    WebElement  remarkField=driver.findElement(RemarkTxtFiledlOc);
+	    remarkField.sendKeys("Test");
 	    
 	    }
 	    
@@ -239,12 +330,12 @@ public class KYCPage {
 	    
 	    
 	    public void EyeIconbtnClick() throws InterruptedException {
-	    	Thread.sleep(4000);
+	    	Thread.sleep(5000);
 	    	for (int i = 0; i <45; i++) {
 				
 				robot.keyPress(KeyEvent.VK_TAB);																										
 				robot.keyRelease(KeyEvent.VK_TAB);
-				Thread.sleep(500);	
+				Thread.sleep(200);	
 				}
 	    	
 	    		WebElement	eyeiconbtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@style='position: absolute; overflow: visible; width: 40px; height: 40px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 100, 7.5); pointer-events: all;'])[1]"))));
@@ -252,19 +343,50 @@ public class KYCPage {
 	    	
 	    }
 	    
-	    public void EditIconbtnClick() {
+	    public void EditIconbtnClick() throws InterruptedException {
 	    	
-	    	
-	    		WebElement	editbtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//flt-semantics[.='Edit']"))));
-	    		editbtn.click();
+	    	By EditLoc=By.xpath("//flt-semantics[.='Edit']");
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(EditLoc));
+	    	Thread.sleep(1000);
+	    	WebElement	EditBtn=driver.findElement(EditLoc);
+	    	EditBtn.click();
+	    	Thread.sleep(3000);
+	    
+		    	// DOB  chekc Box
+		    	
+		    	By DOB_CheckboxLoc	=By.xpath("//flt-semantics/span[.='Type of KYC Change Request *']/following::flt-semantics[@aria-label='DOB Change'][@role='checkbox']");
+		    	wait.until(ExpectedConditions.presenceOfElementLocated(DOB_CheckboxLoc));
+		    	Thread.sleep(500);
+		    	
+		    	WebElement  	DOB_Checkbox=driver.findElement(DOB_CheckboxLoc);
+		    	js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth',});", DOB_Checkbox);
+		    	Thread.sleep(180);
+		    	js.executeScript("arguments[0].click();", DOB_Checkbox);
+		    	//DOB_Checkbox.click();
+		    	
+		    	// signature 
+		    	
+		    	By Signature_Change_CheckboxLoc	=By.xpath("//flt-semantics/span[.='Type of KYC Change Request *']/following::flt-semantics[@aria-label='Signature Change'][@role='checkbox']");
+		    	wait.until(ExpectedConditions.presenceOfElementLocated(Signature_Change_CheckboxLoc));
+		    	Thread.sleep(400);
+		    	WebElement  Signature_Change_Checkbox=driver.findElement(Signature_Change_CheckboxLoc);
+		    	Thread.sleep(180);
+		    	js.executeScript("arguments[0].click();", Signature_Change_Checkbox);
+		    //	Signature_Change_Checkbox.click();
+		    	
+		    	// Occupation
+		    	By Occupatione_CheckboxLoc	=By.xpath("//flt-semantics/span[.='Type of KYC Change Request *']/following::flt-semantics[@aria-label='Occupation'][@role='checkbox']");
+		    	wait.until(ExpectedConditions.presenceOfElementLocated(Occupatione_CheckboxLoc));
+		    	Thread.sleep(400);
+		    	WebElement  Occupatione_Checkbox=driver.findElement(Occupatione_CheckboxLoc);
+		    	Thread.sleep(180);
+		    	js.executeScript("arguments[0].click();", Occupatione_Checkbox);
+		    	//	Occupatione_Checkbox.click();	
+	    		
+	    		
 	    }
 	    
-	    public void NameCorrection_Checkbox() {
-	    	
-	    WebElement	NamecorrectionCheckbox=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@role='checkbox'])[3]"))));
-	    js.executeScript("arguments[0].click();",NamecorrectionCheckbox);
 	    
-	    }
 	    
 	    public void MenuButton() {
 	    	

@@ -38,7 +38,7 @@ public class KYC1_COPS_Page {
 			
 			robot.keyPress(KeyEvent.VK_TAB);																										
 			robot.keyRelease(KeyEvent.VK_TAB);
-			Thread.sleep(500);	
+			Thread.sleep(300);	
 			}
     	
     	By StausAction=By.xpath("(//flt-semantics[.='Start Action'])[1]");
@@ -59,8 +59,10 @@ public class KYC1_COPS_Page {
 		try {
 		
 		By pullOption = By.xpath("//flt-semantics[@style[contains(.,'width: 36px') and contains(.,'height: 34px')]]");
-		WebElement Pull=wait.until(ExpectedConditions.presenceOfElementLocated(pullOption));
-		Thread.sleep(1000);
+		wait.until(ExpectedConditions.presenceOfElementLocated(pullOption));
+		Thread.sleep(800);
+		
+		WebElement Pull=driver.findElement(pullOption);
 		js.executeScript("arguments[0].click();", Pull);
 		
 		}catch(StaleElementReferenceException e) {
@@ -76,7 +78,7 @@ public class KYC1_COPS_Page {
 		By KYCUpdateSelect = By.xpath("//flt-semantics[@style[contains(.,'width: 36px') and contains(.,'height: 34px')]]");
 		WebElement KYCSelect=wait.until(ExpectedConditions.presenceOfElementLocated(KYCUpdateSelect));
 		wait.until(ExpectedConditions.elementToBeClickable(KYCUpdateSelect));
-		Thread.sleep(2000);
+		Thread.sleep(1500);
 		KYCSelect.click();
 		// js.executeScript("arguments[0].click();", KYCSelect);
 	
@@ -148,17 +150,18 @@ public void checkerRadioButton() throws InterruptedException {
 	
 	 public void eyeIconBtn() throws InterruptedException {
 	    	Thread.sleep(4000);
-	    	for (int i = 0; i <33; i++) {
+	    	for (int i = 0; i <36; i++) {
 				
 	    		
 				robot.keyPress(KeyEvent.VK_TAB);																										
 				robot.keyRelease(KeyEvent.VK_TAB);
-				Thread.sleep(500);	
+				Thread.sleep(300);	
 				}
 	    	
-	    		WebElement	eyeiconbtn=wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("(//flt-semantics[@style='position: absolute; overflow: visible; width: 40px; height: 40px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 100, 7.5); pointer-events: all;'])[1]"))));
-	    		eyeiconbtn.click();
-	    	
+	    WebElement	eyeiconbtn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//flt-semantics[@style='position: absolute; overflow: visible; width: 40px; height: 40px; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 100, 7.5); pointer-events: all;'])[1]")));
+   		 js.executeScript("arguments[0].scrollIntoView({block:'center'});", eyeiconbtn);
+   		 Thread.sleep(500);
+   		js.executeScript("arguments[0].click();", eyeiconbtn);
 	    }
 	
 
@@ -204,9 +207,21 @@ public void checkerRadioButton() throws InterruptedException {
 		Thread.sleep(1000);
 		js.executeScript("arguments[0].dispatchEvent(new MouseEvent('click', {bubbles:true}));",Completebtn);
 	}
+	
+	public void reWorkcompleteButton() throws InterruptedException {
+		
+    	
+		By ReCompleteButtonLoc=By.xpath("//flt-semantics[@role='button' and contains(text(),'Rework completed')]");
+		wait.until(ExpectedConditions.visibilityOfElementLocated(ReCompleteButtonLoc));
+		Thread.sleep(500);
+		WebElement ReCompleteButton=driver.findElement(ReCompleteButtonLoc);
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", ReCompleteButton);
+		Thread.sleep(3000);
+		js.executeScript("arguments[0].dispatchEvent(new MouseEvent('click', {bubbles:true}));",ReCompleteButton);
+	}
 
 	
-public void reWorkButton() throws InterruptedException {
+	public void reWorkButton() throws InterruptedException {
 		
     	
 		By ReworkButton=By.xpath("//flt-semantics[@role='button' and contains(text(),'Rework')]");
@@ -214,6 +229,19 @@ public void reWorkButton() throws InterruptedException {
 		js.executeScript("arguments[0].scrollIntoView({block:'center'});", reworkbtn);
 		Thread.sleep(1000);
 		js.executeScript("arguments[0].dispatchEvent(new MouseEvent('click', {bubbles:true}));",reworkbtn);
+	}
+	
+	public void escalateButton() throws InterruptedException {
+		
+    	
+		By EscalateBtnLoc=By.xpath("//flt-semantics[@role='button' and contains(text(),'Escalate')]");
+		wait.until(ExpectedConditions.presenceOfElementLocated(EscalateBtnLoc));
+		Thread.sleep(500);
+		
+		WebElement EscalateBtn=driver.findElement(EscalateBtnLoc);
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", EscalateBtn);
+		Thread.sleep(1000);
+		js.executeScript("arguments[0].dispatchEvent(new MouseEvent('click', {bubbles:true}));",EscalateBtn);
 	}
 
 	
@@ -225,7 +253,7 @@ public void reWorkButton() throws InterruptedException {
     	WebElement UpdatestageCMNTbox=wait.until(ExpectedConditions.presenceOfElementLocated(Commentsection));
     	Thread.sleep(1000);
     	UpdatestageCMNTbox.click();
-    	UpdatestageCMNTbox.sendKeys("Okay");
+    	UpdatestageCMNTbox.sendKeys("Test");
     //	js.executeScript("arguments[0].click()", UpdatestageCMNTbox);
     //	js.executeScript("arguments[0].value= 'Okay';", UpdatestageCMNTbox);
 	

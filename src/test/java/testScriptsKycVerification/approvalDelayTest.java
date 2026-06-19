@@ -19,7 +19,7 @@ import utilityPackage.ListenersClass;
 public class approvalDelayTest extends BaseClass {
 	
 	
-//	@Test(priority = 1)
+	@Test(priority = 1)
 	public void approvalDelayFlow() throws AWTException, InterruptedException {
 		
 		
@@ -90,17 +90,11 @@ public class approvalDelayTest extends BaseClass {
 	}
 	
 	// ,dependsOnMethods = "approvalDelayFlow"
-	@Test(priority = 2)
+	@Test(priority = 2 ,dependsOnMethods = "approvalDelayFlow")
 	public void  KBZPayCenterCheckerFlow() throws InterruptedException, AWTException {
 		
-		driver.get("https://staging.flow.stax.run/#/login");
-		Thread.sleep(5000);
-		
 		LoginPage login = new LoginPage(driver);
-		DashBoardPage DashBoard= new DashBoardPage(driver);
 		KYCPage Kyc= new KYCPage(driver);
-		approvalDelayPage approvalDelay= new approvalDelayPage(driver);
-		KycOfficerPage KycOfficer1= new KycOfficerPage(driver);
 		KBZPayCenterChecker1Page KbzPaycentercheck1= new  KBZPayCenterChecker1Page(driver);
 		
 		
@@ -131,9 +125,7 @@ public class approvalDelayTest extends BaseClass {
 		Thread.sleep(5000);
 		
 		LoginPage login = new LoginPage(driver);
-		DashBoardPage DashBoard= new DashBoardPage(driver);
 		KYCPage Kyc= new KYCPage(driver);
-		approvalDelayPage approvalDelay= new approvalDelayPage(driver);
 		KycOfficerPage KycOfficer1= new KycOfficerPage(driver);
 		
 		login.login("kycofficer_sr@gmail.com", "DD5GK7Ki6W18NgYoQPA8");
@@ -153,6 +145,10 @@ public class approvalDelayTest extends BaseClass {
 		KycOfficer1.UpdateSatgeCMNTbox();
 		
 		Kyc.NextButton();
+		
+		KycOfficer1.eyeIconBtn();
+		
+		KycOfficer1.downloadPDFButton();
 		
 		Kyc.MenuButton();
 		

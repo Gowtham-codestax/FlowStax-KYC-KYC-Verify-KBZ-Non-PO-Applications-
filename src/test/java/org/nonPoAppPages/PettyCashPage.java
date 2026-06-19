@@ -71,7 +71,6 @@ public class PettyCashPage {
 		 //Invoice number field
 		 WebElement	InvoiceNum=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("(//flt-semantics/span[.='Invoice Number *']/following::flt-semantics/input[@data-semantics-role='text-field'])[1]")));
 		// InvoiceNum.click();
-		 wait.until(ExpectedConditions.visibilityOf(InvoiceNum));
 			wait.until(ExpectedConditions.elementToBeClickable(InvoiceNum));
 		 js.executeScript("arguments[0].dispatchEvent(new MouseEvent('click' ,{bubbles:true}));", InvoiceNum);
 		 Thread.sleep(500);
@@ -88,23 +87,21 @@ public class PettyCashPage {
 			int CurrentDay=LocalDate.now().getDayOfMonth();
 			
 			// calender click
-			By CalenderPopup=By.xpath("//input[@aria-label='DD-MM-YYYY']");
-			WebElement Calender=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@aria-label='DD-MM-YYYY']")));
-			wait.until(ExpectedConditions.visibilityOf(Calender));
-			wait.until(ExpectedConditions.elementToBeClickable(Calender));
+			By CalenderPopupLoc=By.xpath("//input[@aria-label='DD-MM-YYYY']");
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@aria-label='DD-MM-YYYY']")));
 			Thread.sleep(500);
-			Calender.click();
+			WebElement	CalenderPopup=driver.findElement(CalenderPopupLoc);
+			CalenderPopup.click();
 			
 			// Dyamimc xpath For Current Day
 			By todayDate = By.xpath("//flt-semantics[contains(text(),'" + CurrentDay + "') and contains(text(),'Today')]");
 			WebElement today = wait.until(ExpectedConditions.elementToBeClickable(todayDate));
 			
 			// Click current date
-			Thread.sleep(200);
+			Thread.sleep(100);
 		    js.executeScript("arguments[0].click();", today);
 			
 		    //OK
-		    
 		    WebElement	OkClick=driver.findElement(By.xpath("//flt-semantics[.='OK']"));
 			//customerOnboardChannel
 	    	OkClick.click();
@@ -359,7 +356,6 @@ public class PettyCashPage {
 	 }
 	 
 	 
-	 
 	 public void uploadAttachments_Btn() throws InterruptedException {  
 		   
 		    
@@ -367,32 +363,37 @@ public class PettyCashPage {
 		    js.executeScript("arguments[0].scrollIntoView(true);", Attachments_Btn);
 		    Thread.sleep(1000);
 		    Attachments_Btn.click();
-		    Thread.sleep(4000);
-		 
-		    	// For Upload Passport Request Form  Robot Loop 
-		 			// Navigate using TAB 
-		 			for (int i = 0; i < 9; i++) {
-		 				robot.keyPress(KeyEvent.VK_TAB);
-		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(300);
-		 			}
-		 							
-		 			// Press ENTER (select file + click Open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		 			Thread.sleep(2000);
-		 			// 🔹 1 TAB (move to Open button)
-		 			robot.keyPress(KeyEvent.VK_TAB);
-		 			robot.keyRelease(KeyEvent.VK_TAB);
-		 			
-		 			// Down to select the File 
-		 			robot.keyPress(KeyEvent.VK_DOWN);
-		 		    robot.keyRelease(KeyEvent.VK_DOWN);
-		 			
-		 			// Enter (click open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
+		    Thread.sleep(5000);
 		    
+			 // For Upload Passport front Page Robot Loop 
+	 			// Navigate using TAB 
+	 			for (int i = 0; i < 9; i++) {
+	 			    robot.keyPress(KeyEvent.VK_TAB);
+	 			    robot.keyRelease(KeyEvent.VK_TAB);
+	 			    Thread.sleep(350);
+	 			}
+	 		// Press DOWN arrow 3 times to select picture option
+	 			for (int i = 0; i < 3; i++) {
+	 			    robot.keyPress(KeyEvent.VK_DOWN);
+	 			    robot.keyRelease(KeyEvent.VK_DOWN);
+	 			    Thread.sleep(300);
+	 			}
+	 			// Press ENTER (select file + click Open)
+	 			robot.keyPress(KeyEvent.VK_ENTER);
+	 			robot.keyRelease(KeyEvent.VK_ENTER);
+	 			Thread.sleep(300);
+	 			// 🔹 1 TAB (move to Open button)
+	 			robot.keyPress(KeyEvent.VK_TAB);
+	 			robot.keyRelease(KeyEvent.VK_TAB);
+	 			
+	 			// Down to select the File 
+	 			robot.keyPress(KeyEvent.VK_DOWN);
+	 		    robot.keyRelease(KeyEvent.VK_DOWN);
+	 			
+	 			// Enter (click open)
+	 			robot.keyPress(KeyEvent.VK_ENTER);
+	 			robot.keyRelease(KeyEvent.VK_ENTER);
+			   
 		    }
 	 
 	 
@@ -441,7 +442,6 @@ public class PettyCashPage {
 		 Thread.sleep(100);
 		 
 		 String incvoiceNumber= "INV"+ System.currentTimeMillis();
-		 
 		 edit_InvoiceNum.sendKeys(incvoiceNumber);	
  		
  }
@@ -654,6 +654,22 @@ public class PettyCashPage {
 	                }
 	            }
 	        }
+	    }
+	    
+	    
+	    
+	    public void downloadPDFButton() throws InterruptedException {
+	    	
+	    	By DownLoadBtn=By.xpath("(//flt-semantics[@role='button'])[last()]");
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(DownLoadBtn));
+	    	Thread.sleep(1000);
+	    	
+	    	WebElement downloadPdfbtn=driver.findElement(DownLoadBtn);
+	    	Thread.sleep(2000);
+	    //	downloadPdfbtn.click();
+	    	js.executeScript("arguments[0].click();", downloadPdfbtn);
+	    	
+	    	
 	    }
 
 	}

@@ -20,10 +20,9 @@ public class LoginPage {
 	 
 	 public LoginPage(WebDriver driver) {
 		 	this.driver = driver;
-		 	wait= new WebDriverWait(driver,Duration.ofSeconds(20));
+		 	wait= new WebDriverWait(driver,Duration.ofSeconds(15));
 		 	mouse= new Actions(driver);
 		 	js = (JavascriptExecutor) driver;
-		 	
 	        PageFactory.initElements( driver,this);
 	    }
 	    
@@ -100,7 +99,7 @@ public class LoginPage {
 	        LoginBtn.click();
 	      //  mouse.moveToElement(driver.findElement(email)).click().sendKeys(user).perform(); //  mouse.moveToElement(driver.findElement(password)).click().sendKeys(pass).perform(); //   driver.findElement(loginBtn).click();
 	        Thread.sleep(5000);
-	        
+	      
 	        
 	        
 	    }

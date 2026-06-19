@@ -62,7 +62,7 @@ public class KycOfficerPage {
 	
 	
 	  public void eyeIconBtn() throws InterruptedException {
-	    	Thread.sleep(4000);
+	    	Thread.sleep(7000);
 	    	for (int i = 0; i <33; i++) {
 				
 	    		
@@ -155,7 +155,21 @@ public class KycOfficerPage {
 	    }
 	  
 	  
-	
+	   public void downloadPDFButton() throws InterruptedException {
+	    	
+	    	By DownLoadBtn=By.xpath("(//flt-semantics[@role='button'])[last()]");
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(DownLoadBtn));
+	    	Thread.sleep(1000);
+	    	
+	    	WebElement downloadPdfbtn=driver.findElement(DownLoadBtn);
+	    	Thread.sleep(2000);
+	    //	downloadPdfbtn.click();
+	    	js.executeScript("arguments[0].click();", downloadPdfbtn);
+	    	
+	    	
+	    }
+
+
 	  
 	  
 	

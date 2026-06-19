@@ -143,30 +143,34 @@ public class Phone_Change_ReqAndDevice_Change_ReqPage {
 		    uploadNRCFrontPagetBtn.click();
 		    Thread.sleep(5000);
 		    
-		    		// For Upload Passport front Page Robot Loop 
-		 			// Navigate using TAB 
-		 			for (int i = 0; i < 9; i++) {
-		 			    robot.keyPress(KeyEvent.VK_TAB);
-		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(200);
-		 			}
-		 			// Press ENTER (select file + click Open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		 			Thread.sleep(1100);
-		 			// 🔹 1 TAB (move to Open button)
-		 			robot.keyPress(KeyEvent.VK_TAB);
-		 			robot.keyRelease(KeyEvent.VK_TAB);
-		 			
-		 			// Down to select the File 
-		 			robot.keyPress(KeyEvent.VK_DOWN);
-		 		    robot.keyRelease(KeyEvent.VK_DOWN);
-		 			
-		 			// Enter (click open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		    
-		   
+		 // For Upload Passport front Page Robot Loop 
+ 			// Navigate using TAB 
+ 			for (int i = 0; i < 9; i++) {
+ 			    robot.keyPress(KeyEvent.VK_TAB);
+ 			    robot.keyRelease(KeyEvent.VK_TAB);
+ 			    Thread.sleep(300);
+ 			}
+ 		// Press DOWN arrow 3 times to select picture option
+ 			for (int i = 0; i < 3; i++) {
+ 			    robot.keyPress(KeyEvent.VK_DOWN);
+ 			    robot.keyRelease(KeyEvent.VK_DOWN);
+ 			    Thread.sleep(200);
+ 			}
+ 			// Press ENTER (select file + click Open)
+ 			robot.keyPress(KeyEvent.VK_ENTER);
+ 			robot.keyRelease(KeyEvent.VK_ENTER);
+ 			Thread.sleep(200);
+ 			// 🔹 1 TAB (move to Open button)
+ 			robot.keyPress(KeyEvent.VK_TAB);
+ 			robot.keyRelease(KeyEvent.VK_TAB);
+ 			
+ 			// Down to select the File 
+ 			robot.keyPress(KeyEvent.VK_DOWN);
+ 		    robot.keyRelease(KeyEvent.VK_DOWN);
+ 			
+ 			// Enter (click open)
+ 			robot.keyPress(KeyEvent.VK_ENTER);
+ 			robot.keyRelease(KeyEvent.VK_ENTER);
 		    }
 	 
 	 
@@ -184,29 +188,34 @@ public class Phone_Change_ReqAndDevice_Change_ReqPage {
 		 uploadNRCBackPageBtn.click();
 		 Thread.sleep(5000);
 		    
-		    		// For Upload Passport front Page Robot Loop 
-		 			// Navigate using TAB 
-		 			for (int i = 0; i < 9; i++) {
-		 			    robot.keyPress(KeyEvent.VK_TAB);
-		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(200);
-		 			}
-		 			// Press ENTER (select file + click Open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		 			Thread.sleep(1100);
-		 			// 🔹 1 TAB (move to Open button)
-		 			robot.keyPress(KeyEvent.VK_TAB);
-		 			robot.keyRelease(KeyEvent.VK_TAB);
-		 			
-		 			// Down to select the File 
-		 			robot.keyPress(KeyEvent.VK_DOWN);
-		 		    robot.keyRelease(KeyEvent.VK_DOWN);
-		 			
-		 			// Enter (click open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		    
+		// For Upload Passport front Page Robot Loop 
+			// Navigate using TAB 
+			for (int i = 0; i < 9; i++) {
+			    robot.keyPress(KeyEvent.VK_TAB);
+			    robot.keyRelease(KeyEvent.VK_TAB);
+			    Thread.sleep(300);
+			}
+		// Press DOWN arrow 3 times to select picture option
+			for (int i = 0; i < 3; i++) {
+			    robot.keyPress(KeyEvent.VK_DOWN);
+			    robot.keyRelease(KeyEvent.VK_DOWN);
+			    Thread.sleep(200);
+			}
+			// Press ENTER (select file + click Open)
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(200);
+			// 🔹 1 TAB (move to Open button)
+			robot.keyPress(KeyEvent.VK_TAB);
+			robot.keyRelease(KeyEvent.VK_TAB);
+			
+			// Down to select the File 
+			robot.keyPress(KeyEvent.VK_DOWN);
+		    robot.keyRelease(KeyEvent.VK_DOWN);
+			
+			// Enter (click open)
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
 		   
 		    }
 	 
@@ -257,28 +266,34 @@ public class Phone_Change_ReqAndDevice_Change_ReqPage {
 		   UploadCustomerFaceBtn.click();
 		    Thread.sleep(5000);
 		    
-		    		// For Upload Passport front Page Robot Loop 
-		 			// Navigate using TAB 
-		 			for (int i = 0; i < 9; i++) {
-		 			    robot.keyPress(KeyEvent.VK_TAB);
-		 			    robot.keyRelease(KeyEvent.VK_TAB);
-		 			    Thread.sleep(200);
-		 			}
-		 			// Press ENTER (select file + click Open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
-		 			Thread.sleep(1100);
-		 			// 🔹 1 TAB (move to Open button)
-		 			robot.keyPress(KeyEvent.VK_TAB);
-		 			robot.keyRelease(KeyEvent.VK_TAB);
-		 			
-		 			// Down to select the File 
-		 			robot.keyPress(KeyEvent.VK_DOWN);
-		 		    robot.keyRelease(KeyEvent.VK_DOWN);
-		 			
-		 			// Enter (click open)
-		 			robot.keyPress(KeyEvent.VK_ENTER);
-		 			robot.keyRelease(KeyEvent.VK_ENTER);
+		 // For Upload Passport front Page Robot Loop 
+ 			// Navigate using TAB 
+ 			for (int i = 0; i < 9; i++) {
+ 			    robot.keyPress(KeyEvent.VK_TAB);
+ 			    robot.keyRelease(KeyEvent.VK_TAB);
+ 			    Thread.sleep(300);
+ 			}
+ 		// Press DOWN arrow 3 times to select picture option
+ 			for (int i = 0; i < 3; i++) {
+ 			    robot.keyPress(KeyEvent.VK_DOWN);
+ 			    robot.keyRelease(KeyEvent.VK_DOWN);
+ 			    Thread.sleep(200);
+ 			}
+ 			// Press ENTER (select file + click Open)
+ 			robot.keyPress(KeyEvent.VK_ENTER);
+ 			robot.keyRelease(KeyEvent.VK_ENTER);
+ 			Thread.sleep(200);
+ 			// 🔹 1 TAB (move to Open button)
+ 			robot.keyPress(KeyEvent.VK_TAB);
+ 			robot.keyRelease(KeyEvent.VK_TAB);
+ 			
+ 			// Down to select the File 
+ 			robot.keyPress(KeyEvent.VK_DOWN);
+ 		    robot.keyRelease(KeyEvent.VK_DOWN);
+ 			
+ 			// Enter (click open)
+ 			robot.keyPress(KeyEvent.VK_ENTER);
+ 			robot.keyRelease(KeyEvent.VK_ENTER);
 		    
 		}
 		
@@ -304,29 +319,34 @@ public class Phone_Change_ReqAndDevice_Change_ReqPage {
 			   Transaction_Btn.click();
 			    Thread.sleep(5000);
 			    
-			    		// For Upload Passport front Page Robot Loop 
-			 			// Navigate using TAB 
-			 			for (int i = 0; i < 9; i++) {
-			 			    robot.keyPress(KeyEvent.VK_TAB);
-			 			    robot.keyRelease(KeyEvent.VK_TAB);
-			 			    Thread.sleep(200);
-			 			}
-			 			// Press ENTER (select file + click Open)
-			 			robot.keyPress(KeyEvent.VK_ENTER);
-			 			robot.keyRelease(KeyEvent.VK_ENTER);
-			 			Thread.sleep(1100);
-			 			// 🔹 1 TAB (move to Open button)
-			 			robot.keyPress(KeyEvent.VK_TAB);
-			 			robot.keyRelease(KeyEvent.VK_TAB);
-			 			
-			 			// Down to select the File 
-			 			robot.keyPress(KeyEvent.VK_DOWN);
-			 		    robot.keyRelease(KeyEvent.VK_DOWN);
-			 			
-			 			// Enter (click open)
-			 			robot.keyPress(KeyEvent.VK_ENTER);
-			 			robot.keyRelease(KeyEvent.VK_ENTER);
-			    
+			    // For Upload Passport front Page Robot Loop 
+	 			// Navigate using TAB 
+	 			for (int i = 0; i < 9; i++) {
+	 			    robot.keyPress(KeyEvent.VK_TAB);
+	 			    robot.keyRelease(KeyEvent.VK_TAB);
+	 			    Thread.sleep(300);
+	 			}
+	 		// Press DOWN arrow 3 times to select picture option
+	 			for (int i = 0; i < 3; i++) {
+	 			    robot.keyPress(KeyEvent.VK_DOWN);
+	 			    robot.keyRelease(KeyEvent.VK_DOWN);
+	 			    Thread.sleep(200);
+	 			}
+	 			// Press ENTER (select file + click Open)
+	 			robot.keyPress(KeyEvent.VK_ENTER);
+	 			robot.keyRelease(KeyEvent.VK_ENTER);
+	 			Thread.sleep(200);
+	 			// 🔹 1 TAB (move to Open button)
+	 			robot.keyPress(KeyEvent.VK_TAB);
+	 			robot.keyRelease(KeyEvent.VK_TAB);
+	 			
+	 			// Down to select the File 
+	 			robot.keyPress(KeyEvent.VK_DOWN);
+	 		    robot.keyRelease(KeyEvent.VK_DOWN);
+	 			
+	 			// Enter (click open)
+	 			robot.keyPress(KeyEvent.VK_ENTER);
+	 			robot.keyRelease(KeyEvent.VK_ENTER);
 			   
 			    }
 		 public void reasonTxtFiled() throws InterruptedException {
@@ -352,28 +372,34 @@ public class Phone_Change_ReqAndDevice_Change_ReqPage {
 			   BankStaffaproltBtn.click();
 			    Thread.sleep(5000);
 			    
-			    		// For Upload Passport front Page Robot Loop 
-			 			// Navigate using TAB 
-			 			for (int i = 0; i < 9; i++) {
-			 			    robot.keyPress(KeyEvent.VK_TAB);
-			 			    robot.keyRelease(KeyEvent.VK_TAB);
-			 			    Thread.sleep(200);
-			 			}
-			 			// Press ENTER (select file + click Open)
-			 			robot.keyPress(KeyEvent.VK_ENTER);
-			 			robot.keyRelease(KeyEvent.VK_ENTER);
-			 			Thread.sleep(1100);
-			 			// 🔹 1 TAB (move to Open button)
-			 			robot.keyPress(KeyEvent.VK_TAB);
-			 			robot.keyRelease(KeyEvent.VK_TAB);
-			 			
-			 			// Down to select the File 
-			 			robot.keyPress(KeyEvent.VK_DOWN);
-			 		    robot.keyRelease(KeyEvent.VK_DOWN);
-			 			
-			 			// Enter (click open)
-			 			robot.keyPress(KeyEvent.VK_ENTER);
-			 			robot.keyRelease(KeyEvent.VK_ENTER);
+			    // For Upload Passport front Page Robot Loop 
+	 			// Navigate using TAB 
+	 			for (int i = 0; i < 9; i++) {
+	 			    robot.keyPress(KeyEvent.VK_TAB);
+	 			    robot.keyRelease(KeyEvent.VK_TAB);
+	 			    Thread.sleep(300);
+	 			}
+	 		// Press DOWN arrow 3 times to select picture option
+	 			for (int i = 0; i < 3; i++) {
+	 			    robot.keyPress(KeyEvent.VK_DOWN);
+	 			    robot.keyRelease(KeyEvent.VK_DOWN);
+	 			    Thread.sleep(200);
+	 			}
+	 			// Press ENTER (select file + click Open)
+	 			robot.keyPress(KeyEvent.VK_ENTER);
+	 			robot.keyRelease(KeyEvent.VK_ENTER);
+	 			Thread.sleep(200);
+	 			// 🔹 1 TAB (move to Open button)
+	 			robot.keyPress(KeyEvent.VK_TAB);
+	 			robot.keyRelease(KeyEvent.VK_TAB);
+	 			
+	 			// Down to select the File 
+	 			robot.keyPress(KeyEvent.VK_DOWN);
+	 		    robot.keyRelease(KeyEvent.VK_DOWN);
+	 			
+	 			// Enter (click open)
+	 			robot.keyPress(KeyEvent.VK_ENTER);
+	 			robot.keyRelease(KeyEvent.VK_ENTER);
 			    
 			   
 			    }

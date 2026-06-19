@@ -19,7 +19,7 @@ public class KYCFlowTest extends BaseClass {
 
 	
 	
-	@Test(priority = 1)
+	@Test(priority = 1 )
 	public void kycFlowTest() throws AWTException, InterruptedException {
 		
 		
@@ -29,7 +29,6 @@ public class KYCFlowTest extends BaseClass {
 		
 		login.login("branch_COPS_stag@gmail.com", "olvH~jMjqdmX-lYdecx3");
 	
-		
 		DashBoard.clickAddNew();
 		
 		Kyc.selectKYCupdate();
@@ -40,11 +39,13 @@ public class KYCFlowTest extends BaseClass {
 		
 		Kyc.uploadPassport_FrontPageBtn();
 		
+		Kyc.passPortNumField();
+		
 		Kyc.uploadRequestForm_Btn();
 		
 		Kyc.Regular_KYC_RequestBtn();
 		
-		Kyc.PhnNumber_Change_KYC_Checkbox();
+		Kyc.typesOf_KYC_ChangeReq_Checkboxes();
 		
 		Kyc.RemarkTextField();
 		
@@ -53,8 +54,6 @@ public class KYCFlowTest extends BaseClass {
 		Kyc.EyeIconbtnClick();
 		
 		Kyc.EditIconbtnClick();
-		
-		Kyc.NameCorrection_Checkbox();
 		
 		Kyc.NextButton();
 				
@@ -66,7 +65,7 @@ public class KYCFlowTest extends BaseClass {
 	
 //	,dependsOnMethods = "kycFlowTest"
 	
-	@Test(priority =2,dependsOnMethods = "kycFlowTest")
+	@Test(priority =2 ,dependsOnMethods = "kycFlowTest")
 	public void Kyc1Flow() throws AWTException, InterruptedException {
 		
 		driver.get("https://staging.flow.stax.run/#/login");
@@ -78,7 +77,6 @@ public class KYCFlowTest extends BaseClass {
 		
 		
 		login.login("KYC1_COPS_Stag@gmail.com", "dZnZGgFV!kROcvmyDRaf");
-	
 	
 		Kyc1.selectKYCUpdate();
 		
@@ -98,13 +96,13 @@ public class KYCFlowTest extends BaseClass {
 		
 		Kyc.NextButton();
 		
-		Kyc1.backButton();
-		
 		Kyc1.eyeIconBtn();
 		
 		Kyc1.updateButton();
 		
 		Kyc1.update_Commentsection();
+		
+		Kyc.NextButton();
 		
 		Kyc.MenuButton();
 		
@@ -113,7 +111,7 @@ public class KYCFlowTest extends BaseClass {
 	}
 	
 	// , dependsOnMethods = "Kyc1Flow"
-	@Test(priority = 3, dependsOnMethods = "Kyc1Flow")
+	@Test(priority = 3, dependsOnMethods = "Kyc1Flow" )
 	public void Kyc2Flow() throws InterruptedException, AWTException {
 		
 		driver.get("https://staging.flow.stax.run/#/login");
@@ -151,11 +149,10 @@ public class KYCFlowTest extends BaseClass {
 		
 	}
 	
-	@Test(priority = 4, dependsOnMethods = "Kyc2Flow")
+//	@Test(priority = 4, dependsOnMethods = "Kyc2Flow" )
 	 public void branchFlow() throws InterruptedException, AWTException {
 		 
 		 	LoginPage login = new LoginPage(driver);
-			DashBoardPage DashBoard= new DashBoardPage(driver);
 			KYCPage Kyc= new KYCPage(driver);
 			
 			login.login("branch_COPS_stag@gmail.com", "olvH~jMjqdmX-lYdecx3");

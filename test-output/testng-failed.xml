@@ -3,13 +3,22 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testsScriptKBZPayService.Pin_Reset_Req_Device_Change_ReqTest">
+      <class name="testScriptNonPo.PettyCashFlowTest">
         <methods>
+          <include name="DCEOFlow"/>
+          <include name="DCEO2Flow"/>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="Pin_Reset_Req_Device_Change_ReqPageFlowTest"/>
+          <include name="branchFlow"/>
+          <include name="dcfoFlow"/>
+          <include name="pettyCashFlow"/>
+          <include name="CFOFlow"/>
+          <include name="financeAuthorizerFlow"/>
+          <include name="CFO2Flow"/>
+          <include name="CEOFlow"/>
+          <include name="FinanceRenocileFlow"/>
         </methods>
-      </class> <!-- testsScriptKBZPayService.Pin_Reset_Req_Device_Change_ReqTest -->
+      </class> <!-- testScriptNonPo.PettyCashFlowTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

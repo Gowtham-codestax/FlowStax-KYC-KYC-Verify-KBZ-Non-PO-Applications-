@@ -19,7 +19,6 @@ public class FuctionPettyCashFlowTest extends BaseClass{
 		
 		petty.nonPoProcess_Option();
 		
-		/*
 		DashBoard.clickAddNew();
 		
 		petty.selectCategory();
@@ -61,15 +60,12 @@ public class FuctionPettyCashFlowTest extends BaseClass{
 		petty.uploadAttachments_Btn();
 			
 		petty.NextButton();
-		
-		*/
-		
+			
 		petty.EyeIconbtnClick();
 		
 		petty.EditIconbtnClick();
 		
 		petty.lineItems_2ndRowEditing();
-		
 		
 		petty.NextButton();
 		
