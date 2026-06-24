@@ -3,22 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScriptNonPo.PettyCashFlowTest">
+      <class name="testsScripts.Duplicate_Phone_Number_Online_Banking_ApplicationClosedTest">
         <methods>
-          <include name="DCEOFlow"/>
-          <include name="DCEO2Flow"/>
+          <include name="branchFlow"/>
+          <include name="CFI_Flow"/>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="branchFlow"/>
-          <include name="dcfoFlow"/>
-          <include name="pettyCashFlow"/>
-          <include name="CFOFlow"/>
-          <include name="financeAuthorizerFlow"/>
-          <include name="CFO2Flow"/>
-          <include name="CEOFlow"/>
-          <include name="FinanceRenocileFlow"/>
+          <include name="branchFlow_2"/>
+          <include name="adminFlow"/>
+          <include name="Duplicate_Phone_Number_Online_Banking_applicationClose_FlowTest"/>
         </methods>
-      </class> <!-- testScriptNonPo.PettyCashFlowTest -->
+      </class> <!-- testsScripts.Duplicate_Phone_Number_Online_Banking_ApplicationClosedTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

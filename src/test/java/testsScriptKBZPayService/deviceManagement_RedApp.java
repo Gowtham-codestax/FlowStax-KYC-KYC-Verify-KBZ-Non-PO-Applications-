@@ -117,7 +117,7 @@ public class deviceManagement_RedApp  extends BaseClass{
 		
 		login.login("BranchTeam_KBZPay@gmail.com", "98DjpLo4WVsdI5HILPVI");
 		
-		accClose.kbzPayServiceOPtion();
+	//	accClose.kbzPayServiceOPtion();
 		
 		accClose.EyeIconbtnClick();
 		

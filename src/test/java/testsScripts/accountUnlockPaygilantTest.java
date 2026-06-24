@@ -23,7 +23,6 @@ public class accountUnlockPaygilantTest  extends BaseClass{
 		LoginPage login = new LoginPage(driver);
 		DashBoardPage DashBoard= new DashBoardPage(driver);
 		KYCPage Kyc= new KYCPage(driver);
-		
 		AccountUnlock_Paygilant_Page accPaygilant = new AccountUnlock_Paygilant_Page(driver);
 		
 		login.login("branch_COPS_stag@gmail.com", "olvH~jMjqdmX-lYdecx3");

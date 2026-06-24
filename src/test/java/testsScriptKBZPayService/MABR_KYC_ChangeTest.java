@@ -18,7 +18,7 @@ import utilityPackage.ListenersClass;
 @Listeners(ListenersClass.class)
 public class MABR_KYC_ChangeTest extends BaseClass {
 	
-//	@Test(priority = 1)
+	@Test(priority = 1)
 	public void MABR_KYC_ChangeFlowTest() throws AWTException, InterruptedException {
 
 		LoginPage login = new LoginPage(driver);
@@ -75,9 +75,9 @@ public class MABR_KYC_ChangeTest extends BaseClass {
 		
 		MABRKYC.EyeIconbtnClick();
 		
-		CusKYC.EditIconbtnClick();
+	//	CusKYC.EditIconbtnClick();
 		
-		accClose.NextButton();
+	//	accClose.NextButton();
 		
 		accClose.assignToTSOBtn();
 		
@@ -98,7 +98,7 @@ public class MABR_KYC_ChangeTest extends BaseClass {
 	}
 	
 	// , dependsOnMethods = "MABR_KYC_ChangeFlowTest"
-//	@Test(priority = 2 , dependsOnMethods = "MABR_KYC_ChangeFlowTest")
+	@Test(priority = 2 , dependsOnMethods = "MABR_KYC_ChangeFlowTest")
 	public void tsoLoginFlow() throws AWTException, InterruptedException {
 		
 		LoginPage login = new LoginPage(driver);
@@ -138,7 +138,7 @@ public class MABR_KYC_ChangeTest extends BaseClass {
 		
 		login.login("BranchTeam_KBZPay@gmail.com", "98DjpLo4WVsdI5HILPVI");
 		
-		accClose.kbzPayServiceOPtion();
+	//	accClose.kbzPayServiceOPtion();
 		
 		tso.EyeIconbtnClick();
 		

@@ -97,9 +97,6 @@ public class accountCloseTest extends BaseClass{
 	@Test(priority = 2,dependsOnMethods = "AccountCloseTest")
 	public void TSOLoginFlow() throws AWTException, InterruptedException {
 		
-	//	driver.get("https://staging.flow.stax.run/#/login");
-	//	Thread.sleep(5000);
-		
 		LoginPage login = new LoginPage(driver);
 		accountClosePage accClose= new accountClosePage(driver);	
 		tsoLoginPage tso= new tsoLoginPage(driver);

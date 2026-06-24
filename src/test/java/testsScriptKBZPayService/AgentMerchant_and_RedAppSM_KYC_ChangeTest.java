@@ -143,7 +143,7 @@ public class AgentMerchant_and_RedAppSM_KYC_ChangeTest extends BaseClass {
 	}
 	
 	// , dependsOnMethods = "TSOLoginFlow"
-	@Test(priority = 3  ) 
+	@Test(priority = 3  , dependsOnMethods = "TSOLoginFlow" ) 
 	public void branchLoginFlow() throws InterruptedException, AWTException {
 		
 		LoginPage login = new LoginPage(driver);

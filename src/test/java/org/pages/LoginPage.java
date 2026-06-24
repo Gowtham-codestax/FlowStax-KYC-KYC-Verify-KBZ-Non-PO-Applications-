@@ -77,7 +77,7 @@ public class LoginPage {
 	     // Email
 	        By email = By.xpath("(//flt-semantics/span[.='Email ']/following::flt-semantics/input[@data-semantics-role='text-field'])[1]");
 	        Thread.sleep(300);
-	        wait.until(ExpectedConditions.elementToBeClickable(email)).click();
+	        wait.until(ExpectedConditions.presenceOfElementLocated(email)).click();
 	        Thread.sleep(500);
 	        wait.until(ExpectedConditions.presenceOfElementLocated(email)).sendKeys(user);
 	        
@@ -85,7 +85,7 @@ public class LoginPage {
 	        // Password
 	        By password = By.xpath("(//flt-semantics/span[.='Password ']/following::flt-semantics/flt-semantics-container/flt-semantics/input[@data-semantics-role='text-field'])[1]");
 	        Thread.sleep(300);
-	        wait.until(ExpectedConditions.elementToBeClickable(password)).click();
+	        wait.until(ExpectedConditions.presenceOfElementLocated(password)).click();
 	  	    Thread.sleep(500);
 	        wait.until(ExpectedConditions.presenceOfElementLocated(password)).sendKeys(pass);
 

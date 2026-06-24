@@ -110,19 +110,23 @@ public class PettyCashPage {
 	 
 	 public void vendorDetailsType() throws InterruptedException {
 	    	
-	    	WebElement	Vendor=driver.findElement(By.xpath("(//flt-semantics/span[.='Vendor Details']/following::flt-semantics[.='Please select'])[1]"));
+		 By VendorDetailsLoc= By.xpath("(//flt-semantics/span[.='Vendor Details']/following::flt-semantics[.='Please select'])[1]");
+		 wait.until(ExpectedConditions.presenceOfElementLocated(VendorDetailsLoc));
 			//Vendor DD 
-	    	Thread.sleep(1000);
-	    	Vendor.click();	
+		 Thread.sleep(1000);
+		 WebElement VendorDetails=driver.findElement(VendorDetailsLoc);
+		 VendorDetails.click();	
 	 }
 	 
 	 public void vendorID() throws InterruptedException {
 	    	
-	    	By	VendorID=By.xpath("//flt-semantics[.='Vendor Id']");
-	    	WebElement ID = wait.until(ExpectedConditions.elementToBeClickable(VendorID));
+	    	By	VendorIDLoc=By.xpath("//flt-semantics[.='Vendor Id']");
+	    	wait.until(ExpectedConditions.presenceOfElementLocated(VendorIDLoc));
 			//Vendor DD 
+	    	
+	    	WebElement	VendorID=driver.findElement(VendorIDLoc);
 	    	Thread.sleep(500);
-	    	ID.click();		
+	    	VendorID.click();		
 	 }
 	 
 	 public void vendorName() throws InterruptedException {

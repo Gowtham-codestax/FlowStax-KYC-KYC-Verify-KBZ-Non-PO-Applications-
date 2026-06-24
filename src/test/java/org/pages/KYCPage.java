@@ -319,7 +319,7 @@ public class KYCPage {
 	    Thread.sleep(400);
 	    
 	    WebElement  remarkField=driver.findElement(RemarkTxtFiledlOc);
-	    remarkField.sendKeys("Test");
+	    remarkField.sendKeys("Test@123");
 	    
 	    }
 	    
@@ -330,8 +330,8 @@ public class KYCPage {
 	    
 	    
 	    public void EyeIconbtnClick() throws InterruptedException {
-	    	Thread.sleep(5000);
-	    	for (int i = 0; i <45; i++) {
+	    	Thread.sleep(6000);
+	    	for (int i = 0; i <46; i++) {
 				
 				robot.keyPress(KeyEvent.VK_TAB);																										
 				robot.keyRelease(KeyEvent.VK_TAB);
@@ -350,7 +350,7 @@ public class KYCPage {
 	    	Thread.sleep(1000);
 	    	WebElement	EditBtn=driver.findElement(EditLoc);
 	    	EditBtn.click();
-	    	Thread.sleep(3000);
+	    	Thread.sleep(8000);
 	    
 		    	// DOB  chekc Box
 		    	

@@ -81,7 +81,7 @@ public class PettyCashRejectFlowTest  extends BaseClass{
 	
 	// ,dependsOnMethods = "pettyCash_Reject_Flow"
 	
-	@Test(priority = 2 ,dependsOnMethods = "pettyCash_Reject_Flow")
+	@Test(priority = 2 )
 	public void financeAuthorizerFlow() throws AWTException, InterruptedException {
 		
 
@@ -91,7 +91,7 @@ public class PettyCashRejectFlowTest  extends BaseClass{
 		
 		login.login("finance_authorizer_npo@gmail.com", "bbJyL6et2OCjao4hy30B");
 		
-		financeAuthorizer.nonPoProcess_Option();
+	//	financeAuthorizer.nonPoProcess_Option();
 		
 		financeAuthorizer.EyeIconbtnClick();
 		
@@ -110,7 +110,7 @@ public class PettyCashRejectFlowTest  extends BaseClass{
 	
 	// ,dependsOnMethods = "financeAuthorizerFlow"
 	
-	@Test(priority = 3 ,dependsOnMethods = "financeAuthorizerFlow")
+	@Test(priority = 3 )
 	public void dcfoFlow() throws InterruptedException, AWTException {
 		
 
@@ -148,7 +148,7 @@ public class PettyCashRejectFlowTest  extends BaseClass{
 		
 		login.login("cfo_npo@gmail.com", "9JnmmenusfeIqPebx~m~");
 		
-		financeAuthorizer.nonPoProcess_Option();
+	//	financeAuthorizer.nonPoProcess_Option();
 		
 		financeAuthorizer.EyeIconbtnClick();
 		
@@ -175,7 +175,7 @@ public class PettyCashRejectFlowTest  extends BaseClass{
 		
 		login.login("dceo_npo@gmail.com", "I4xKC2BBKV@5syekUwx7");
 		
-		financeAuthorizer.nonPoProcess_Option();
+	//	financeAuthorizer.nonPoProcess_Option();
 		
 		financeAuthorizer.EyeIconbtnClick();
 		
@@ -202,7 +202,7 @@ public class PettyCashRejectFlowTest  extends BaseClass{
 		
 		login.login("ceo_npo@gmail.com", "lBwHwJLyQX7qW#!OO~1A");
 		
-		financeAuthorizer.nonPoProcess_Option();
+	//	financeAuthorizer.nonPoProcess_Option();
 		
 		financeAuthorizer.EyeIconbtnClick();
 		
@@ -228,7 +228,7 @@ public class PettyCashRejectFlowTest  extends BaseClass{
 		
 		login.login("finance_reconcile_npo@gmail.com", "I9y0qsXlTx2u37ygJwis");
 		
-		financeAuthorizer.nonPoProcess_Option();
+//		financeAuthorizer.nonPoProcess_Option();
 		
 		financeAuthorizer.EyeIconbtnClick();
 		

@@ -292,7 +292,7 @@ public class tsoLoginPage {
 	    	Thread.sleep(2000);
 	    	js.executeScript("arguments[0].click();", UpdatestageCMNTbox);
 	    	Thread.sleep(500);
-	    	UpdatestageCMNTbox.sendKeys("Okay");
+	    	UpdatestageCMNTbox.sendKeys("Test@123");
 	    //	js.executeScript("arguments[0].click()", UpdatestageCMNTbox);
 	    //	js.executeScript("arguments[0].value= 'Okay';", UpdatestageCMNTbox);
 		
