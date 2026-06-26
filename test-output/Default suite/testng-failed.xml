@@ -3,17 +3,19 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testsScripts.Duplicate_Phone_Number_Online_Banking_ApplicationClosedTest">
+      <class name="testsScriptKBZPayService.AgentMerchant_and_RedAppSM_KYC_Change_DeniedTest">
         <methods>
-          <include name="branchFlow"/>
-          <include name="CFI_Flow"/>
+          <include name="TsoLoginFlow2"/>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="branchFlow_2"/>
-          <include name="adminFlow"/>
-          <include name="Duplicate_Phone_Number_Online_Banking_applicationClose_FlowTest"/>
+          <include name="TsoLoginFlow3"/>
+          <include name="branchLoginFlow"/>
+          <include name="closingLoopLogin"/>
+          <include name="closingLoopLogin2"/>
+          <include name="TSOLoginFlow"/>
+          <include name="AgemtMerchantand_RedAppFlowTest"/>
         </methods>
-      </class> <!-- testsScripts.Duplicate_Phone_Number_Online_Banking_ApplicationClosedTest -->
+      </class> <!-- testsScriptKBZPayService.AgentMerchant_and_RedAppSM_KYC_Change_DeniedTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

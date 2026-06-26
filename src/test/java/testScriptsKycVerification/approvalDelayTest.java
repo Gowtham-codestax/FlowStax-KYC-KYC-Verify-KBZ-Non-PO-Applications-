@@ -1,18 +1,15 @@
 package testScriptsKycVerification;
-
 import java.awt.AWTException;
 
+import org.CentralOpsPages.DashBoardPage;
+import org.CentralOpsPages.KYCPage;
+import org.CentralOpsPages.LoginPage;
 import org.KycVerificationAppPages.KBZPayCenterChecker1Page;
 import org.KycVerificationAppPages.KycOfficerPage;
 import org.KycVerificationAppPages.approvalDelayPage;
-import org.KycVerificationAppPages.customerUrgentRequestPages;
 import org.genricPackage.BaseClass;
-import org.pages.DashBoardPage;
-import org.pages.KYCPage;
-import org.pages.LoginPage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-
 import utilityPackage.ListenersClass;
 
 @Listeners(ListenersClass.class)
@@ -21,7 +18,6 @@ public class approvalDelayTest extends BaseClass {
 	
 	@Test(priority = 1)
 	public void approvalDelayFlow() throws AWTException, InterruptedException {
-		
 		
 		LoginPage login = new LoginPage(driver);
 		DashBoardPage DashBoard= new DashBoardPage(driver);
@@ -85,8 +81,7 @@ public class approvalDelayTest extends BaseClass {
 		Kyc.MenuButton();
 		
 		Kyc.LogOut();
-		
-		
+			
 	}
 	
 	// ,dependsOnMethods = "approvalDelayFlow"
@@ -96,7 +91,6 @@ public class approvalDelayTest extends BaseClass {
 		LoginPage login = new LoginPage(driver);
 		KYCPage Kyc= new KYCPage(driver);
 		KBZPayCenterChecker1Page KbzPaycentercheck1= new  KBZPayCenterChecker1Page(driver);
-		
 		
 		login.login("KBZPayCenter_checker1@gmail.com", "w8O$cz~CI6hV7L-tc4SG");
 	
@@ -114,15 +108,10 @@ public class approvalDelayTest extends BaseClass {
 		
 		Kyc.LogOut();
 		
-		
 	}
 	
 	@Test(priority = 3,dependsOnMethods = "KBZPayCenterCheckerFlow")
 	public void kycOfficerFlow() throws InterruptedException, AWTException {
-		
-
-		driver.get("https://staging.flow.stax.run/#/login");
-		Thread.sleep(5000);
 		
 		LoginPage login = new LoginPage(driver);
 		KYCPage Kyc= new KYCPage(driver);
@@ -156,5 +145,4 @@ public class approvalDelayTest extends BaseClass {
 				
 	}
 	
-
 }

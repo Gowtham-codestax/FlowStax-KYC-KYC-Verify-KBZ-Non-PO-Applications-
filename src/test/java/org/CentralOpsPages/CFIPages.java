@@ -1,4 +1,4 @@
-package org.pages;
+package org.CentralOpsPages;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -64,6 +64,25 @@ public class CFIPages {
 	}
 	
 	
+	public void im_BankingOption() throws InterruptedException {
+		
+		By	Im_BankingOptionLoc=By.xpath("//flt-semantics/span[contains(.,'i/m Banking (CIF)')]");
+		wait.until(ExpectedConditions.presenceOfElementLocated(Im_BankingOptionLoc));
+		Thread.sleep(1000);
+		
+		WebElement	Im_BankingOption=driver.findElement(Im_BankingOptionLoc);
+		js.executeScript("arguments[0].click();", Im_BankingOption);
+		
+		Thread.sleep(600);
+			
+				// PUll
+					By pull = By.xpath("//flt-semantics[@role='button' and .='Pull']");
+					WebElement Pull=wait.until(ExpectedConditions.presenceOfElementLocated(pull));
+					Thread.sleep(500);
+					js.executeScript("arguments[0].click();", Pull);	
+	}
+	
+	
 	public void PullOptionButon() throws InterruptedException {
 		
 		for (int i = 0; i < 5; i++) {
@@ -108,7 +127,7 @@ public class CFIPages {
 			    WebElement StartActionOption =
 			            wait.until(ExpectedConditions.presenceOfElementLocated(StartActionOption_Btn));
 
-			    Thread.sleep(500);
+			    Thread.sleep(3000);
 			    js.executeScript("arguments[0].click();",StartActionOption);
 			
 		}
@@ -133,7 +152,7 @@ public class CFIPages {
 			    WebElement VerifiyandActiveOption =
 			            wait.until(ExpectedConditions.presenceOfElementLocated(VerifiyandActiveOption_Btn));
 
-			    Thread.sleep(500);
+			    Thread.sleep(3000);
 			    js.executeScript("arguments[0].click();",VerifiyandActiveOption);
 			
 		}
@@ -146,7 +165,7 @@ public class CFIPages {
 			            wait.until(ExpectedConditions.presenceOfElementLocated(
 			                    MakeforcorrectionOption_Btn));
 
-			    Thread.sleep(500);
+			    Thread.sleep(3000);
 
 			    js.executeScript("arguments[0].click();",
 			    		Make);

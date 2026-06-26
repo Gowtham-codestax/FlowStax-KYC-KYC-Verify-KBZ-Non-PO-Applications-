@@ -1,4 +1,4 @@
-package org.pages;
+package org.CentralOpsPages;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -74,6 +74,7 @@ public class KYCPage {
 	    	Thread.sleep(800);
 	    	
 	    	WebElement CusName=driver.findElement(CusNameLoc);
+	    	Thread.sleep(200);
 	    	mouse.moveToElement(CusName).click().sendKeys("Test").perform();
 	    	
 	    	//Premium Radio button
@@ -392,14 +393,14 @@ public class KYCPage {
 	    	
 	    	// (//flt-semantics[@role='button'])[3]
 	    			
-	        By menuBtn = By.xpath("(//flt-semantics[@role='button'])[3]");
+	        By menuBtn = By.xpath("(//flt-semantics[@role='button'])[2]");
 
 	        for (int i = 0; i < 5; i++) {
 
 	            try {
 
 	                WebElement menu =
-	                        wait.until(ExpectedConditions.elementToBeClickable(menuBtn));
+	                        wait.until(ExpectedConditions.presenceOfElementLocated(menuBtn));
 
 	                js.executeScript("arguments[0].scrollIntoView({block:'center'});", menu);
 	                
@@ -427,14 +428,14 @@ public class KYCPage {
 	    
 	    public void LogOut() {
 
-	        By logoutDD = By.xpath("//*[@role='group']");
+	        By logoutDD = By.xpath("(//*[@role='group'])[2]");
 
 	        for (int i = 0; i < 5; i++) {
 
 	            try {
 
 	                WebElement dropdown =
-	                        wait.until(ExpectedConditions.elementToBeClickable(logoutDD));
+	                        wait.until(ExpectedConditions.presenceOfElementLocated(logoutDD));
 	                Thread.sleep(2000);
 	                js.executeScript(
 	                        "arguments[0].dispatchEvent(new MouseEvent('click',{bubbles:true}));",

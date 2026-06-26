@@ -1,11 +1,12 @@
-package testsScripts;
+package testsScriptsCentralOps;
 import java.awt.AWTException;
+
+import org.CentralOpsPages.CFIPages;
+import org.CentralOpsPages.DashBoardPage;
+import org.CentralOpsPages.Duplicate_Phone_Number_Online_BankingPage;
+import org.CentralOpsPages.KYCPage;
+import org.CentralOpsPages.LoginPage;
 import org.genricPackage.BaseClass;
-import org.pages.CFIPages;
-import org.pages.DashBoardPage;
-import org.pages.Duplicate_Phone_Number_Online_BankingPage;
-import org.pages.KYCPage;
-import org.pages.LoginPage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utilityPackage.ListenersClass;

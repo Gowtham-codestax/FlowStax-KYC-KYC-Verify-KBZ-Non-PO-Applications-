@@ -1,10 +1,11 @@
 package testScriptNonPo;
 import java.awt.AWTException;
+
+import org.CentralOpsPages.DashBoardPage;
+import org.CentralOpsPages.LoginPage;
 import org.genricPackage.BaseClass;
 import org.nonPoAppPages.FinanceAuthorizerPage;
 import org.nonPoAppPages.PettyCashPage;
-import org.pages.DashBoardPage;
-import org.pages.LoginPage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utilityPackage.ListenersClass;

@@ -1,4 +1,4 @@
-package org.pages;
+package org.CentralOpsPages;
 import java.time.Duration;
 import java.util.Set;
 import org.openqa.selenium.By;

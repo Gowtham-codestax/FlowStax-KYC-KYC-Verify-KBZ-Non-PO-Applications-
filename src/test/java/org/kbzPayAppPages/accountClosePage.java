@@ -79,8 +79,7 @@ public class accountClosePage {
 		
 		
 		WebElement BranhcPhnnumField=wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//flt-semantics/span[.='Branch Phone Number *']/following::flt-semantics[2]/input[@data-semantics-role='text-field']")));
-		wait.until(ExpectedConditions.visibilityOf(BranhcPhnnumField));
-		wait.until(ExpectedConditions.elementToBeClickable(BranhcPhnnumField));
+		Thread.sleep(500);
 		BranhcPhnnumField.click();
 		Thread.sleep(200);
 		BranhcPhnnumField.sendKeys("678976777");
@@ -665,7 +664,7 @@ public class accountClosePage {
 		  
 		  public void MenuButton() {
 
-		        By menuBtn = By.xpath("(//flt-semantics[@role='button'])[3]");
+		        By menuBtn = By.xpath("(//flt-semantics[@role='button'])[2]");
 
 		        for (int i = 0; i < 5; i++) {
 
@@ -698,14 +697,14 @@ public class accountClosePage {
 		    
 		    public void LogOut() {
 
-		        By logoutDD = By.xpath("//*[@role='group']");
+		        By logoutDD = By.xpath("(//*[@role='group'])[2]");
 
 		        for (int i = 0; i < 5; i++) {
 
 		            try {
 
 		                WebElement dropdown =
-		                        wait.until(ExpectedConditions.elementToBeClickable(logoutDD));
+		                        wait.until(ExpectedConditions.presenceOfElementLocated(logoutDD));
 		                Thread.sleep(2000);
 		                js.executeScript("arguments[0].dispatchEvent(new MouseEvent('click',{bubbles:true}));",dropdown);
 
@@ -724,7 +723,7 @@ public class accountClosePage {
 		            try {
 
 		                WebElement logout =
-		                        wait.until(ExpectedConditions.elementToBeClickable(logoutBtn));
+		                        wait.until(ExpectedConditions.presenceOfElementLocated(logoutBtn));
 
 		                		Thread.sleep(3000);	             
 		                		js.executeScript("arguments[0].dispatchEvent(new MouseEvent('click',{bubbles:true}));", logout);

@@ -1,13 +1,12 @@
-package testsScripts;
+package testsScriptsCentralOps;
 
 import java.awt.AWTException;
 
-
+import org.CentralOpsPages.DashBoardPage;
+import org.CentralOpsPages.KYC1_COPS_Page;
+import org.CentralOpsPages.KYCPage;
+import org.CentralOpsPages.LoginPage;
 import org.genricPackage.BaseClass;
-import org.pages.DashBoardPage;
-import org.pages.KYC1_COPS_Page;
-import org.pages.KYCPage;
-import org.pages.LoginPage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 

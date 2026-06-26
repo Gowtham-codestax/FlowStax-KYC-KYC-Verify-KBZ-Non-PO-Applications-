@@ -1,14 +1,15 @@
 package testsScriptKBZPayService;
 
 import java.awt.AWTException;
+
+import org.CentralOpsPages.DashBoardPage;
+import org.CentralOpsPages.LoginPage;
 import org.genricPackage.BaseClass;
 import org.kbzPayAppPages.Account_Resumption_Fraud_RelatedPage;
 import org.kbzPayAppPages.Pin_Reset_Req_Device_Change_ReqPage;
 import org.kbzPayAppPages.accountClosePage;
 import org.kbzPayAppPages.closingLoopPage;
 import org.kbzPayAppPages.tsoLoginPage;
-import org.pages.DashBoardPage;
-import org.pages.LoginPage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utilityPackage.ListenersClass;

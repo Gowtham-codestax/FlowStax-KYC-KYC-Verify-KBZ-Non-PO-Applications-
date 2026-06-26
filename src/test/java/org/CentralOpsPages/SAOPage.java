@@ -1,4 +1,4 @@
-package org.pages;
+package org.CentralOpsPages;
 
 import java.awt.AWTException;
 import java.awt.Robot;

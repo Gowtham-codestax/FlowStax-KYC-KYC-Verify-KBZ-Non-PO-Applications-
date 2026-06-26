@@ -1,15 +1,15 @@
 package testScriptsKycVerification;
 import java.awt.AWTException;
 
+import org.CentralOpsPages.DashBoardPage;
+import org.CentralOpsPages.KYCPage;
+import org.CentralOpsPages.LoginPage;
 import org.KycVerificationAppPages.ClustuerManger1Page;
 import org.KycVerificationAppPages.KBZPayCenterChecker1Page;
 import org.KycVerificationAppPages.KBZPayCenterMaker1Page;
 import org.KycVerificationAppPages.KycOfficerPage;
 import org.KycVerificationAppPages.customerUrgentRequestPages;
 import org.genricPackage.BaseClass;
-import org.pages.DashBoardPage;
-import org.pages.KYCPage;
-import org.pages.LoginPage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -18,7 +18,7 @@ import utilityPackage.ListenersClass;
 @Listeners(ListenersClass.class)
 public class customerUrgentRequestFlow extends BaseClass {
 
-//	@Test(priority = 1)
+	@Test(priority = 1)
 	public void CustomerUrgentRequestFlowTest()throws AWTException, InterruptedException {
 		LoginPage login = new LoginPage(driver);
 		DashBoardPage DashBoard= new DashBoardPage(driver);
@@ -85,7 +85,7 @@ public class customerUrgentRequestFlow extends BaseClass {
 	}
 	
 	// ,dependsOnMethods = "CustomerUrgentRequestFlowTest"
-	@Test(priority = 2)
+	@Test(priority = 2 ,dependsOnMethods = "CustomerUrgentRequestFlowTest")
 	public void KycOfficerFlow() throws AWTException , InterruptedException{
 		
 		driver.get("https://staging.flow.stax.run/#/login");

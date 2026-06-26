@@ -1,16 +1,14 @@
 package testScriptNonPo;
-
 import java.awt.AWTException;
 
+import org.CentralOpsPages.DashBoardPage;
+import org.CentralOpsPages.LoginPage;
 import org.genricPackage.BaseClass;
 import org.nonPoAppPages.FinanceAuthorizerPage;
 import org.nonPoAppPages.PettyCashPage;
-import org.pages.DashBoardPage;
-import org.pages.LoginPage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utilityPackage.ListenersClass;
-
 
 @Listeners(ListenersClass.class)
 public class PettyCashRejectFlowTest  extends BaseClass{
@@ -24,7 +22,6 @@ public class PettyCashRejectFlowTest  extends BaseClass{
 		
 		login.login("branch_npo@gmail.com", "P$2EorwK5cyc@Ar-8NOT");
 	
-		
 		DashBoard.clickAddNew();
 		
 		petty.selectCategory();
@@ -84,7 +81,6 @@ public class PettyCashRejectFlowTest  extends BaseClass{
 	@Test(priority = 2 )
 	public void financeAuthorizerFlow() throws AWTException, InterruptedException {
 		
-
 		LoginPage login = new LoginPage(driver);
 		PettyCashPage petty= new PettyCashPage(driver);
 		FinanceAuthorizerPage financeAuthorizer= new FinanceAuthorizerPage(driver);
@@ -113,14 +109,13 @@ public class PettyCashRejectFlowTest  extends BaseClass{
 	@Test(priority = 3 )
 	public void dcfoFlow() throws InterruptedException, AWTException {
 		
-
 		LoginPage login = new LoginPage(driver);
 		PettyCashPage petty= new PettyCashPage(driver);
 		FinanceAuthorizerPage financeAuthorizer= new FinanceAuthorizerPage(driver);
 		
 		login.login("dcfo_npo@gmail.com", "Pn!NskTNlvfJa8k~TRb$");
 		
-		financeAuthorizer.nonPoProcess_Option();
+	//	financeAuthorizer.nonPoProcess_Option();
 		
 		financeAuthorizer.EyeIconbtnClick();
 		
@@ -138,10 +133,9 @@ public class PettyCashRejectFlowTest  extends BaseClass{
 	
 	// ,dependsOnMethods = "dcfoFlow"
 	
-	@Test(priority = 4,dependsOnMethods = "dcfoFlow")
+	@Test(priority = 4  )
 	public void CFOFlow() throws AWTException, InterruptedException {
 		
-
 		LoginPage login = new LoginPage(driver);
 		PettyCashPage petty= new PettyCashPage(driver);
 		FinanceAuthorizerPage financeAuthorizer= new FinanceAuthorizerPage(driver);
@@ -165,9 +159,8 @@ public class PettyCashRejectFlowTest  extends BaseClass{
 	}
 	
 	// ,dependsOnMethods = "CFOFlow"
-	@Test(priority = 5,dependsOnMethods = "CFOFlow")
+	@Test(priority = 5 )
 	public void DCEOFlow() throws AWTException, InterruptedException {
-		
 		
 		LoginPage login = new LoginPage(driver);
 		PettyCashPage petty= new PettyCashPage(driver);
@@ -191,9 +184,8 @@ public class PettyCashRejectFlowTest  extends BaseClass{
 		
 	}
 	
-	
-	
-	@Test(priority = 6,dependsOnMethods = "DCEOFlow")
+	// ,dependsOnMethods = "DCEOFlow"
+	@Test(priority = 6 )
 	public void CEOFlow() throws AWTException, InterruptedException {
 		
 		LoginPage login = new LoginPage(driver);
@@ -219,7 +211,7 @@ public class PettyCashRejectFlowTest  extends BaseClass{
 	}
 	
 	// ,dependsOnMethods = "CEOFlow"
-	@Test(priority = 7,dependsOnMethods = "CEOFlow")
+	@Test(priority = 7 )
 	public void FinanceRenocileFlow() throws AWTException, InterruptedException {
 		
 		LoginPage login = new LoginPage(driver);
@@ -244,7 +236,6 @@ public class PettyCashRejectFlowTest  extends BaseClass{
 		
 	}
 	
-
 	// ,dependsOnMethods = "FinanceRenocileFlow"
 	
 	@Test(priority = 8 ,dependsOnMethods = "FinanceRenocileFlow" )

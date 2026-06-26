@@ -410,7 +410,7 @@ public class PettyCashPage {
 		    
 	 
 	 public void EyeIconbtnClick() throws InterruptedException {
-	    	Thread.sleep(4000);
+	    	Thread.sleep(8000);
 	    	for (int i = 0; i <32; i++) {
 				
 				robot.keyPress(KeyEvent.VK_TAB);																										

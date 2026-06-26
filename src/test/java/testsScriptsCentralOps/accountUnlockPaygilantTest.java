@@ -1,13 +1,13 @@
-package testsScripts;
+package testsScriptsCentralOps;
 
 import java.awt.AWTException;
 
+import org.CentralOpsPages.AccountUnlock_Paygilant_Page;
+import org.CentralOpsPages.DashBoardPage;
+import org.CentralOpsPages.KYC1_COPS_Page;
+import org.CentralOpsPages.KYCPage;
+import org.CentralOpsPages.LoginPage;
 import org.genricPackage.BaseClass;
-import org.pages.AccountUnlock_Paygilant_Page;
-import org.pages.DashBoardPage;
-import org.pages.KYC1_COPS_Page;
-import org.pages.KYCPage;
-import org.pages.LoginPage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -100,13 +100,7 @@ public class accountUnlockPaygilantTest  extends BaseClass{
 	@Test(priority = 3)
 	public void SOC1Login() throws InterruptedException, AWTException {
 		
-		
-		
-		driver.get("https://staging.flow.stax.run/#/login");
-		Thread.sleep(5000);
-		
 		LoginPage login = new LoginPage(driver);
-		DashBoardPage DashBoard= new DashBoardPage(driver);
 		KYCPage Kyc= new KYCPage(driver);
 		KYC1_COPS_Page Kyc1=new KYC1_COPS_Page(driver);
 		AccountUnlock_Paygilant_Page accPaygilant = new AccountUnlock_Paygilant_Page(driver);
@@ -133,13 +127,8 @@ public class accountUnlockPaygilantTest  extends BaseClass{
 	public void FMUlogin() throws InterruptedException, AWTException {
 		
 		
-		driver.get("https://staging.flow.stax.run/#/login");
-		Thread.sleep(5000);
-		
 		LoginPage login = new LoginPage(driver);
-		DashBoardPage DashBoard= new DashBoardPage(driver);
 		KYCPage Kyc= new KYCPage(driver);
-		KYC1_COPS_Page Kyc1=new KYC1_COPS_Page(driver);
 		AccountUnlock_Paygilant_Page accPaygilant = new AccountUnlock_Paygilant_Page(driver);
 		
 		login.login("fmu1_cops@gmail.com", "FPsvBbB6!!3Cfobbq$9E");
@@ -188,12 +177,7 @@ public class accountUnlockPaygilantTest  extends BaseClass{
 		Kyc.MenuButton();
 		
 		Kyc.LogOut();
-		
-		
-		
-	//	accPaygilant.PullOptionButon();
-		
-		
+			
 	}
 	
 	// ,dependsOnMethods = "CIFGropuLogin"

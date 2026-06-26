@@ -2,13 +2,13 @@ package testsScriptKBZPayService;
 
 import java.awt.AWTException;
 
+import org.CentralOpsPages.DashBoardPage;
+import org.CentralOpsPages.LoginPage;
 import org.genricPackage.BaseClass;
 import org.kbzPayAppPages.AgentMerchant_and_RedAppSM_KYC_ChangePage;
 import org.kbzPayAppPages.accountClosePage;
 import org.kbzPayAppPages.closingLoopPage;
 import org.kbzPayAppPages.tsoLoginPage;
-import org.pages.DashBoardPage;
-import org.pages.LoginPage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -108,7 +108,7 @@ public class AgentMerchant_and_RedAppSM_KYC_Change_DeniedTest extends BaseClass{
 		
 		accClose.NextButton();
 		
-		accClose.MenuButton();
+	//	accClose.MenuButton();
 		
 		accClose.LogOut();
 			
@@ -138,7 +138,7 @@ public class AgentMerchant_and_RedAppSM_KYC_Change_DeniedTest extends BaseClass{
 		
 		accClose.NextButton();
 	
-		accClose.MenuButton();
+	//	accClose.MenuButton();
 		
 		accClose.LogOut();	
 		
@@ -162,7 +162,7 @@ public class AgentMerchant_and_RedAppSM_KYC_Change_DeniedTest extends BaseClass{
 		
 		accClose.NextButton();
 		
-		accClose.MenuButton();
+	//	accClose.MenuButton();
 		
 		accClose.LogOut();	
 		
@@ -187,7 +187,7 @@ public class AgentMerchant_and_RedAppSM_KYC_Change_DeniedTest extends BaseClass{
 		
 		accClose.NextButton();
 		
-		accClose.MenuButton();
+	//	accClose.MenuButton();
 		
 		accClose.LogOut();	
 		
@@ -213,7 +213,7 @@ public class AgentMerchant_and_RedAppSM_KYC_Change_DeniedTest extends BaseClass{
 		
 		accClose.NextButton();
 		
-		accClose.MenuButton();
+	//	accClose.MenuButton();
 		
 		accClose.LogOut();	
 		
@@ -238,7 +238,7 @@ public class AgentMerchant_and_RedAppSM_KYC_Change_DeniedTest extends BaseClass{
 		
 		accClose.NextButton();
 		
-		accClose.MenuButton();
+	//	accClose.MenuButton();
 		
 		accClose.LogOut();	
 		
@@ -258,7 +258,7 @@ public class AgentMerchant_and_RedAppSM_KYC_Change_DeniedTest extends BaseClass{
 		
     	closingLoop.downloadPDFButton();
 				
-		accClose.MenuButton();
+	//	accClose.MenuButton();
 		
 		accClose.LogOut();	
 			

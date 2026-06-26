@@ -2,13 +2,13 @@ package testsScriptKBZPayService;
 
 import java.awt.AWTException;
 
+import org.CentralOpsPages.DashBoardPage;
+import org.CentralOpsPages.LoginPage;
 import org.genricPackage.BaseClass;
 import org.kbzPayAppPages.accountClosePage;
 import org.kbzPayAppPages.closingLoopPage;
 import org.kbzPayAppPages.deviceChangeRedApp;
 import org.kbzPayAppPages.deviceManagement_DeviceChange;
-import org.pages.DashBoardPage;
-import org.pages.LoginPage;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 

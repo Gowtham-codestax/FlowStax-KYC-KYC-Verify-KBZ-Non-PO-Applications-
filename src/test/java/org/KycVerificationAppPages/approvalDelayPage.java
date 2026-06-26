@@ -546,7 +546,7 @@ Thread.sleep(5100);
 	 
 	 
 	    public void EyeIconbtnClick() throws InterruptedException {
-	    	Thread.sleep(4000);
+	    	Thread.sleep(8100);
 	    	for (int i = 0; i <32; i++) {
 				
 				robot.keyPress(KeyEvent.VK_TAB);																										

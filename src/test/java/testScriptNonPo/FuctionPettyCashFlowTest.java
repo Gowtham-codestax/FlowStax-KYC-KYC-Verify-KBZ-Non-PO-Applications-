@@ -1,9 +1,10 @@
 package testScriptNonPo;
 import java.awt.AWTException;
+
+import org.CentralOpsPages.DashBoardPage;
+import org.CentralOpsPages.LoginPage;
 import org.genricPackage.BaseClass;
 import org.nonPoAppPages.PettyCashPage;
-import org.pages.DashBoardPage;
-import org.pages.LoginPage;
 import org.testng.annotations.Test;
 
 public class FuctionPettyCashFlowTest extends BaseClass{

@@ -1,4 +1,4 @@
-package org.pages;
+package org.CentralOpsPages;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -53,6 +53,18 @@ public class AdminPage {
 		Thread.sleep(1100);
 		js.executeScript("arguments[0].click();", DuplicatePhnAndNoWorkOption);
 	//	DuplicatePhnAndNoWorkOption.click();
+	}
+	
+	public void cifWork_Option() throws InterruptedException {
+		
+		By CIFWorkOptionLoc	=By.xpath("//flt-semantics[@role='button' and contains(.,'CIF Work')]");
+		wait.until(ExpectedConditions.presenceOfElementLocated(CIFWorkOptionLoc));
+		Thread.sleep(2500);
+		
+		WebElement CIFWorkOption=driver.findElement(CIFWorkOptionLoc);
+		Thread.sleep(1100);
+		js.executeScript("arguments[0].click();", CIFWorkOption);
+	//	CIFWorkOption.click();
 	}
 	
 	public void switchRadioBtn() throws InterruptedException {
