@@ -81,7 +81,7 @@ public class AdminPage {
     	Thread.sleep(6000);
     	for (int i = 0; i <40; i++) {
 			
-			robot.keyPress(KeyEvent.VK_TAB);																										
+			robot.keyPress(KeyEvent.VK_TAB);																						
 			robot.keyRelease(KeyEvent.VK_TAB);
 			Thread.sleep(200);	
 			}
