@@ -1,6 +1,5 @@
 package testsScriptsCentralOps;
 import java.awt.AWTException;
-
 import org.CentralOpsPages.AdminPage;
 import org.CentralOpsPages.CFIPages;
 import org.CentralOpsPages.DashBoardPage;
